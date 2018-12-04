@@ -1,5 +1,8 @@
+library(reticulate)  # Used to call Tensorflow Python script
 library(shiny)
-library(reticulate)
+library(magrittr)
+library(shinycssloaders)
+
 use_python("/opt/python/bin/python3", required=TRUE)
 # use_python("/anaconda3/envs/py3/bin/python3", required=TRUE)
 source_python('image-classifier.py')
@@ -16,25 +19,34 @@ ui <- fluidPage(
         # Sidebar panel for inputs ----
         sidebarPanel(
 
-            # Input: Select a file ----
-            fileInput("file1", "Choose image file",
-                      multiple = FALSE,
-                      accept = c("image/jpg",
-                                 "image/png",
-                                 "image/gif",
-                                 ".jpg",
-                                 ".png",
-                                 ".gif")),
+            textInput("file1", label = h5("Enter Image URL:"), value = ""),
 
-            helpText("Your image will be uploaded, classified using Tensorflow and a model trained on the ImageNet data set, and the resulting predictions will be shown along with their confidence level.")
+            helpText("Your image will be downloaded and classified using Tensorflow in Python."),
+
+            helpText("The resulting predictions will be shown along with their confidence level."),
+
+            hr(),
+
+            helpText("Or, choose an example image:"),
+
+            actionButton("dog", "Dog"),
+            actionButton("cat", "Cat"),
+            actionButton("truck", "Truck"),
+
+            hr(),
+
+            helpText("View", a("source code on GitHub", href="https://github.com/sol-eng/python-examples/tree/master/image-classifier"))
+
+            # url <- a("GitHub", href="")
+            # tagList("View source on", url)
         ),
 
         # Main panel for displaying outputs ----
         mainPanel(
 
             # Output: Data file ----
-            tableOutput("contents"),
-            imageOutput("image1")
+            tableOutput("contents") %>% withSpinner(),
+            imageOutput("image1") %>% withSpinner(color = "#ffffff")
 
         )
 
@@ -42,20 +54,23 @@ ui <- fluidPage(
 )
 
 # Define server logic to read selected file ----
-server <- function(input, output) {
+server <- function(input, output, session) {
 
     output$contents <- renderTable({
 
         # input$file1 will be NULL initially. After the user selects
         # and uploads a file, the image will be classified, and the
         # predictions will be shown.
-
         req(input$file1)
 
         tryCatch(
             {
 
-                results <- main(image=input$file1$datapath)
+                # Download image from URL
+                downloader::download(input$file1, "image")
+
+                # Call Tensorflow Python script to classify downloaded image
+                results <- main(image="image")
 
             },
             error = function(e) {
@@ -87,9 +102,24 @@ server <- function(input, output) {
             return(NULL)
         }
         else {
-        return(list(src = input$file1$datapath))
+        return(list(src = "image"))
         }
 
+    })
+
+    observe({
+        x = input$cat
+        updateTextInput(session, "file1", value = paste("https://www.catster.com/wp-content/uploads/2017/08/Pixiebob-cat.jpg"))
+    })
+
+    observe({
+        x = input$truck
+        updateTextInput(session, "file1", value = paste("http://image.fourwheeler.com/f/174296714+w660+h440+q80+re0+cr1+ar0/006-chevy-1500-boggers-mud-truck-suspension.jpg"))
+    })
+
+    observe({
+        x = input$dog
+        updateTextInput(session, "file1", value = paste("https://www.akc.org/wp-content/themes/akc/component-library/assets/img/welcome.jpg"))
     })
 
 }
