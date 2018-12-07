@@ -166,7 +166,7 @@ def run_inference_on_image(image):
       human_string = node_lookup.id_to_string(node_id)
       score = predictions[node_id]
       results.append(('%s (score = %.5f)' % (human_string, score)))
-    return results
+    return results  # MODIFIED: Return results instead of printing
 
 
 def maybe_download_and_extract():
@@ -188,16 +188,12 @@ def maybe_download_and_extract():
   tarfile.open(filepath, 'r:gz').extractall(dest_directory)
 
 
-def main(image):
+def main(image):  # MODIFIED: Pass in image directly
   maybe_download_and_extract()
   # image = (FLAGS.image_file if FLAGS.image_file else
   #          os.path.join(FLAGS.model_dir, 'cropped_panda.jpg'))
   result = run_inference_on_image(image)
-  return(result)
-
-
-def adder(x):
-    return x+1
+  return(result)  # MODIFIED: Return results instead of printing
 
 
 if __name__ == '__main__':
@@ -231,4 +227,4 @@ if __name__ == '__main__':
       help='Display this many predictions.'
   )
   FLAGS, unparsed = parser.parse_known_args()
-  # tf.app.run(main=main, argv=[sys.argv[0]] + unparsed)
+  # tf.app.run(main=main, argv=[sys.argv[0]] + unparsed)  # MODIFIED: This breaks reticulate upon sourcing
