@@ -5,16 +5,19 @@ output: html_notebook
 
 ```{r setup}
 library(reticulate)
-use_python("/anaconda/bin/python")
+use_python("/opt/python/bin/python3")
 ```
-
-### Matplotlib
 
 ```{python}
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+```
 
+
+### Matplotlib
+
+```{python}
 import numpy as np
 
 np.random.seed(0)
@@ -40,10 +43,6 @@ plt.show()
 ### Pandas
 
 ```{python}
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
-
 import numpy as np
 import pandas as pd
 
@@ -58,24 +57,23 @@ plt.show()
 ### Seaborn
 
 ```{python}
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
-
-import pandas as pd
 import seaborn as sns
 
-sns.set(style="whitegrid", palette="muted")
+sns.set()
 
-# Load the example iris dataset
-iris = sns.load_dataset("iris")
+# Generate an example radial datast
+r = np.linspace(0, 10, num=100)
+df = pd.DataFrame({'r': r, 'slow': r, 'medium': 2 * r, 'fast': 4 * r})
 
-# "Melt" the dataset to "long-form" or "tidy" representation
-iris = pd.melt(iris, "species", var_name="measurement")
+# Convert the dataframe to long-form or "tidy" format
+df = pd.melt(df, id_vars=['r'], var_name='speed', value_name='theta')
 
-plt.figure()
-# Draw a categorical scatterplot to show each observation
-sns.swarmplot(x="measurement", y="value", hue="species",
-              palette=["r", "c", "y"], data=iris)
+# Set up a grid of axes with a polar projection
+g = sns.FacetGrid(df, col="speed", hue="speed",
+                  subplot_kws=dict(projection='polar'), height=4.5,
+                  sharex=False, sharey=False, despine=False)
+
+# Draw a scatterplot onto each axes in the grid
+g.map(sns.scatterplot, "theta", "r")
 plt.show()
 ```

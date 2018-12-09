@@ -4,7 +4,6 @@ library(magrittr)
 library(shinycssloaders)
 
 use_python("/opt/python/bin/python3", required=TRUE)
-# use_python("/anaconda3/envs/py3/bin/python3", required=TRUE)
 source_python('image-classifier.py')
 
 # Define UI for data upload app ----
