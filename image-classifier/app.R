@@ -3,19 +3,17 @@ library(shiny)
 library(magrittr)
 library(shinycssloaders)
 
-use_python("/opt/python/bin/python3", required=TRUE)
+# Set PyTorch model directory
+Sys.setenv(TORCH_MODEL_ZOO = "./model")
+
 source_python('image-classifier.py')
 
-# Define UI for data upload app ----
 ui <- fluidPage(
 
-    # App title ----
     titlePanel("Image Classifier"),
 
-    # Sidebar layout with input and output definitions ----
     sidebarLayout(
 
-        # Sidebar panel for inputs ----
         sidebarPanel(
 
             textInput("file1", label = h5("Enter Image URL:"), value = ""),
@@ -36,11 +34,8 @@ ui <- fluidPage(
 
             helpText("View", a("source code on GitHub", href="https://github.com/sol-eng/python-examples/tree/master/image-classifier"))
 
-            # url <- a("GitHub", href="")
-            # tagList("View source on", url)
         ),
 
-        # Main panel for displaying outputs ----
         mainPanel(
 
             # Output: Data file ----
@@ -52,7 +47,6 @@ ui <- fluidPage(
     )
 )
 
-# Define server logic to read selected file ----
 server <- function(input, output, session) {
 
     output$contents <- renderTable({
@@ -68,12 +62,11 @@ server <- function(input, output, session) {
                 # Download image from URL
                 downloader::download(input$file1, "image")
 
-                # Call Tensorflow Python script to classify downloaded image
-                results <- main(image="image")
+                # Call function from PyTorch Python script to classify image
+                results <- classify_image_pytorch(image_path="image")
 
             },
             error = function(e) {
-                # return a safeError if a parsing error occurs
                 stop(safeError(e))
             }
         )
@@ -91,7 +84,6 @@ server <- function(input, output, session) {
                 input$file1
             },
             error = function(e) {
-                # return a safeError if a parsing error occurs
                 stop(safeError(e))
             }
         )
@@ -123,5 +115,4 @@ server <- function(input, output, session) {
 
 }
 
-# Run the application
 shinyApp(ui = ui, server = server)
