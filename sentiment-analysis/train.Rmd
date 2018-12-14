@@ -3,12 +3,6 @@ title: "Sentiment Analysis with Python in RStudio"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-library(reticulate)
-use_python("/opt/python/bin/python3")
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 ### Import modules
 
 ```{python}
