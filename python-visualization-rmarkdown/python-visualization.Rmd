@@ -3,17 +3,11 @@ title: "Using Python Visualization Libraries in RStudio"
 output: html_notebook
 ---
 
-```{r setup}
-library(reticulate)
-use_python("/opt/python/bin/python3")
-```
-
 ```{python}
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 ```
-
 
 ### Matplotlib
 
