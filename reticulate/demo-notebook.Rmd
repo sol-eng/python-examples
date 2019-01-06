@@ -1,0 +1,46 @@
+---
+title: "R and Python Notebook"
+output: html_notebook
+---
+
+# Use R to write data to file
+
+```{r setup, include=FALSE}
+library(reticulate)
+use_python("/usr/local/bin/python")
+readr::write_csv(nycflights13::flights,path = "flights.csv")
+```
+
+# Use Python to manipulate data
+
+```{python}
+import pandas
+flights = pandas.read_csv("flights.csv")
+flights = flights[flights['dest'] == "ORD"]
+flights = flights[['carrier', 'dep_delay', 'arr_delay']]
+flights = flights.dropna()
+```
+
+# Use R to visualize Pandas DataFrame
+
+```{r, fig.width=7, fig.height=3}
+library(ggplot2)
+ggplot(py$flights, aes(carrier, arr_delay)) + geom_point() + geom_jitter()
+```
+
+# Use R to read and manipulate data
+
+```{r, message=FALSE}
+library(tidyverse)
+flights <- read_csv("flights.csv") %>%
+  filter(dest == "ORD") %>%
+  select(carrier, dep_delay, arr_delay) %>%
+  na.omit()
+```
+
+# Use Python to print R dataframe
+
+```{python}
+print(r.flights.head())
+```
+
