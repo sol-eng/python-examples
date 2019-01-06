@@ -18,12 +18,15 @@ The reticulate package provides a comprehensive set of tools for interoperabilit
 * Bind with Virtualenv
 * Bind with Conda environments
 
+### RStudio Connect
+
+You can publish Jupyter notebooks to RStudio connect. The RStudio plugin for Jupyter allows you to publish Jupyter notebooks with the press of a button. Once published on RStudio Connect, these notebooks can be scheduled for updates or refreshed on demand.
+
 ### Examples
 
-* `python-visualization-jupyter`
-* `python-visualization-rmarkdown`
-* `reticulate`
-* `sentiment-analysis`
+* [Use Python with R Markdown](https://colorado.rstudio.com/rsc/python-visuals) [[login]](https://colorado.rstudio.com/rsc/connect/#/apps/1716/access)
+* [Use Python to visualize data in R Markdown](https://colorado.rstudio.com/rsc/reticulate-demo) [[login]](https://colorado.rstudio.com/rsc/connect/#/apps/1924/access/2075)
+* [Publish Jupyter notebooks to RStudio Connect](https://colorado.rstudio.com/rsc/jupyter-geospatial) [[login]](https://colorado.rstudio.com/rsc/connect/#/apps/1762/access)
 
 ***
 
