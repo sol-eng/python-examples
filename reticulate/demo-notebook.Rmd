@@ -1,17 +1,25 @@
 ---
-title: "R and Python Notebook"
+title: "The reticulate package"
+subtitle: "Integration of Python into R projects"
 output: html_notebook
 ---
 
-# Use R to write data to file
+***
 
-```{r setup, include=FALSE}
+### Setup
+
+```{r setup}
 library(reticulate)
 use_python("/usr/local/bin/python")
 readr::write_csv(nycflights13::flights,path = "flights.csv")
 ```
 
-# Use Python to manipulate data
+***
+
+# From Python to R
+
+
+### Use Python to manipulate data
 
 ```{python}
 import pandas
@@ -21,14 +29,18 @@ flights = flights[['carrier', 'dep_delay', 'arr_delay']]
 flights = flights.dropna()
 ```
 
-# Use R to visualize Pandas DataFrame
+### Use R to visualize Pandas DataFrame
 
 ```{r, fig.width=7, fig.height=3}
 library(ggplot2)
 ggplot(py$flights, aes(carrier, arr_delay)) + geom_point() + geom_jitter()
 ```
 
-# Use R to read and manipulate data
+***
+
+# From R to Python
+
+### Use R to read and manipulate data
 
 ```{r, message=FALSE}
 library(tidyverse)
@@ -38,9 +50,13 @@ flights <- read_csv("flights.csv") %>%
   na.omit()
 ```
 
-# Use Python to print R dataframe
+### Use Python to print R dataframe
 
 ```{python}
-print(r.flights.head())
+print r.flights.head(10)
 ```
+
+***
+
+See the [reticulate website](https://rstudio.github.io/reticulate/index.html) for details.
 
