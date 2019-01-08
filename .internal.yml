@@ -4,5 +4,5 @@ default:
       path: "./reticulate"
       description: "Use the reticulate package to integrate Python into an R Markdown notebook."
       tag:
-        - "Conf2019|Python"
+        - "Demo Content|Python"
       url: "/python/reticulate/"
