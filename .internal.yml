@@ -6,3 +6,4 @@ default:
       tag:
         - "Demo Content|Python"
       url: "/python/reticulate/"
+      image: "reticulated_python.png"
