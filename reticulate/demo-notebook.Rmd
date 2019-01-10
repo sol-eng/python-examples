@@ -20,7 +20,7 @@ readr::write_csv(nycflights13::flights,path = "flights.csv")
 
 ### Use Python to manipulate data
 
-```{python}
+```{python data}
 import pandas
 flights = pandas.read_csv("flights.csv")
 flights = flights[flights['dest'] == "ORD"]
