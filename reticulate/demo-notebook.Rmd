@@ -12,7 +12,7 @@ output: html_notebook
 library(reticulate)
 readr::write_csv(nycflights13::flights,path = "flights.csv")
 
-reticulate::py_config()
+print(reticulate::py_config())
 ```
 
 ***
