@@ -28,10 +28,19 @@ You can publish Jupyter notebooks to RStudio connect. The RStudio plugin for Jup
 * [Use Python to visualize data in R Markdown](https://colorado.rstudio.com/rsc/python-visuals) [[login]](https://colorado.rstudio.com/rsc/connect/#/apps/1716/access)
 * [Publish Jupyter notebooks to RStudio Connect](https://colorado.rstudio.com/rsc/jupyter-geospatial) [[login]](https://colorado.rstudio.com/rsc/connect/#/apps/1762/access)
 
-***
+### Getting Started
+
+* Clone this repository
+* Install Python on your machine
+* Set the `RETICULATE_PYTHON` environment variable to point to your installation
+  of Python, for example using the following line in your `~/.Rprofile`:
+
+  ```
+  Sys.setenv(RETICULATE_PYTHON = '/usr/local/bin/python')
+  ```
+* Run the examples
+* Publish the examples with source code to RStudio Connect
 
 ### Philosophy
 
 The intent of the reticulate package is to integrate Python into R projects, and are not intended for standalone Python work. There are many IDEs available for doing data science with Python including JupyterLab, Rodeo, Spyder, and Visual Studio Code, and we strongly recommend using one of them for Python-only projects. However, if you are using reticulated Python within an R project then RStudio provides a set of tools that we think you will find extremely helpful.
-
-
