@@ -41,3 +41,4 @@ rsconnect/
 __pycache__
 .ipynb_checkpoints
 *.html
+flights.csv

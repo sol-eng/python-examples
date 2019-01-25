@@ -53,7 +53,7 @@ flights <- read_csv("flights.csv") %>%
 ### Use Python to print R dataframe
 
 ```{python}
-print r.flights.head(10)
+print(r.flights.head(10))
 ```
 
 ***
