@@ -1,0 +1,73 @@
+---
+title: "Using Python Visualization Libraries in RStudio"
+output: html_notebook
+---
+
+```{python include=FALSE}
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+```
+
+### Matplotlib
+
+```{python}
+import numpy as np
+
+np.random.seed(0)
+
+mu = 200
+sigma = 25
+x = np.random.normal(mu, sigma, size=100)
+
+fig, (ax0, ax1) = plt.subplots(ncols=2, figsize=(8, 4))
+
+ax0.hist(x, 20, density=1, histtype='stepfilled', facecolor='g', alpha=0.75)
+ax0.set_title('stepfilled')
+
+# Create a histogram by providing the bin edges (unequally spaced).
+bins = [100, 150, 180, 195, 205, 220, 250, 300]
+ax1.hist(x, bins, density=1, histtype='bar', rwidth=0.8)
+ax1.set_title('unequal bins')
+
+fig.tight_layout()
+plt.show()
+```
+
+### Pandas
+
+```{python}
+import numpy as np
+import pandas as pd
+
+dd = pd.DataFrame(np.random.randn(10, 10)).applymap(abs)
+dd = dd.cumsum()
+
+plt.figure()
+dd.plot.bar(colormap='Greens')
+plt.show()
+```
+
+### Seaborn
+
+```{python}
+import seaborn as sns
+
+sns.set()
+
+# Generate an example radial datast
+r = np.linspace(0, 10, num=100)
+df = pd.DataFrame({'r': r, 'slow': r, 'medium': 2 * r, 'fast': 4 * r})
+
+# Convert the dataframe to long-form or "tidy" format
+df = pd.melt(df, id_vars=['r'], var_name='speed', value_name='theta')
+
+# Set up a grid of axes with a polar projection
+g = sns.FacetGrid(df, col="speed", hue="speed",
+                  subplot_kws=dict(projection='polar'), height=4.5,
+                  sharex=False, sharey=False, despine=False)
+
+# Draw a scatterplot onto each axes in the grid
+g.map(sns.scatterplot, "theta", "r")
+plt.show()
+```
