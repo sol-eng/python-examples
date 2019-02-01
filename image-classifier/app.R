@@ -3,9 +3,6 @@ library(reticulate)  # Used to call Tensorflow Python script
 library(shiny)
 library(shinycssloaders)
 
-# Set PyTorch model directory
-Sys.setenv(TORCH_MODEL_ZOO = "./model")
-
 # Load source of Python image classifier script
 source_python('image-classifier.py')
 
