@@ -4,7 +4,7 @@
   "platform": "3.4.3",
   "metadata": {
     "appmode": "rmd-static",
-    "primary_rmd": "demo-notebook.Rmd",
+    "primary_rmd": "rmarkdown-notebook.Rmd",
     "primary_html": null,
     "content_category": null,
     "has_parameters": false
@@ -339,7 +339,7 @@
         "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
         "Repository": "RSPM",
         "Date/Publication": "2018-09-25 11:40:07 UTC",
-        "Built": "R 3.4.3; ; 2018-11-06 19:25:53 UTC; unix"
+        "Built": "R 3.4.3; ; 2019-01-24 02:36:09 UTC; unix"
       }
     },
     "colorspace": {
@@ -1292,7 +1292,7 @@
       "GithubRepo": "reticulate",
       "GithubUsername": "rstudio",
       "GithubRef": "master",
-      "GithubSha1": "3d118e41dd4abcc245133d4990fb8b2587e26450",
+      "GithubSha1": "6a60daddafba2376a7857b28d0b50c283b662777",
       "description": {
         "Package": "reticulate",
         "Type": "Package",
@@ -1318,16 +1318,16 @@
         "RemoteRepo": "reticulate",
         "RemoteUsername": "rstudio",
         "RemoteRef": "master",
-        "RemoteSha": "3d118e41dd4abcc245133d4990fb8b2587e26450",
+        "RemoteSha": "6a60daddafba2376a7857b28d0b50c283b662777",
         "GithubRepo": "reticulate",
         "GithubUsername": "rstudio",
         "GithubRef": "master",
-        "GithubSHA1": "3d118e41dd4abcc245133d4990fb8b2587e26450",
+        "GithubSHA1": "6a60daddafba2376a7857b28d0b50c283b662777",
         "NeedsCompilation": "yes",
-        "Packaged": "2019-01-02 02:27:39 UTC; carendt",
+        "Packaged": "2019-01-28 04:14:51 UTC; carendt",
         "Author": "JJ Allaire [aut, cre],\n  Kevin Ushey [aut],\n  RStudio [cph, fnd],\n  Yuan Tang [aut, cph] (0000-0001-5243-233X),\n  Dirk Eddelbuettel [ctb, cph],\n  Bryan Lewis [ctb, cph],\n  Marcus Geelnard [ctb, cph] (TinyThread library,\n    http://tinythreadpp.bitsnbites.eu/)",
         "Maintainer": "JJ Allaire <jj@rstudio.com>",
-        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2019-01-02 02:27:39 UTC; unix"
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2019-01-28 04:14:52 UTC; unix"
       }
     },
     "rlang": {
@@ -1339,7 +1339,7 @@
       "GithubSha1": null,
       "description": {
         "Package": "rlang",
-        "Version": "0.3.0.1",
+        "Version": "0.3.1",
         "Title": "Functions for Base Types and Core R and 'Tidyverse' Features",
         "Description": "A toolbox for working with base types, core R features\n  like the condition system, and core 'Tidyverse' features like tidy\n  evaluation.",
         "Authors@R": "c(\n    person(\"Lionel\", \"Henry\", ,\"lionel@rstudio.com\", c(\"aut\", \"cre\")),\n    person(\"Hadley\", \"Wickham\", ,\"hadley@rstudio.com\", \"aut\"),\n    person(\"RStudio\", role = \"cph\")\n    )",
@@ -1350,16 +1350,16 @@
         "Depends": "R (>= 3.1.0)",
         "Suggests": "crayon, magrittr, methods, pillar, testthat (>= 2.0.0), covr",
         "Encoding": "UTF-8",
-        "RoxygenNote": "6.1.0.9000",
-        "URL": "http://rlang.tidyverse.org, https://github.com/r-lib/rlang",
+        "RoxygenNote": "6.1.1",
+        "URL": "http://rlang.r-lib.org, https://github.com/r-lib/rlang",
         "BugReports": "https://github.com/r-lib/rlang/issues",
         "NeedsCompilation": "yes",
-        "Packaged": "2018-10-25 07:46:00 UTC; ripley",
+        "Packaged": "2019-01-04 21:28:51 UTC; lionel",
         "Author": "Lionel Henry [aut, cre],\n  Hadley Wickham [aut],\n  RStudio [cph]",
         "Maintainer": "Lionel Henry <lionel@rstudio.com>",
         "Repository": "RSPM",
-        "Date/Publication": "2018-10-25 08:24:20 UTC",
-        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-11-06 19:26:28 UTC; unix"
+        "Date/Publication": "2019-01-08 13:00:03 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2019-01-29 15:17:16 UTC; unix"
       }
     },
     "rmarkdown": {
@@ -1739,9 +1739,6 @@
     }
   },
   "files": {
-    "demo-notebook.Rmd": {
-      "checksum": "22082803838386e273a1ab0e96a53092"
-    },
     "packrat/desc/assertthat": {
       "checksum": "8d1395cb909e100c8433a01614da5f10"
     },
@@ -1758,7 +1755,7 @@
       "checksum": "00cb34c5785c005bc21c1b45bd352806"
     },
     "packrat/desc/cli": {
-      "checksum": "ba8cfad4f0dcdde5d33e910c27871d5d"
+      "checksum": "3750e33ff35f262f73c6bb05ae7f35e3"
     },
     "packrat/desc/colorspace": {
       "checksum": "85629c522af9fa84380a2018c4391e29"
@@ -1869,10 +1866,10 @@
       "checksum": "6a23a153d95292868ca53dfa87b76b22"
     },
     "packrat/desc/reticulate": {
-      "checksum": "249eab42d2f8e8f902187ebd13f9161e"
+      "checksum": "54a386100627967160070146edc236db"
     },
     "packrat/desc/rlang": {
-      "checksum": "5ecfc08504004468704151147ef62f3e"
+      "checksum": "badba2d4e28e163b1322f98c7cee3ce2"
     },
     "packrat/desc/rmarkdown": {
       "checksum": "cbc03b0c31f3045dec5667a9f04f7130"
@@ -1911,10 +1908,13 @@
       "checksum": "727431b9e87c3b298ee1bb1676e8f5ba"
     },
     "packrat/packrat.lock": {
-      "checksum": "eb4aac1da89646d8e5f035da42c2f0eb"
+      "checksum": "148c47056ee65025c739d550ff3bbf81"
     },
     "requirements.txt": {
       "checksum": "ae84c7724e17bf1bc94db88da461a3de"
+    },
+    "rmarkdown-notebook.Rmd": {
+      "checksum": "75a060802630b90516f69b78b968a2ae"
     }
   },
   "users": null
