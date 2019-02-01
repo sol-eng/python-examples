@@ -1,7 +1,7 @@
 default:
   content:
     - title: "Use Python with R"
-      path: "./reticulate"
+      path: "./rmarkdown-notebook"
       description: "Use the reticulate package to integrate Python into an R Markdown notebook."
       tag:
         - "Demo Content|Python"
