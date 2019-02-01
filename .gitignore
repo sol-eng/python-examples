@@ -37,10 +37,8 @@ rsconnect/
 
 # Temporary files
 .DS_Store
-.model
 __pycache__
 .ipynb_checkpoints
 *.html
 rmarkdown-notebook/flights.csv
-image-classifier/model/
 sentiment-analysis/model/
