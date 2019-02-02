@@ -76,35 +76,12 @@ server <- function(input, output, session) {
         }
     })
 
-    observe({
-        x = input$oil_platform
-        image_url = "https://upload.wikimedia.org/wikipedia/commons/a/a1/Oil_platform.jpeg"
-        updateTextInput(session, "file1", value = paste(image_url))
-    })
-
-    observe({
-        x = input$truck
-        image_url = "https://upload.wikimedia.org/wikipedia/commons/6/6c/Toyota-1984-truck.jpg"
-        updateTextInput(session, "file1", value = paste(image_url))
-    })
-
-    observe({
-        x = input$flower
-        image_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Aster_Tataricus.JPG/612px-Aster_Tataricus.JPG"
-        updateTextInput(session, "file1", value = paste(image_url))
-    })
-
-    observe({
-        x = input$cat
-        image_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Egyptian_Mau_Bronze.jpg/611px-Egyptian_Mau_Bronze.jpg"
-        updateTextInput(session, "file1", value = paste(image_url))
-    })
-
-    observe({
-        x = input$dog
-        image_url = "https://upload.wikimedia.org/wikipedia/commons/e/e4/Border_Collie_600.jpg"
-        updateTextInput(session, "file1", value = paste(image_url))
-    })
+    # default images
+    observeEvent(input$oil_platform, image_path("./img/oil_platform.jpg"))
+    observeEvent(input$truck, image_path("./img/truck.jpg"))
+    observeEvent(input$flower, image_path("./img/flower.jpg"))
+    observeEvent(input$cat, image_path("./img/cat.jpg"))
+    observeEvent(input$dog, image_path("./img/dog.jpg"))
 
 }
 
