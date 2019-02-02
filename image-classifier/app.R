@@ -13,14 +13,17 @@ source_python('image-classifier.py')
 server <- function(input, output, session) {
     
     # where the image that should be classified is on disk
-    image_path <- reactiveVal("./cat.jpg")
+    image_path <- reactiveVal("./img/cat.jpg")
     
     image_prefix <- "pytorch_image"
     
     # the configurable selector for download vs. upload
     output$image_selector <- renderUI({
         if (behavior == "download") {
-          textInput("file1", label = h5("Enter Image URL:"), value = "")
+          list(
+            textInput("file1", label = h5("Enter Image URL:"), value = ""),
+            actionButton("download1", "Download")
+          )
         } else if (behavior == "upload") {
           fileInput("file_upload", label = h5("Upload an Image:"))
         } else {
@@ -28,13 +31,16 @@ server <- function(input, output, session) {
         }
     })
     
+    # handle upload
     observe({
         req(input$file_upload)
         upload_file <- input$file_upload
         image_path(upload_file$datapath[[1]])
     })
     
-    observeEvent(input$file1, {
+    # handle download
+    observeEvent(input$download1, {
+        req(input$file1)
         tryCatch({
             # Download image from URL
             temp_download <- fs::file_temp(image_prefix, ext = ".jpg")
@@ -42,7 +48,9 @@ server <- function(input, output, session) {
             
             image_path(temp_download)
         }, error = function(e){
-            stop(safeError(e))
+            # usually, you would not expose this to the user
+            # without a little sanitization
+            showNotification(as.character(safeError(e)), type = "warning")
         })  
     })
     
@@ -55,7 +63,9 @@ server <- function(input, output, session) {
                 results <- classify_image_pytorch(image_path=image_path())
             },
             error = function(e) {
-                stop(safeError(e))
+                # usually, you would not expose this to the user
+                # without a little sanitization
+                showNotification(as.character(safeError(e)), type = "warning")
             }
         )
         return(results)
