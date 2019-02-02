@@ -15,6 +15,8 @@ server <- function(input, output, session) {
     # where the image that should be classified is on disk
     image_path <- reactiveVal("./cat.jpg")
     
+    image_prefix <- "pytorch_image"
+    
     # the configurable selector for download vs. upload
     output$image_selector <- renderUI({
         if (behavior == "download") {
@@ -26,7 +28,6 @@ server <- function(input, output, session) {
         }
     })
     
-    
     observe({
         req(input$file_upload)
         upload_file <- input$file_upload
@@ -36,7 +37,7 @@ server <- function(input, output, session) {
     observeEvent(input$file1, {
         tryCatch({
             # Download image from URL
-            temp_download <- fs::file_temp("image", ext = ".jpg")
+            temp_download <- fs::file_temp(image_prefix, ext = ".jpg")
             downloader::download(input$file1, temp_download)
             
             image_path(temp_download)
@@ -45,14 +46,6 @@ server <- function(input, output, session) {
         })  
     })
     
-    #image_path <- reactiveVal({
-    #    
-    #    # After the user uploads a file, the image will be classified and the predictions will be shown.
-    #    # Download image from URL
-    #    downloader::download(input$file1, "image")
-    #    
-    #})
-
     output$contents <- renderTable({
         req(image_path())
 
@@ -70,16 +63,9 @@ server <- function(input, output, session) {
 
     output$image1 <- renderImage({
         req(image_path())
-        #var <- tryCatch(
-        #    {
-        #        image_path()
-        #    },
-        #    error = function(e) {
-        #        stop(safeError(e))
-        #    }
-        #)
+        
         # Copy the image to temp space
-        new_path <- fs::file_copy(image_path(), fs::file_temp("image", ext = ".jpg"))
+        new_path <- fs::file_copy(image_path(), fs::file_temp(image_prefix, ext = ".jpg"))
 
         # Return a list containing the filename
         if(is.null(new_path)) {
