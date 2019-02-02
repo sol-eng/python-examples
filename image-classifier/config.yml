@@ -1,0 +1,2 @@
+default:
+  image: "upload"
