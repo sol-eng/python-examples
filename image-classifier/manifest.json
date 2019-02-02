@@ -1,0 +1,945 @@
+{
+  "version": 1,
+  "locale": "en_US",
+  "platform": "3.4.3",
+  "metadata": {
+    "appmode": "shiny",
+    "primary_rmd": null,
+    "primary_html": null,
+    "content_category": null,
+    "has_parameters": false
+  },
+  "python": {
+    "version": "3.7.1",
+    "package_manager": {
+      "name": "pip",
+      "version": "19.0.1",
+      "package_file": "requirements.txt"
+    }
+  },
+  "packages": {
+    "BH": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "BH",
+        "Type": "Package",
+        "Title": "Boost C++ Header Files",
+        "Version": "1.66.0-1",
+        "Date": "2018-02-12",
+        "Author": "Dirk Eddelbuettel, John W. Emerson and Michael J. Kane",
+        "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
+        "Description": "Boost provides free peer-reviewed portable C++ source \n libraries.  A large part of Boost is provided as C++ template code\n which is resolved entirely at compile-time without linking.  This \n package aims to provide the most useful subset of Boost libraries \n for template use among CRAN package. By placing these libraries in \n this package, we offer a more efficient distribution system for CRAN \n as replication of this code in the sources of other packages is \n avoided. As of release 1.65.0-1, the following Boost libraries are\n included: 'algorithm' 'align' 'any' 'atomic' 'bimap' 'bind'\n 'circular_buffer' 'compute' 'concept' 'config' 'container' 'date'_'time'\n 'detail' 'dynamic_bitset' 'exception' 'filesystem' 'flyweight' 'foreach'\n 'functional' 'fusion' 'geometry' 'graph' 'heap' 'icl' 'integer'\n 'interprocess' 'intrusive' 'io' 'iostreams' 'iterator' 'math' 'move' 'mpl'\n 'multiprcecision' 'numeric' 'pending' 'phoenix' 'preprocessor'\n 'propery_tree' 'random' 'range' 'scope_exit' 'smart_ptr' 'sort' 'spirit'\n 'tuple' 'type_traits' 'typeof' 'unordered' 'utility' 'uuid'.",
+        "License": "BSL-1.0",
+        "BugReports": "https://github.com/eddelbuettel/bh/issues",
+        "NeedsCompilation": "no",
+        "Packaged": "2018-02-12 19:11:19.852233 UTC; deddelbuettel",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-02-13 23:48:11 UTC",
+        "Built": "R 3.4.3; ; 2018-06-26 19:07:06 UTC; unix"
+      }
+    },
+    "Matrix": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "Matrix",
+        "Version": "1.2-14",
+        "Date": "2018-04-06",
+        "Priority": "recommended",
+        "Title": "Sparse and Dense Matrix Classes and Methods",
+        "Contact": "Doug and Martin <Matrix-authors@R-project.org>",
+        "Maintainer": "Martin Maechler <mmaechler+Matrix@gmail.com>",
+        "Authors@R": "c(person(\"Douglas\",\"Bates\", role=\"aut\")\n , person(\"Martin\",\"Maechler\", email=\"mmaechler+Matrix@gmail.com\",\n           role = c(\"aut\",\"cre\"))\n , person(\"Timothy A.\", \"Davis\", role=\"ctb\",\n           comment = c(\"SuiteSparse and 'cs' C libraries, notably CHOLMOD, AMD;\n\t\t       collaborators listed in\n\t\t\tdir(pattern = '^[A-Z]+[.]txt$', full.names=TRUE,\n\t\t\t    system.file('doc', 'SuiteSparse', package='Matrix'))\"))\n , person(\"Jens\", \"Oehlschlägel\", role=\"ctb\", comment=\"initial nearPD()\")\n , person(\"Jason\", \"Riedy\", role=\"ctb\",\n          comment = c(\"condest() and onenormest() for octave\",\n \t  \t      \"Copyright: Regents of the University of California\"))\n , person(\"R Core Team\", role = \"ctb\", comment=\"base R matrix implementation\")\n )",
+        "Description": "A rich hierarchy of matrix classes, including triangular,\n   symmetric, and diagonal matrices, both dense and sparse and with\n   pattern, logical and numeric entries.   Numerous methods for and\n   operations on these matrices, using 'LAPACK' and 'SuiteSparse' libraries.",
+        "Depends": "R (>= 3.2.0)",
+        "Imports": "methods, graphics, grid, stats, utils, lattice",
+        "Suggests": "expm, MASS",
+        "Enhances": "MatrixModels, graph, SparseM, sfsmisc",
+        "Encoding": "UTF-8",
+        "LazyData": "no",
+        "LazyDataNote": "not possible, since we use data/*.R *and* our classes",
+        "BuildResaveData": "no",
+        "License": "GPL (>= 2) | file LICENCE",
+        "URL": "http://Matrix.R-forge.R-project.org/",
+        "BugReports": "https://r-forge.r-project.org/tracker/?group_id=61",
+        "NeedsCompilation": "yes",
+        "Packaged": "2018-04-06 21:34:14 UTC; maechler",
+        "Author": "Douglas Bates [aut],\n  Martin Maechler [aut, cre],\n  Timothy A. Davis [ctb] (SuiteSparse and 'cs' C libraries, notably\n    CHOLMOD, AMD; collaborators listed in dir(pattern =\n    '^[A-Z]+[.]txt$', full.names=TRUE, system.file('doc',\n    'SuiteSparse', package='Matrix'))),\n  Jens Oehlschlägel [ctb] (initial nearPD()),\n  Jason Riedy [ctb] (condest() and onenormest() for octave, Copyright:\n    Regents of the University of California),\n  R Core Team [ctb] (base R matrix implementation)",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-04-09 17:10:53 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-10-16 20:51:31 UTC; unix"
+      }
+    },
+    "R6": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "R6",
+        "Title": "Classes with Reference Semantics",
+        "Version": "2.3.0",
+        "Authors@R": "person(\"Winston\", \"Chang\", role = c(\"aut\", \"cre\"), email = \"winston@stdout.org\")",
+        "Description": "Creates classes with reference semantics, similar to R's built-in\n    reference classes. Compared to reference classes, R6 classes are simpler\n    and lighter-weight, and they are not built on S4 classes so they do not\n    require the methods package. These classes allow public and private\n    members, and they support inheritance, even when the classes are defined in\n    different packages.",
+        "Depends": "R (>= 3.0)",
+        "Suggests": "knitr, microbenchmark, pryr, testthat, ggplot2, scales",
+        "License": "MIT + file LICENSE",
+        "URL": "https://github.com/r-lib/R6/",
+        "LazyData": "true",
+        "BugReports": "https://github.com/r-lib/R6/issues",
+        "RoxygenNote": "6.1.0.9000",
+        "NeedsCompilation": "no",
+        "Packaged": "2018-10-04 14:48:18 UTC; winston",
+        "Author": "Winston Chang [aut, cre]",
+        "Maintainer": "Winston Chang <winston@stdout.org>",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-10-04 15:30:03 UTC",
+        "Built": "R 3.4.3; ; 2018-11-06 19:26:06 UTC; unix"
+      }
+    },
+    "Rcpp": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "Rcpp",
+        "Title": "Seamless R and C++ Integration",
+        "Version": "1.0.0",
+        "Date": "2018-11-05",
+        "Author": "Dirk Eddelbuettel, Romain Francois, JJ Allaire, Kevin Ushey, Qiang Kou,\n Nathan Russell, Douglas Bates and John Chambers",
+        "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
+        "Description": "The 'Rcpp' package provides R functions as well as C++ classes which\n offer a seamless integration of R and C++. Many R data types and objects can be\n mapped back and forth to C++ equivalents which facilitates both writing of new\n code as well as easier integration of third-party libraries. Documentation\n about 'Rcpp' is provided by several vignettes included in this package, via the\n 'Rcpp Gallery' site at <http://gallery.rcpp.org>, the paper by Eddelbuettel and\n Francois (2011, <doi:10.18637/jss.v040.i08>), the book by Eddelbuettel (2013,\n <doi:10.1007/978-1-4614-6868-4>) and the paper by Eddelbuettel and Balamuta (2018,\n <doi:10.1080/00031305.2017.1375990>); see 'citation(\"Rcpp\")' for details.",
+        "Depends": "R (>= 3.0.0)",
+        "Imports": "methods, utils",
+        "Suggests": "RUnit, inline, rbenchmark, knitr, rmarkdown, pinp, pkgKitten\n(>= 0.1.2)",
+        "VignetteBuilder": "knitr",
+        "URL": "http://www.rcpp.org, http://dirk.eddelbuettel.com/code/rcpp.html,\nhttps://github.com/RcppCore/Rcpp",
+        "License": "GPL (>= 2)",
+        "BugReports": "https://github.com/RcppCore/Rcpp/issues",
+        "MailingList": "Please send questions and comments regarding Rcpp to\nrcpp-devel@lists.r-forge.r-project.org",
+        "RoxygenNote": "6.0.1",
+        "NeedsCompilation": "yes",
+        "Packaged": "2018-11-06 03:02:42.98448 UTC; edd",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-11-07 20:00:03 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-12-17 21:07:57 UTC; unix"
+      }
+    },
+    "config": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "config",
+        "Type": "Package",
+        "Title": "Manage Environment Specific Configuration Values",
+        "Version": "0.3",
+        "Authors@R": "c(\n  person(\"JJ\", \"Allaire\", role = c(\"aut\", \"cre\"), email = \"jj@rstudio.com\"),\n  person(family = \"RStudio, Inc.\", role = \"cph\"))",
+        "Imports": "yaml (>= 2.1.13)",
+        "Suggests": "testthat, knitr",
+        "Description": "Manage configuration values across multiple environments (e.g.\n  development, test, production). Read values using a function that determines\n  the current environment and returns the appropriate value.",
+        "License": "GPL-3",
+        "URL": "https://github.com/rstudio/config",
+        "BugReports": "https://github.com/rstudio/config/issues",
+        "RoxygenNote": "6.0.1",
+        "VignetteBuilder": "knitr",
+        "NeedsCompilation": "no",
+        "Packaged": "2018-03-27 17:50:45 UTC; jjallaire",
+        "Author": "JJ Allaire [aut, cre],\n  RStudio, Inc. [cph]",
+        "Maintainer": "JJ Allaire <jj@rstudio.com>",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-03-27 20:38:53 UTC",
+        "Built": "R 3.4.3; ; 2019-01-29 21:47:02 UTC; unix"
+      }
+    },
+    "crayon": {
+      "Source": "CRAN",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "crayon",
+        "Title": "Colored Terminal Output",
+        "Version": "1.3.4",
+        "Authors@R": "c(\n    person(\"Gábor\", \"Csárdi\", , \"csardi.gabor@gmail.com\",\n    role = c(\"aut\", \"cre\")),\n    person(\n    \"Brodie\", \"Gaslam\", email=\"brodie.gaslam@yahoo.com\",\n    role=c(\"ctb\"))\n    )",
+        "Description": "Colored terminal output on terminals that support 'ANSI'\n    color and highlight codes. It also works in 'Emacs' 'ESS'. 'ANSI'\n    color support is automatically detected. Colors and highlighting can\n    be combined and nested. New styles can also be created easily.\n    This package was inspired by the 'chalk' 'JavaScript' project.",
+        "License": "MIT + file LICENSE",
+        "LazyData": "true",
+        "URL": "https://github.com/r-lib/crayon#readme",
+        "BugReports": "https://github.com/r-lib/crayon/issues",
+        "Collate": "'ansi-256.r' 'combine.r' 'string.r' 'utils.r'\n'crayon-package.r' 'disposable.r' 'has_ansi.r' 'has_color.r'\n'styles.r' 'machinery.r' 'parts.r' 'print.r' 'style-var.r'\n'show.r' 'string_operations.r'",
+        "Imports": "grDevices, methods, utils",
+        "Suggests": "mockery, rstudioapi, testthat, withr",
+        "RoxygenNote": "6.0.1.9000",
+        "Encoding": "UTF-8",
+        "NeedsCompilation": "no",
+        "Packaged": "2017-09-15 18:14:04 UTC; gaborcsardi",
+        "Author": "Gábor Csárdi [aut, cre],\n  Brodie Gaslam [ctb]",
+        "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2017-09-16 19:49:46 UTC",
+        "Built": "R 3.4.1; ; 2017-09-17 04:43:27 UTC; unix"
+      }
+    },
+    "digest": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "digest",
+        "Author": "Dirk Eddelbuettel <edd@debian.org> with contributions \n by Antoine Lucas, Jarek Tuszynski, Henrik Bengtsson, Simon Urbanek,\n Mario Frasca, Bryan Lewis, Murray Stokely, Hannes Muehleisen,\n Duncan Murdoch, Jim Hester, Wush Wu, Qiang Kou, Thierry Onkelinx, \n Michel Lang, Viliam Simko, Kurt Hornik and Radford Neal.",
+        "Version": "0.6.18",
+        "Date": "2018-10-10",
+        "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
+        "Title": "Create Compact Hash Digests of R Objects",
+        "Description": "Implementation of a function 'digest()' for the creation \n of hash digests of arbitrary R objects (using the 'md5', 'sha-1', 'sha-256', \n 'crc32', 'xxhash' and 'murmurhash' algorithms) permitting easy comparison of R\n language objects, as well as a function 'hmac()' to create hash-based\n message authentication code. Please note that this package is not meant to\n be deployed for cryptographic purposes for which more comprehensive (and\n widely tested) libraries such as 'OpenSSL' should be used.",
+        "URL": "http://dirk.eddelbuettel.com/code/digest.html",
+        "BugReports": "https://github.com/eddelbuettel/digest/issues",
+        "Depends": "R (>= 3.1.0)",
+        "License": "GPL (>= 2)",
+        "Suggests": "knitr, rmarkdown",
+        "VignetteBuilder": "knitr",
+        "NeedsCompilation": "yes",
+        "Packaged": "2018-10-10 11:30:39.397655 UTC; edd",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-10-10 16:00:23 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-11-06 19:25:54 UTC; unix"
+      }
+    },
+    "downloader": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "downloader",
+        "Maintainer": "Winston Chang <winston@stdout.org>",
+        "Author": "Winston Chang <winston@stdout.org>",
+        "Version": "0.4",
+        "License": "GPL-2",
+        "Title": "Download Files over HTTP and HTTPS",
+        "Description": "Provides a wrapper for the download.file function,\n    making it possible to download files over HTTPS on Windows, Mac OS X, and\n    other Unix-like platforms. The 'RCurl' package provides this functionality\n    (and much more) but can be difficult to install because it must be compiled\n    with external dependencies. This package has no external dependencies, so\n    it is much easier to install.",
+        "URL": "https://github.com/wch/downloader",
+        "Imports": "utils, digest",
+        "Suggests": "testthat",
+        "BugReports": "https://github.com/wch/downloader/issues",
+        "NeedsCompilation": "no",
+        "Packaged": "2015-07-09 01:22:22 UTC; winston",
+        "Repository": "RSPM",
+        "Date/Publication": "2015-07-09 14:47:41",
+        "Built": "R 3.4.3; ; 2018-07-05 16:29:05 UTC; unix"
+      }
+    },
+    "fs": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "fs",
+        "Title": "Cross-Platform File System Operations Based on 'libuv'",
+        "Version": "1.2.6",
+        "Authors@R": "c(\n    person(\"Jim\", \"Hester\", email = \"james.f.hester@gmail.com\", role = c(\"aut\", \"cre\")),\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", \"aut\"),\n    person(\"libuv project contributors\", role = \"cph\", comment = \"libuv library\"),\n    person(\"Joyent, Inc. and other Node contributors\", role = \"cph\", comment = \"libuv library\"),\n    person(\"RStudio\", role = c(\"cph\", \"fnd\"))\n    )",
+        "Description": "A cross-platform interface to file system operations, built on\n  top of the 'libuv' C library.",
+        "Depends": "R (>= 3.1)",
+        "License": "GPL-3",
+        "Encoding": "UTF-8",
+        "LazyData": "true",
+        "ByteCompile": "true",
+        "LinkingTo": "Rcpp",
+        "Imports": "methods, Rcpp",
+        "SystemRequirements": "GNU make",
+        "RoxygenNote": "6.1.0",
+        "URL": "http://fs.r-lib.org, https://github.com/r-lib/fs",
+        "BugReports": "https://github.com/r-lib/fs/issues",
+        "Copyright": "file COPYRIGHTS",
+        "Suggests": "testthat, covr, pillar (>= 1.0.0), crayon, withr",
+        "NeedsCompilation": "yes",
+        "Packaged": "2018-08-23 19:04:30 UTC; jhester",
+        "Author": "Jim Hester [aut, cre],\n  Hadley Wickham [aut],\n  libuv project contributors [cph] (libuv library),\n  Joyent, Inc. and other Node contributors [cph] (libuv library),\n  RStudio [cph, fnd]",
+        "Maintainer": "Jim Hester <james.f.hester@gmail.com>",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-08-23 19:34:26 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-10-17 18:47:24 UTC; unix"
+      }
+    },
+    "gitlink": {
+      "Source": "github",
+      "Repository": null,
+      "GithubRepo": "gitlink",
+      "GithubUsername": "colearendt",
+      "GithubRef": "master",
+      "GithubSha1": "345afc6aef96e7321f412d6abd088d7c4ae874bd",
+      "description": {
+        "Package": "gitlink",
+        "Title": "Add git links to your web-based assets",
+        "Version": "0.0.0.9000",
+        "Authors@R": "c(\n    person(\"Cole\", \"Arendt\", , \"cole@rstudio.com\", c(\"aut\", \"cre\")),\n    person(\"RStudio\", role = c(\"cph\", \"fnd\"))\n    )",
+        "Description": "Provides helpers to add git links to Shiny applications, R Markdown documents, and other HTML-based resources. This is most commonly used for GitHub ribbons.",
+        "License": "MIT + file LICENSE",
+        "Encoding": "UTF-8",
+        "LazyData": "true",
+        "RoxygenNote": "6.1.1",
+        "Imports": "htmltools, rlang",
+        "Suggests": "testthat",
+        "RemoteType": "github",
+        "RemoteHost": "api.github.com",
+        "RemoteRepo": "gitlink",
+        "RemoteUsername": "colearendt",
+        "RemoteRef": "master",
+        "RemoteSha": "345afc6aef96e7321f412d6abd088d7c4ae874bd",
+        "GithubRepo": "gitlink",
+        "GithubUsername": "colearendt",
+        "GithubRef": "master",
+        "GithubSHA1": "345afc6aef96e7321f412d6abd088d7c4ae874bd",
+        "NeedsCompilation": "no",
+        "Packaged": "2019-02-02 02:46:36 UTC; carendt",
+        "Author": "Cole Arendt [aut, cre],\n  RStudio [cph, fnd]",
+        "Maintainer": "Cole Arendt <cole@rstudio.com>",
+        "Built": "R 3.4.3; ; 2019-02-02 02:46:36 UTC; unix"
+      }
+    },
+    "glue": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "glue",
+        "Title": "Interpreted String Literals",
+        "Version": "1.3.0",
+        "Authors@R": "person(\"Jim\", \"Hester\", email = \"james.f.hester@gmail.com\", role = c(\"aut\", \"cre\"))",
+        "Description": "An implementation of interpreted string literals, inspired by\n  Python's Literal String Interpolation <https://www.python.org/dev/peps/pep-0498/> and Docstrings\n  <https://www.python.org/dev/peps/pep-0257/> and Julia's Triple-Quoted String Literals\n  <https://docs.julialang.org/en/stable/manual/strings/#triple-quoted-string-literals>.",
+        "Depends": "R (>= 3.1)",
+        "Imports": "methods",
+        "Suggests": "testthat, covr, magrittr, crayon, knitr, rmarkdown, DBI,\nRSQLite, R.utils, forcats, microbenchmark, rprintf, stringr,\nggplot2, dplyr, withr",
+        "License": "MIT + file LICENSE",
+        "Encoding": "UTF-8",
+        "LazyData": "true",
+        "RoxygenNote": "6.0.1",
+        "URL": "https://github.com/tidyverse/glue",
+        "BugReports": "https://github.com/tidyverse/glue/issues",
+        "VignetteBuilder": "knitr",
+        "ByteCompile": "true",
+        "NeedsCompilation": "yes",
+        "Packaged": "2018-07-17 14:19:58 UTC; jhester",
+        "Author": "Jim Hester [aut, cre]",
+        "Maintainer": "Jim Hester <james.f.hester@gmail.com>",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-07-17 19:10:02 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-11-06 19:26:01 UTC; unix"
+      }
+    },
+    "htmltools": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "htmltools",
+        "Type": "Package",
+        "Title": "Tools for HTML",
+        "Version": "0.3.6",
+        "Date": "2017-04-26",
+        "Author": "RStudio, Inc.",
+        "Maintainer": "Joe Cheng <joe@rstudio.com>",
+        "Description": "Tools for HTML generation and output.",
+        "Depends": "R (>= 2.14.1)",
+        "Imports": "utils, digest, Rcpp",
+        "Suggests": "markdown, testthat",
+        "Enhances": "knitr",
+        "License": "GPL (>= 2)",
+        "URL": "https://github.com/rstudio/htmltools",
+        "BugReports": "https://github.com/rstudio/htmltools/issues",
+        "RoxygenNote": "6.0.1",
+        "LinkingTo": "Rcpp",
+        "NeedsCompilation": "yes",
+        "Packaged": "2017-04-27 00:04:32 UTC; jcheng",
+        "Repository": "RSPM",
+        "Date/Publication": "2017-04-28 07:41:46 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-11-30 03:28:33 UTC; unix"
+      }
+    },
+    "httpuv": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "httpuv",
+        "Type": "Package",
+        "Title": "HTTP and WebSocket Server Library",
+        "Version": "1.4.5.1",
+        "Author": "Joe Cheng, Hector Corrada Bravo [ctb], Jeroen Ooms [ctb],\n    Winston Chang [ctb]",
+        "Copyright": "RStudio, Inc.; Joyent, Inc.; Nginx Inc.; Igor Sysoev; Niels\nProvos; Internet Systems Consortium, Inc.; Alexander Chemeris",
+        "Maintainer": "Joe Cheng <joe@rstudio.com>",
+        "Description": "Provides low-level socket and protocol support for handling\n    HTTP and WebSocket requests directly from within R. It is primarily\n    intended as a building block for other packages, rather than making it\n    particularly easy to create complete web applications using httpuv alone.\n    httpuv is built on top of the libuv and http-parser C libraries, both of\n    which were developed by Joyent, Inc. (See LICENSE file for libuv and\n    http-parser license information.)",
+        "License": "GPL (>= 2) | file LICENSE",
+        "Depends": "R (>= 2.15.1), methods",
+        "Imports": "Rcpp (>= 0.11.0), utils, promises, later (>= 0.7.3)",
+        "LinkingTo": "Rcpp, BH, later",
+        "URL": "https://github.com/rstudio/httpuv",
+        "SystemRequirements": "GNU make",
+        "RoxygenNote": "6.0.1.9000",
+        "Suggests": "testthat, callr",
+        "NeedsCompilation": "yes",
+        "Packaged": "2018-12-18 19:03:26 UTC; winston",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-12-18 19:40:03 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2019-01-07 15:14:19 UTC; unix"
+      }
+    },
+    "jsonlite": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "jsonlite",
+        "Version": "1.6",
+        "Title": "A Robust, High Performance JSON Parser and Generator for R",
+        "License": "MIT + file LICENSE",
+        "NeedsCompilation": "yes",
+        "Depends": "methods",
+        "Author": "Jeroen Ooms, Duncan Temple Lang, Lloyd Hilaiel",
+        "URL": "https://arxiv.org/abs/1403.2805,\nhttps://www.opencpu.org/posts/jsonlite-a-smarter-json-encoder",
+        "BugReports": "http://github.com/jeroen/jsonlite/issues",
+        "Maintainer": "Jeroen Ooms <jeroen@berkeley.edu>",
+        "VignetteBuilder": "knitr, R.rsp",
+        "Description": "A fast JSON parser and generator optimized for statistical data\n    and the web. Started out as a fork of 'RJSONIO', but has been completely\n    rewritten in recent versions. The package offers flexible, robust, high\n    performance tools for working with JSON in R and is particularly powerful\n    for building pipelines and interacting with a web API. The implementation is\n    based on the mapping described in the vignette (Ooms, 2014). In addition to\n    converting JSON data from/to R objects, 'jsonlite' contains functions to\n    stream, validate, and prettify JSON data. The unit tests included with the\n    package verify that all edge cases are encoded and decoded consistently for\n    use with dynamic data in systems and applications.",
+        "Suggests": "httr, curl, plyr, testthat, knitr, rmarkdown, R.rsp, sp",
+        "RoxygenNote": "6.1.1",
+        "Packaged": "2018-12-07 11:22:02 UTC; jeroen",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-12-07 12:50:02 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-12-20 04:28:51 UTC; unix"
+      }
+    },
+    "later": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "later",
+        "Type": "Package",
+        "Title": "Utilities for Delaying Function Execution",
+        "Version": "0.7.5",
+        "Authors@R": "c(\n    person(\"Joe\", \"Cheng\", role = c(\"aut\", \"cre\"), email = \"joe@rstudio.com\"),\n    person(family = \"RStudio\", role = \"cph\"),\n    person(\"Marcus\", \"Geelnard\", role = c(\"ctb\", \"cph\"), comment = \"TinyCThread library, https://tinycthread.github.io/\"),\n    person(\"Evan\", \"Nemerson\", role = c(\"ctb\", \"cph\"), comment = \"TinyCThread library, https://tinycthread.github.io/\")\n    )",
+        "Description": "Executes arbitrary R or C functions some time after the current\n    time, after the R execution stack has emptied.",
+        "URL": "https://github.com/r-lib/later",
+        "BugReports": "https://github.com/r-lib/later/issues",
+        "License": "GPL (>= 2)",
+        "Imports": "Rcpp (>= 0.12.9), rlang",
+        "LinkingTo": "Rcpp, BH",
+        "RoxygenNote": "6.1.0",
+        "Suggests": "knitr, rmarkdown, testthat",
+        "VignetteBuilder": "knitr",
+        "NeedsCompilation": "yes",
+        "Packaged": "2018-09-14 22:59:16 UTC; jcheng",
+        "Author": "Joe Cheng [aut, cre],\n  RStudio [cph],\n  Marcus Geelnard [ctb, cph] (TinyCThread library,\n    https://tinycthread.github.io/),\n  Evan Nemerson [ctb, cph] (TinyCThread library,\n    https://tinycthread.github.io/)",
+        "Maintainer": "Joe Cheng <joe@rstudio.com>",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-09-18 22:20:03 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2019-01-17 12:46:39 UTC; unix"
+      }
+    },
+    "lattice": {
+      "Source": "CRAN",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "lattice",
+        "Version": "0.20-35",
+        "Date": "2017-03-23",
+        "Priority": "recommended",
+        "Title": "Trellis Graphics for R",
+        "Author": "Deepayan Sarkar <deepayan.sarkar@r-project.org>",
+        "Maintainer": "Deepayan Sarkar <deepayan.sarkar@r-project.org>",
+        "Description": "A powerful and elegant high-level data visualization\n  system inspired by Trellis graphics, with an emphasis on\n  multivariate data. Lattice is sufficient for typical graphics needs,\n  and is also flexible enough to handle most nonstandard requirements.\n  See ?Lattice for an introduction.",
+        "Depends": "R (>= 3.0.0)",
+        "Suggests": "KernSmooth, MASS, latticeExtra",
+        "Imports": "grid, grDevices, graphics, stats, utils",
+        "Enhances": "chron",
+        "LazyLoad": "yes",
+        "LazyData": "yes",
+        "License": "GPL (>= 2)",
+        "URL": "http://lattice.r-forge.r-project.org/",
+        "BugReports": "https://github.com/deepayan/lattice/issues",
+        "NeedsCompilation": "yes",
+        "Packaged": "2017-03-25 11:25:40 UTC; deepayan",
+        "Repository": "CRAN",
+        "Date/Publication": "2017-03-25 18:05:47 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2017-12-07 02:10:43 UTC; unix"
+      }
+    },
+    "magrittr": {
+      "Source": "CRAN",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "magrittr",
+        "Type": "Package",
+        "Title": "A Forward-Pipe Operator for R",
+        "Version": "1.5",
+        "Author": "Stefan Milton Bache <stefan@stefanbache.dk> and\n    Hadley Wickham <h.wickham@gmail.com>",
+        "Maintainer": "Stefan Milton Bache <stefan@stefanbache.dk>",
+        "Description": "Provides a mechanism for chaining commands with a\n    new forward-pipe operator, %>%. This operator will forward a\n    value, or the result of an expression, into the next function\n    call/expression. There is flexible support for the type\n    of right-hand side expressions. For more information, see\n    package vignette.\n    To quote Rene Magritte, \"Ceci n'est pas un pipe.\"",
+        "Suggests": "testthat, knitr",
+        "VignetteBuilder": "knitr",
+        "License": "MIT + file LICENSE",
+        "ByteCompile": "Yes",
+        "Packaged": "2014-11-22 08:50:53 UTC; shb",
+        "NeedsCompilation": "no",
+        "Repository": "CRAN",
+        "Date/Publication": "2014-11-22 19:15:57",
+        "Built": "R 3.4.0; ; 2017-04-21 21:17:20 UTC; unix"
+      }
+    },
+    "mime": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "mime",
+        "Type": "Package",
+        "Title": "Map Filenames to MIME Types",
+        "Version": "0.6",
+        "Authors@R": "c(\n    person(\"Yihui\", \"Xie\", role = c(\"aut\", \"cre\"), email = \"xie@yihui.name\", comment = c(ORCID = \"0000-0003-0645-5666\")),\n    person(\"Jeffrey\", \"Horner\", role = \"ctb\"),\n    person(\"Beilei\", \"Bian\", role = \"ctb\")\n    )",
+        "Description": "Guesses the MIME type from a filename extension using the data\n    derived from /etc/mime.types in UNIX-type systems.",
+        "Imports": "tools",
+        "License": "GPL",
+        "URL": "https://github.com/yihui/mime",
+        "BugReports": "https://github.com/yihui/mime/issues",
+        "LazyData": "TRUE",
+        "RoxygenNote": "6.1.0",
+        "Encoding": "UTF-8",
+        "NeedsCompilation": "yes",
+        "Packaged": "2018-10-05 16:50:15 UTC; yihui",
+        "Author": "Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>),\n  Jeffrey Horner [ctb],\n  Beilei Bian [ctb]",
+        "Maintainer": "Yihui Xie <xie@yihui.name>",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-10-05 18:10:03 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-11-06 19:26:04 UTC; unix"
+      }
+    },
+    "promises": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "promises",
+        "Type": "Package",
+        "Title": "Abstractions for Promise-Based Asynchronous Programming",
+        "Version": "1.0.1",
+        "Authors@R": "c(\n      person(\"Joe\", \"Cheng\", email = \"joe@rstudio.com\", role = c(\"aut\", \"cre\")),\n      person(\"RStudio\", role = c(\"cph\", \"fnd\"))\n    )",
+        "Description": "Provides fundamental abstractions for doing asynchronous programming\n    in R using promises. Asynchronous programming is useful for allowing a single\n    R process to orchestrate multiple tasks in the background while also attending\n    to something else. Semantics are similar to 'JavaScript' promises, but with a\n    syntax that is idiomatic R.",
+        "License": "MIT + file LICENSE",
+        "Imports": "R6, Rcpp, later, rlang, stats, magrittr",
+        "Suggests": "testthat, future, knitr, rmarkdown",
+        "LinkingTo": "later, Rcpp",
+        "RoxygenNote": "6.0.1",
+        "Encoding": "UTF-8",
+        "LazyData": "true",
+        "VignetteBuilder": "knitr",
+        "URL": "https://rstudio.github.io/promises,\nhttps://github.com/rstudio/promises",
+        "BugReports": "https://github.com/rstudio/promises/issues",
+        "NeedsCompilation": "yes",
+        "Packaged": "2018-04-12 22:42:12 UTC; jcheng",
+        "Author": "Joe Cheng [aut, cre],\n  RStudio [cph, fnd]",
+        "Maintainer": "Joe Cheng <joe@rstudio.com>",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-04-13 08:59:30 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-07-14 14:45:07 UTC; unix"
+      }
+    },
+    "reticulate": {
+      "Source": "github",
+      "Repository": null,
+      "GithubRepo": "reticulate",
+      "GithubUsername": "rstudio",
+      "GithubRef": "master",
+      "GithubSha1": "6a60daddafba2376a7857b28d0b50c283b662777",
+      "description": {
+        "Package": "reticulate",
+        "Type": "Package",
+        "Title": "Interface to 'Python'",
+        "Version": "1.10.0.9003",
+        "Authors@R": "c(\n  person(\"JJ\", \"Allaire\", role = c(\"aut\", \"cre\"), email = \"jj@rstudio.com\"),\n  person(\"Kevin\", \"Ushey\", role = c(\"aut\"),\n         email = \"kevin@rstudio.com\"),\n  person(\"RStudio\", role = c(\"cph\", \"fnd\")),\n  person(\"Yuan\", \"Tang\", role = c(\"aut\", \"cph\"),\n         email = \"terrytangyuan@gmail.com\",\n         comment = c(ORCID = \"0000-0001-5243-233X\")),\n  person(\"Dirk\", \"Eddelbuettel\", role = c(\"ctb\", \"cph\"),\n         email = \"edd@debian.org\"),\n  person(\"Bryan\", \"Lewis\", role = c(\"ctb\", \"cph\"),\n         email = \"blewis@illposed.net\"),\n  person(\"Marcus\", \"Geelnard\", role = c(\"ctb\", \"cph\"),\n         comment = \"TinyThread library, http://tinythreadpp.bitsnbites.eu/\")\n  )",
+        "Description": "Interface to 'Python' modules, classes, and functions. When calling\n    into 'Python', R data types are automatically converted to their equivalent 'Python'\n    types. When values are returned from 'Python' to R they are converted back to R\n    types. Compatible with all versions of 'Python' >= 2.7.",
+        "License": "Apache License 2.0",
+        "URL": "https://github.com/rstudio/reticulate",
+        "BugReports": "https://github.com/rstudio/reticulate/issues",
+        "SystemRequirements": "Python (>= 2.7.0)",
+        "Encoding": "UTF-8",
+        "LazyData": "true",
+        "Depends": "R (>= 3.0)",
+        "Imports": "utils, graphics, jsonlite, Rcpp (>= 0.12.7), Matrix",
+        "Suggests": "testthat, knitr, callr, rmarkdown",
+        "LinkingTo": "Rcpp",
+        "RoxygenNote": "6.1.1",
+        "Roxygen": "list(markdown = TRUE)",
+        "VignetteBuilder": "knitr",
+        "RemoteType": "github",
+        "RemoteHost": "api.github.com",
+        "RemoteRepo": "reticulate",
+        "RemoteUsername": "rstudio",
+        "RemoteRef": "master",
+        "RemoteSha": "6a60daddafba2376a7857b28d0b50c283b662777",
+        "GithubRepo": "reticulate",
+        "GithubUsername": "rstudio",
+        "GithubRef": "master",
+        "GithubSHA1": "6a60daddafba2376a7857b28d0b50c283b662777",
+        "NeedsCompilation": "yes",
+        "Packaged": "2019-01-28 04:14:51 UTC; carendt",
+        "Author": "JJ Allaire [aut, cre],\n  Kevin Ushey [aut],\n  RStudio [cph, fnd],\n  Yuan Tang [aut, cph] (0000-0001-5243-233X),\n  Dirk Eddelbuettel [ctb, cph],\n  Bryan Lewis [ctb, cph],\n  Marcus Geelnard [ctb, cph] (TinyThread library,\n    http://tinythreadpp.bitsnbites.eu/)",
+        "Maintainer": "JJ Allaire <jj@rstudio.com>",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2019-01-28 04:14:52 UTC; unix"
+      }
+    },
+    "rlang": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "rlang",
+        "Version": "0.3.1",
+        "Title": "Functions for Base Types and Core R and 'Tidyverse' Features",
+        "Description": "A toolbox for working with base types, core R features\n  like the condition system, and core 'Tidyverse' features like tidy\n  evaluation.",
+        "Authors@R": "c(\n    person(\"Lionel\", \"Henry\", ,\"lionel@rstudio.com\", c(\"aut\", \"cre\")),\n    person(\"Hadley\", \"Wickham\", ,\"hadley@rstudio.com\", \"aut\"),\n    person(\"RStudio\", role = \"cph\")\n    )",
+        "License": "GPL-3",
+        "LazyData": "true",
+        "ByteCompile": "true",
+        "Biarch": "true",
+        "Depends": "R (>= 3.1.0)",
+        "Suggests": "crayon, magrittr, methods, pillar, testthat (>= 2.0.0), covr",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "6.1.1",
+        "URL": "http://rlang.r-lib.org, https://github.com/r-lib/rlang",
+        "BugReports": "https://github.com/r-lib/rlang/issues",
+        "NeedsCompilation": "yes",
+        "Packaged": "2019-01-04 21:28:51 UTC; lionel",
+        "Author": "Lionel Henry [aut, cre],\n  Hadley Wickham [aut],\n  RStudio [cph]",
+        "Maintainer": "Lionel Henry <lionel@rstudio.com>",
+        "Repository": "RSPM",
+        "Date/Publication": "2019-01-08 13:00:03 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2019-01-29 15:17:16 UTC; unix"
+      }
+    },
+    "shiny": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "shiny",
+        "Type": "Package",
+        "Title": "Web Application Framework for R",
+        "Version": "1.2.0",
+        "Authors@R": "c(\n    person(\"Winston\", \"Chang\", role = c(\"aut\", \"cre\"), email = \"winston@rstudio.com\"),\n    person(\"Joe\", \"Cheng\", role = \"aut\", email = \"joe@rstudio.com\"),\n    person(\"JJ\", \"Allaire\", role = \"aut\", email = \"jj@rstudio.com\"),\n    person(\"Yihui\", \"Xie\", role = \"aut\", email = \"yihui@rstudio.com\"),\n    person(\"Jonathan\", \"McPherson\", role = \"aut\", email = \"jonathan@rstudio.com\"),\n    person(family = \"RStudio\", role = \"cph\"),\n    person(family = \"jQuery Foundation\", role = \"cph\",\n    comment = \"jQuery library and jQuery UI library\"),\n    person(family = \"jQuery contributors\", role = c(\"ctb\", \"cph\"),\n    comment = \"jQuery library; authors listed in inst/www/shared/jquery-AUTHORS.txt\"),\n    person(family = \"jQuery UI contributors\", role = c(\"ctb\", \"cph\"),\n    comment = \"jQuery UI library; authors listed in inst/www/shared/jqueryui/AUTHORS.txt\"),\n    person(\"Mark\", \"Otto\", role = \"ctb\",\n    comment = \"Bootstrap library\"),\n    person(\"Jacob\", \"Thornton\", role = \"ctb\",\n    comment = \"Bootstrap library\"),\n    person(family = \"Bootstrap contributors\", role = \"ctb\",\n    comment = \"Bootstrap library\"),\n    person(family = \"Twitter, Inc\", role = \"cph\",\n    comment = \"Bootstrap library\"),\n    person(\"Alexander\", \"Farkas\", role = c(\"ctb\", \"cph\"),\n    comment = \"html5shiv library\"),\n    person(\"Scott\", \"Jehl\", role = c(\"ctb\", \"cph\"),\n    comment = \"Respond.js library\"),\n    person(\"Stefan\", \"Petre\", role = c(\"ctb\", \"cph\"),\n    comment = \"Bootstrap-datepicker library\"),\n    person(\"Andrew\", \"Rowls\", role = c(\"ctb\", \"cph\"),\n    comment = \"Bootstrap-datepicker library\"),\n    person(\"Dave\", \"Gandy\", role = c(\"ctb\", \"cph\"),\n    comment = \"Font-Awesome font\"),\n    person(\"Brian\", \"Reavis\", role = c(\"ctb\", \"cph\"),\n    comment = \"selectize.js library\"),\n    person(\"Kristopher Michael\", \"Kowal\", role = c(\"ctb\", \"cph\"),\n    comment = \"es5-shim library\"),\n    person(family = \"es5-shim contributors\", role = c(\"ctb\", \"cph\"),\n    comment = \"es5-shim library\"),\n    person(\"Denis\", \"Ineshin\", role = c(\"ctb\", \"cph\"),\n    comment = \"ion.rangeSlider library\"),\n    person(\"Sami\", \"Samhuri\", role = c(\"ctb\", \"cph\"),\n    comment = \"Javascript strftime library\"),\n    person(family = \"SpryMedia Limited\", role = c(\"ctb\", \"cph\"),\n    comment = \"DataTables library\"),\n    person(\"John\", \"Fraser\", role = c(\"ctb\", \"cph\"),\n    comment = \"showdown.js library\"),\n    person(\"John\", \"Gruber\", role = c(\"ctb\", \"cph\"),\n    comment = \"showdown.js library\"),\n    person(\"Ivan\", \"Sagalaev\", role = c(\"ctb\", \"cph\"),\n    comment = \"highlight.js library\"),\n    person(family = \"R Core Team\", role = c(\"ctb\", \"cph\"),\n    comment = \"tar implementation from R\")\n    )",
+        "Description": "Makes it incredibly easy to build interactive web\n    applications with R. Automatic \"reactive\" binding between inputs and\n    outputs and extensive prebuilt widgets make it possible to build\n    beautiful, responsive, and powerful applications with minimal effort.",
+        "License": "GPL-3 | file LICENSE",
+        "Depends": "R (>= 3.0.2), methods",
+        "Imports": "utils, grDevices, httpuv (>= 1.4.4), mime (>= 0.3), jsonlite\n(>= 0.9.16), xtable, digest, htmltools (>= 0.3.5), R6 (>= 2.0),\nsourcetools, later (>= 0.7.2), promises (>= 1.0.1), tools,\ncrayon, rlang",
+        "Suggests": "datasets, Cairo (>= 1.5-5), testthat, knitr (>= 1.6),\nmarkdown, rmarkdown, ggplot2, magrittr",
+        "URL": "http://shiny.rstudio.com",
+        "BugReports": "https://github.com/rstudio/shiny/issues",
+        "Collate": "'app.R' 'bookmark-state-local.R' 'stack.R' 'bookmark-state.R'\n'bootstrap-layout.R' 'globals.R' 'conditions.R' 'map.R'\n'utils.R' 'bootstrap.R' 'cache-context.R' 'cache-disk.R'\n'cache-memory.R' 'cache-utils.R' 'diagnose.R' 'fileupload.R'\n'font-awesome.R' 'graph.R' 'reactives.R' 'reactive-domains.R'\n'history.R' 'hooks.R' 'html-deps.R' 'htmltools.R'\n'image-interact-opts.R' 'image-interact.R' 'imageutils.R'\n'input-action.R' 'input-checkbox.R' 'input-checkboxgroup.R'\n'input-date.R' 'input-daterange.R' 'input-file.R'\n'input-numeric.R' 'input-password.R' 'input-radiobuttons.R'\n'input-select.R' 'input-slider.R' 'input-submit.R'\n'input-text.R' 'input-textarea.R' 'input-utils.R'\n'insert-tab.R' 'insert-ui.R' 'jqueryui.R' 'middleware-shiny.R'\n'middleware.R' 'modal.R' 'modules.R' 'notifications.R'\n'priorityqueue.R' 'progress.R' 'react.R' 'render-cached-plot.R'\n'render-plot.R' 'render-table.R' 'run-url.R' 'serializers.R'\n'server-input-handlers.R' 'server.R' 'shiny-options.R'\n'shiny.R' 'shinyui.R' 'shinywrappers.R' 'showcase.R'\n'snapshot.R' 'tar.R' 'test-export.R' 'timer.R' 'update-input.R'",
+        "RoxygenNote": "6.1.0",
+        "NeedsCompilation": "no",
+        "Packaged": "2018-11-02 16:06:02 UTC; jcheng",
+        "Author": "Winston Chang [aut, cre],\n  Joe Cheng [aut],\n  JJ Allaire [aut],\n  Yihui Xie [aut],\n  Jonathan McPherson [aut],\n  RStudio [cph],\n  jQuery Foundation [cph] (jQuery library and jQuery UI library),\n  jQuery contributors [ctb, cph] (jQuery library; authors listed in\n    inst/www/shared/jquery-AUTHORS.txt),\n  jQuery UI contributors [ctb, cph] (jQuery UI library; authors listed in\n    inst/www/shared/jqueryui/AUTHORS.txt),\n  Mark Otto [ctb] (Bootstrap library),\n  Jacob Thornton [ctb] (Bootstrap library),\n  Bootstrap contributors [ctb] (Bootstrap library),\n  Twitter, Inc [cph] (Bootstrap library),\n  Alexander Farkas [ctb, cph] (html5shiv library),\n  Scott Jehl [ctb, cph] (Respond.js library),\n  Stefan Petre [ctb, cph] (Bootstrap-datepicker library),\n  Andrew Rowls [ctb, cph] (Bootstrap-datepicker library),\n  Dave Gandy [ctb, cph] (Font-Awesome font),\n  Brian Reavis [ctb, cph] (selectize.js library),\n  Kristopher Michael Kowal [ctb, cph] (es5-shim library),\n  es5-shim contributors [ctb, cph] (es5-shim library),\n  Denis Ineshin [ctb, cph] (ion.rangeSlider library),\n  Sami Samhuri [ctb, cph] (Javascript strftime library),\n  SpryMedia Limited [ctb, cph] (DataTables library),\n  John Fraser [ctb, cph] (showdown.js library),\n  John Gruber [ctb, cph] (showdown.js library),\n  Ivan Sagalaev [ctb, cph] (highlight.js library),\n  R Core Team [ctb, cph] (tar implementation from R)",
+        "Maintainer": "Winston Chang <winston@rstudio.com>",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-11-02 19:20:03 UTC",
+        "Built": "R 3.4.3; ; 2018-11-06 19:27:53 UTC; unix"
+      }
+    },
+    "shinycssloaders": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "shinycssloaders",
+        "Type": "Package",
+        "Title": "Add CSS Loading Animations to 'shiny' Outputs",
+        "Version": "0.2.0",
+        "Date": "2017-05-03",
+        "Authors@R": "c(person(\"Andras\",\"Sali\",email=\"andras.sali@alphacruncher.hu\",role=c(\"aut\",\"cre\"),comment=\"Creator of Shiny-wrapper code\"),person(\"Luke\",\"Hass\",role=c(\"ctb\",\"cph\"),comment=\"Author of included CSS loader code\"))",
+        "Description": "Create a lightweight Shiny wrapper for the css-loaders created by Luke Hass <https://github.com/lukehaas/css-loaders>. Wrapping a Shiny output will automatically show a loader when the output is (re)calculating.",
+        "License": "GPL-3",
+        "URL": "https://github.com/andrewsali/shinycssloaders",
+        "Imports": "digest, glue, grDevices, shiny",
+        "RoxygenNote": "5.0.1",
+        "NeedsCompilation": "no",
+        "Packaged": "2017-05-12 19:20:11 UTC; andras",
+        "Author": "Andras Sali [aut, cre] (Creator of Shiny-wrapper code),\n  Luke Hass [ctb, cph] (Author of included CSS loader code)",
+        "Maintainer": "Andras Sali <andras.sali@alphacruncher.hu>",
+        "Repository": "RSPM",
+        "Date/Publication": "2017-05-12 22:46:15 UTC",
+        "Built": "R 3.4.3; ; 2019-01-07 14:36:34 UTC; unix"
+      }
+    },
+    "sourcetools": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "sourcetools",
+        "Type": "Package",
+        "Title": "Tools for Reading, Tokenizing and Parsing R Code",
+        "Version": "0.1.7",
+        "Author": "Kevin Ushey",
+        "Maintainer": "Kevin Ushey <kevinushey@gmail.com>",
+        "Description": "Tools for the reading and tokenization of R code. The\n    'sourcetools' package provides both an R and C++ interface for the tokenization\n    of R code, and helpers for interacting with the tokenized representation of R\n    code.",
+        "License": "MIT + file LICENSE",
+        "LazyData": "TRUE",
+        "Depends": "R (>= 3.0.2)",
+        "Suggests": "testthat",
+        "RoxygenNote": "5.0.1",
+        "BugReports": "https://github.com/kevinushey/sourcetools/issues",
+        "Encoding": "UTF-8",
+        "NeedsCompilation": "yes",
+        "Packaged": "2018-04-25 03:19:22 UTC; kevin",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-04-25 03:38:09 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-11-06 19:26:36 UTC; unix"
+      }
+    },
+    "xtable": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "xtable",
+        "Version": "1.8-3",
+        "Date": "2018-08-29",
+        "Title": "Export Tables to LaTeX or HTML",
+        "Authors@R": "c(person(\"David B.\", \"Dahl\", role=\"aut\"),\n             person(\"David\", \"Scott\", role=c(\"aut\",\"cre\"),\n               email=\"d.scott@auckland.ac.nz\"),\n             person(\"Charles\", \"Roosen\", role=\"aut\"),\n             person(\"Arni\", \"Magnusson\", role=\"aut\"),\n             person(\"Jonathan\", \"Swinton\", role=\"aut\"),\n             person(\"Ajay\", \"Shah\", role=\"ctb\"),\n             person(\"Arne\", \"Henningsen\", role=\"ctb\"),\n             person(\"Benno\", \"Puetz\", role=\"ctb\"),\n             person(\"Bernhard\", \"Pfaff\", role=\"ctb\"),\n             person(\"Claudio\", \"Agostinelli\", role=\"ctb\"),\n             person(\"Claudius\", \"Loehnert\", role=\"ctb\"),\n             person(\"David\", \"Mitchell\", role=\"ctb\"),\n             person(\"David\", \"Whiting\", role=\"ctb\"),\n             person(\"Fernando da\", \"Rosa\", role=\"ctb\"),\n             person(\"Guido\", \"Gay\", role=\"ctb\"),\n             person(\"Guido\", \"Schulz\", role=\"ctb\"),\n             person(\"Ian\", \"Fellows\", role=\"ctb\"),\n             person(\"Jeff\", \"Laake\", role=\"ctb\"),\n             person(\"John\", \"Walker\", role=\"ctb\"),\n             person(\"Jun\", \"Yan\", role=\"ctb\"),\n             person(\"Liviu\", \"Andronic\", role=\"ctb\"),\n             person(\"Markus\", \"Loecher\", role=\"ctb\"),\n             person(\"Martin\", \"Gubri\", role=\"ctb\"),\n             person(\"Matthieu\", \"Stigler\", role=\"ctb\"),\n             person(\"Robert\", \"Castelo\", role=\"ctb\"),\n             person(\"Seth\", \"Falcon\", role=\"ctb\"),\n             person(\"Stefan\", \"Edwards\", role=\"ctb\"),\n             person(\"Sven\", \"Garbade\", role=\"ctb\"),\n             person(\"Uwe\", \"Ligges\", role=\"ctb\"))",
+        "Maintainer": "David Scott <d.scott@auckland.ac.nz>",
+        "Imports": "stats, utils",
+        "Suggests": "knitr, spdep, splm, sphet, plm, zoo, survival",
+        "VignetteBuilder": "knitr",
+        "Description": "Coerce data to LaTeX and HTML tables.",
+        "URL": "http://xtable.r-forge.r-project.org/",
+        "Depends": "R (>= 2.10.0)",
+        "License": "GPL (>= 2)",
+        "Repository": "RSPM",
+        "NeedsCompilation": "no",
+        "Packaged": "2018-08-29 20:21:51 UTC; dsco036",
+        "Author": "David B. Dahl [aut],\n  David Scott [aut, cre],\n  Charles Roosen [aut],\n  Arni Magnusson [aut],\n  Jonathan Swinton [aut],\n  Ajay Shah [ctb],\n  Arne Henningsen [ctb],\n  Benno Puetz [ctb],\n  Bernhard Pfaff [ctb],\n  Claudio Agostinelli [ctb],\n  Claudius Loehnert [ctb],\n  David Mitchell [ctb],\n  David Whiting [ctb],\n  Fernando da Rosa [ctb],\n  Guido Gay [ctb],\n  Guido Schulz [ctb],\n  Ian Fellows [ctb],\n  Jeff Laake [ctb],\n  John Walker [ctb],\n  Jun Yan [ctb],\n  Liviu Andronic [ctb],\n  Markus Loecher [ctb],\n  Martin Gubri [ctb],\n  Matthieu Stigler [ctb],\n  Robert Castelo [ctb],\n  Seth Falcon [ctb],\n  Stefan Edwards [ctb],\n  Sven Garbade [ctb],\n  Uwe Ligges [ctb]",
+        "Date/Publication": "2018-08-29 23:10:02 UTC",
+        "Built": "R 3.4.3; ; 2018-11-06 19:26:39 UTC; unix"
+      }
+    },
+    "yaml": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "yaml",
+        "Type": "Package",
+        "Title": "Methods to Convert R Data to YAML and Back",
+        "Date": "2018-07-20",
+        "Version": "2.2.0",
+        "Suggests": "RUnit",
+        "Author": "Jeremy Stephens [aut, cre], Kirill Simonov [aut], Yihui Xie [ctb],\n  Zhuoer Dong [ctb], Hadley Wickham [ctb], Jeffrey Horner [ctb], reikoch [ctb],\n  Will Beasley [ctb], Brendan O'Connor [ctb], Gregory R. Warnes [ctb]",
+        "Maintainer": "Jeremy Stephens <jeremy.f.stephens@vumc.org>",
+        "License": "BSD_3_clause + file LICENSE",
+        "Description": "Implements the 'libyaml' 'YAML' 1.1 parser and emitter\n  (<http://pyyaml.org/wiki/LibYAML>) for R.",
+        "URL": "https://github.com/viking/r-yaml/",
+        "BugReports": "https://github.com/viking/r-yaml/issues",
+        "NeedsCompilation": "yes",
+        "Packaged": "2018-07-24 19:09:41 UTC; stephej1",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-07-25 15:40:03 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-08-04 19:10:07 UTC; unix"
+      }
+    }
+  },
+  "files": {
+    "app.R": {
+      "checksum": "6eb4d06f016d2e4198c5fdb8eb9d1e62"
+    },
+    "config.yml": {
+      "checksum": "f5537e2eee2b9d4359e312a1bd90a97b"
+    },
+    "DESCRIPTION": {
+      "checksum": "ef211a6b3ef2ddc6d7ff9ddf2f079563"
+    },
+    "image-classifier.py": {
+      "checksum": "c0ec0c25dbf62d6984a5b2f81e51306e"
+    },
+    "img/cat.jpg": {
+      "checksum": "02afd4ca34e17369930f996533432811"
+    },
+    "img/dog.jpg": {
+      "checksum": "f27cf238891c0a8434f209b6a5206665"
+    },
+    "img/flower.jpg": {
+      "checksum": "8f6e8dbca6c16ca2102b0c4286efb370"
+    },
+    "img/oil_platform.jpg": {
+      "checksum": "d342a753e6839ea2a2f0b2122cc15450"
+    },
+    "img/truck.jpg": {
+      "checksum": "903688ef81b2dc52e0c16f0af65de903"
+    },
+    "labels.json": {
+      "checksum": "a59af31afa53a3a2ef6f7620011634f4"
+    },
+    "model/squeezenet1_1-f364aa15.pth": {
+      "checksum": "46a44d32d2c5c07f7f66324bef4c7266"
+    },
+    "packrat/desc/BH": {
+      "checksum": "5abd8581dc0ff3aa06b3bb63a0595245"
+    },
+    "packrat/desc/config": {
+      "checksum": "67f6150bffc91d9fa99bfa9524bd6f77"
+    },
+    "packrat/desc/crayon": {
+      "checksum": "edcd5810ba2f87d8215bd07b6c7e702f"
+    },
+    "packrat/desc/digest": {
+      "checksum": "c95ae59bfc208d230e68f3f801f23846"
+    },
+    "packrat/desc/downloader": {
+      "checksum": "a7a7fffda6464f93a1203fc88a3c3b88"
+    },
+    "packrat/desc/fs": {
+      "checksum": "8fc133fe6fa9e2978156e839a5459b13"
+    },
+    "packrat/desc/gitlink": {
+      "checksum": "4d2d9304e720f28d6fbe6d867479d7f3"
+    },
+    "packrat/desc/glue": {
+      "checksum": "b6621544dfe9ce763cd4ab9be9057ee7"
+    },
+    "packrat/desc/htmltools": {
+      "checksum": "6fb2b6f9179a0b87b9391c912763f3a2"
+    },
+    "packrat/desc/httpuv": {
+      "checksum": "5c3a90f812e5fc64f7228f7f8d206be9"
+    },
+    "packrat/desc/jsonlite": {
+      "checksum": "81f981554c247af7cec2c74e8d9b7f13"
+    },
+    "packrat/desc/later": {
+      "checksum": "f76cab82543a9b235a5a0545b77d1ab6"
+    },
+    "packrat/desc/lattice": {
+      "checksum": "3de0fdce21b1f67076e5507edb187495"
+    },
+    "packrat/desc/magrittr": {
+      "checksum": "94afb9deed6685e2a4a7591ec5adc17f"
+    },
+    "packrat/desc/Matrix": {
+      "checksum": "9eb3beefbf03abd65b627ad29588c44e"
+    },
+    "packrat/desc/mime": {
+      "checksum": "57cf4dbce954fd6622092434cc90a531"
+    },
+    "packrat/desc/promises": {
+      "checksum": "87ae09d1618a4219516974c77e6fcdee"
+    },
+    "packrat/desc/R6": {
+      "checksum": "63ed2d1108aa9e7e6df841286d7bf337"
+    },
+    "packrat/desc/Rcpp": {
+      "checksum": "b19b256c7cd1169f1cd4b58ecb842641"
+    },
+    "packrat/desc/reticulate": {
+      "checksum": "54a386100627967160070146edc236db"
+    },
+    "packrat/desc/rlang": {
+      "checksum": "badba2d4e28e163b1322f98c7cee3ce2"
+    },
+    "packrat/desc/shiny": {
+      "checksum": "b87b226c0beacaacec049ce7bdb66a74"
+    },
+    "packrat/desc/shinycssloaders": {
+      "checksum": "c51c797abcbf03aaa448ffbb5cc803e2"
+    },
+    "packrat/desc/sourcetools": {
+      "checksum": "118dd1371398f4a5e650fddfa05a7d9e"
+    },
+    "packrat/desc/xtable": {
+      "checksum": "524f8e3e26ccfd8b49f9f5164d6a68aa"
+    },
+    "packrat/desc/yaml": {
+      "checksum": "727431b9e87c3b298ee1bb1676e8f5ba"
+    },
+    "packrat/packrat.lock": {
+      "checksum": "9a77eb3a0176b9995c527069b4cefa6b"
+    },
+    "requirements.txt": {
+      "checksum": "84f63d0b6b480eb966592c0c3d28a751"
+    }
+  },
+  "users": null
+}
