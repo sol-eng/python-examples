@@ -4,22 +4,62 @@ library(shiny)
 library(shinycssloaders)
 library(gitlink)
 
+behavior <- config::get("image")
+stopifnot(behavior %in% c("upload", "download"))
+
 # Load source of Python image classifier script
 source_python('image-classifier.py')
 
 server <- function(input, output, session) {
+    
+    # where the image that should be classified is on disk
+    image_path <- reactiveVal("./cat.jpg")
+    
+    # the configurable selector for download vs. upload
+    output$image_selector <- renderUI({
+        if (behavior == "download") {
+          textInput("file1", label = h5("Enter Image URL:"), value = "")
+        } else if (behavior == "upload") {
+          fileInput("file_upload", label = h5("Upload an Image:"))
+        } else {
+            stop("Invalid configuration. Please chose 'download' or 'upload'")
+        }
+    })
+    
+    
+    observe({
+        req(input$file_upload)
+        upload_file <- input$file_upload
+        image_path(upload_file$datapath[[1]])
+    })
+    
+    observeEvent(input$file1, {
+        tryCatch({
+            # Download image from URL
+            temp_download <- fs::file_temp("image", ext = ".jpg")
+            downloader::download(input$file1, temp_download)
+            
+            image_path(temp_download)
+        }, error = function(e){
+            stop(safeError(e))
+        })  
+    })
+    
+    #image_path <- reactiveVal({
+    #    
+    #    # After the user uploads a file, the image will be classified and the predictions will be shown.
+    #    # Download image from URL
+    #    downloader::download(input$file1, "image")
+    #    
+    #})
 
     output$contents <- renderTable({
-        # After the user uploads a file, the image will be classified and the predictions will be shown.
-        req(input$file1)
+        req(image_path())
 
         tryCatch(
             {
-                # Download image from URL
-                downloader::download(input$file1, "image")
-
                 # Call function from PyTorch Python script to classify image
-                results <- classify_image_pytorch(image_path="image")
+                results <- classify_image_pytorch(image_path=image_path())
             },
             error = function(e) {
                 stop(safeError(e))
@@ -29,22 +69,24 @@ server <- function(input, output, session) {
     })
 
     output$image1 <- renderImage({
-        req(input$file1)
-        tryCatch(
-            {
-                input$file1
-            },
-            error = function(e) {
-                stop(safeError(e))
-            }
-        )
+        req(image_path())
+        #var <- tryCatch(
+        #    {
+        #        image_path()
+        #    },
+        #    error = function(e) {
+        #        stop(safeError(e))
+        #    }
+        #)
+        # Copy the image to temp space
+        new_path <- fs::file_copy(image_path(), fs::file_temp("image", ext = ".jpg"))
 
         # Return a list containing the filename
-        if(is.null(input$file1)) {
+        if(is.null(new_path)) {
             return(NULL)
         }
         else {
-            return(list(src = "image"))
+            return(list(src = new_path))
         }
     })
 
@@ -89,7 +131,7 @@ ui <- fluidPage(
     #    ),
     sidebarLayout(
         sidebarPanel(
-            textInput("file1", label = h5("Enter Image URL:"), value = ""),
+            uiOutput("image_selector"),
             helpText("Your image will be downloaded and classified using Tensorflow in Python."),
             helpText("The resulting predictions will be shown along with their confidence level."),
             hr(),
@@ -108,7 +150,7 @@ ui <- fluidPage(
         mainPanel(
             # Output
             tableOutput("contents") %>% withSpinner(),
-            imageOutput("image1") %>% withSpinner(color = "#ffffff")
+            imageOutput("image1", height = NULL) %>% withSpinner(color = "#ffffff")
         )
     )
 )
