@@ -71,6 +71,7 @@ server <- function(input, output, session) {
         return(results)
     })
 
+    # render the image
     output$image1 <- renderImage({
         req(image_path())
         
@@ -82,7 +83,7 @@ server <- function(input, output, session) {
             return(NULL)
         }
         else {
-            return(list(src = new_path))
+            return(list(src = new_path, style = htmltools::css(width = "100%")))
         }
     })
 
