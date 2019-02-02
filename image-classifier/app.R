@@ -2,6 +2,7 @@ library(magrittr)
 library(reticulate)  # Used to call Tensorflow Python script
 library(shiny)
 library(shinycssloaders)
+library(gitlink)
 
 # Load source of Python image classifier script
 source_python('image-classifier.py')
@@ -82,6 +83,10 @@ server <- function(input, output, session) {
 ui <- fluidPage(
 
     titlePanel("Image Classifier"),
+    #ribbon_css(
+    #    link = "https://github.com/sol-eng/python-examples/tree/master/image-classifier",
+    #    position = "left"
+    #    ),
     sidebarLayout(
         sidebarPanel(
             textInput("file1", label = h5("Enter Image URL:"), value = ""),
