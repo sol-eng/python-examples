@@ -13,4 +13,4 @@ default:
       tag:
         - "Demo Content|Python"
       url: "/python/image-classification/"
-      image: "reticulated_python.png"
+      image: "image-classifier/pytorch-logo.png"
