@@ -21,7 +21,7 @@ server <- function(input, output, session) {
         if (behavior == "fetch-image-url") {
           list(
             textInput("file1", label = h5("Enter Image URL:"), value = ""),
-            actionButton("download1", "Download")
+            actionButton("fetch-image-url", "Fetch Image")
           )
         } else if (behavior == "upload") {
           fileInput("file_upload", label = h5("Upload an Image:"))
@@ -37,15 +37,15 @@ server <- function(input, output, session) {
         image_path(upload_file$datapath[[1]])
     })
     
-    # handle download
-    observeEvent(input$download1, {
+    # handle fetch-image-url
+    observeEvent(input[["fetch-image-url"]], {
         req(input$file1)
         tryCatch({
-            # Download image from URL
-            temp_download <- fs::file_temp(image_prefix, ext = ".jpg")
-            downloader::download(input$file1, temp_download)
+            # Fetch image from URL
+            temp_fetch_image_url <- fs::file_temp(image_prefix, ext = ".jpg")
+            downloader::download(input$file1, temp_fetch_image_url)
             
-            image_path(temp_download)
+            image_path(temp_fetch_image_url)
         }, error = function(e){
             # usually, you would not expose this to the user
             # without a little sanitization
@@ -101,7 +101,7 @@ ui <- fluidPage(
     sidebarLayout(
         sidebarPanel(
             uiOutput("image_selector"),
-            helpText("Your image will be downloaded and classified using Tensorflow in Python."),
+            helpText("Your image will be classified using Tensorflow in Python."),
             helpText("The resulting predictions will be shown along with their confidence level."),
             hr(),
             helpText("Or, choose an example image:"),
