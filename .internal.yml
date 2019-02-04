@@ -7,3 +7,10 @@ default:
         - "Demo Content|Python"
       url: "/python/reticulate/"
       image: "reticulated_python.png"
+    - name: "Image Classification with PyTorch"
+      path: "./image-classifier"
+      description: "An interactive Shiny app that uses R and Python to classify images into categories using a pretrained PyTorch model."
+      tag:
+        - "Demo Content|Python"
+      url: "/python/image-classification/"
+      image: "reticulated_python.png"
