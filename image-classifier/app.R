@@ -4,7 +4,7 @@ library(shiny)
 library(shinycssloaders)
 
 behavior <- config::get("image")
-stopifnot(behavior %in% c("upload", "download"))
+stopifnot(behavior %in% c("upload", "fetch-image-url"))
 
 # Load source of Python image classifier script
 source_python('image-classifier.py')
@@ -16,9 +16,9 @@ server <- function(input, output, session) {
     
     image_prefix <- "pytorch_image"
     
-    # the configurable selector for download vs. upload
+    # the configurable selector for fetch-image-url vs. upload
     output$image_selector <- renderUI({
-        if (behavior == "download") {
+        if (behavior == "fetch-image-url") {
           list(
             textInput("file1", label = h5("Enter Image URL:"), value = ""),
             actionButton("download1", "Download")
@@ -26,7 +26,7 @@ server <- function(input, output, session) {
         } else if (behavior == "upload") {
           fileInput("file_upload", label = h5("Upload an Image:"))
         } else {
-            stop("Invalid configuration. Please chose 'download' or 'upload'")
+            stop("Invalid configuration. Please chose 'fetch-image-url' or 'upload'")
         }
     })
     
