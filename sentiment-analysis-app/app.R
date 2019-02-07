@@ -11,10 +11,24 @@ to_title <- function(x) {
 }
 
 ui <- fluidPage(
+  tags$head(
+    htmltools::tags$style(
+      list(
+        paste0(".fa-times-circle {",
+               htmltools::css("color" = "red"),
+               "}"),
+        paste0(".fa-star {",
+               htmltools::css("color" = "gold"),
+               "}"),
+        paste0(".shiny-flow-layout>div {",
+               htmltools::css("width" = "40%"),
+               "}")
+      )
+    )
+  ),
   titlePanel("Sentiment Analysis"),
   shiny::inputPanel(
-    column(
-      8,
+    tagList(
       textInput(
         "raw_title",
         "Movie Title",
@@ -29,8 +43,7 @@ ui <- fluidPage(
       br(),
       br()
      ),
-    column(
-      4,
+    tagList(
       actionButton("sample_1", "Sample Review 1"),
       actionButton("sample_2", "Sample Review 2"),
       actionButton("sample_3", "Sample Review 3"),
@@ -117,6 +130,7 @@ build_pretty_output <- function(title, review) {
   score <- predict_output[[2]][["POSITIVE"]]
   num_stars <- (score + 0.1) %/% 0.2
 
+  score_pretty <- format(round(score * 100, 2), nsmall = 2)
   adj <- switch(
     num_stars + 1,
     "A scathing review",
@@ -148,7 +162,7 @@ build_pretty_output <- function(title, review) {
           ui_icon=ui_icon)
         ),
       br(),
-      p(paste("Score:", score)),
+      p(paste("Score:", score_pretty, "/", "100")),
       shiny::wellPanel(tags$blockquote(review))
     )
   } else {
@@ -168,7 +182,7 @@ build_pretty_output <- function(title, review) {
         ui_icon
       ),
       br(),
-      p(paste("Score:", score)),
+      p(paste("Score:", score_pretty, "/", "100")),
       shiny::wellPanel(tags$blockquote(review))
     )
   }
