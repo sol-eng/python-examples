@@ -33,7 +33,8 @@ ui <- fluidPage(
       4,
       actionButton("sample_1", "Sample Review 1"),
       actionButton("sample_2", "Sample Review 2"),
-      actionButton("sample_3", "Sample Review 3")
+      actionButton("sample_3", "Sample Review 3"),
+      actionButton("sample_4", "Sample Review 4")
     )
   ),
   shiny::fluidRow(
@@ -47,11 +48,62 @@ server <- function(input, output, session) {
     req(input$raw_title, input$raw_review)
 
     raw_html(
-      div(
-        build_pretty_output(input$raw_title, input$raw_review),
-        style = htmltools::css("text-align" = "center")
+      build_pretty_output(input$raw_title, input$raw_review)
+    )
+  })
+
+  observeEvent(input$sample_1, {
+    raw_html(
+      build_pretty_output(
+        "The Incredibles",
+        paste(
+          "This movie was well named - incredible!",
+          "So much excitement and fun, along with quality",
+          "heroes and hearty laughter. I recommend this movie highly!"
         )
       )
+    )
+  })
+
+  observeEvent(input$sample_2, {
+    raw_html(
+      build_pretty_output(
+        "The Not So Incredibles",
+        paste(
+          "What were the writers thinking?",
+          "It's almost like they forgot what their job",
+          "was, or how to make a movie entertaining. This",
+          "movie was bores-ville from start to finish, simply",
+          "awful. Don't waste your time going to see this one!"
+        )
+      )
+    )
+  })
+
+  observeEvent(input$sample_3, {
+    raw_html(
+      build_pretty_output(
+        "Questionable Questioners",
+        paste(
+          "The Questionable Questioners will make you question...",
+          "Why are we here? What are we doing? Why am I writing this review?",
+          "I don't know where I stand. Maybe it was not so great,",
+          "or maybe it was pretty good after all.",
+          "I think you will just have to see for yourself."
+        )
+      )
+    )
+  })
+
+  observeEvent(input$sample_4, {
+    raw_html(
+      build_pretty_output(
+        "Briefing Briefers",
+        paste(
+          "What did I just watch? It was ok."
+        )
+      )
+    )
   })
 
   output$review <- renderUI(raw_html())
@@ -120,6 +172,13 @@ build_pretty_output <- function(title, review) {
       shiny::wellPanel(tags$blockquote(review))
     )
   }
+
+  return(
+    div(
+      ui_output,
+      style = htmltools::css("text-align" = "center")
+    )
+  )
 }
 
 
