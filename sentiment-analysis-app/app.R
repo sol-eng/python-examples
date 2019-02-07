@@ -84,6 +84,7 @@ build_pretty_output <- function(title, review) {
           function(x, ui_icon){return(ui_icon)},
           ui_icon=ui_icon)
         ),
+      br(),
       p(paste("Score:", score)),
       shiny::wellPanel(tags$blockquote(review))
     )
@@ -103,6 +104,7 @@ build_pretty_output <- function(title, review) {
       div(
         ui_icon
       ),
+      br(),
       p(paste("Score:", score)),
       shiny::wellPanel(tags$blockquote(review))
     )
