@@ -13,17 +13,28 @@ to_title <- function(x) {
 ui <- fluidPage(
   titlePanel("Sentiment Analysis"),
   shiny::inputPanel(
+    column(
+      8,
       textInput(
         "raw_title",
         "Movie Title",
         placeholder = "Title of the movie"
-    ),
-      textAreaInput(
-        "raw_review",
-        "Movie Review",
-        placeholder = "Type your review here..."
-    ),
-    actionButton("submit", "Submit Review")
+       ),
+         textAreaInput(
+           "raw_review",
+           "Movie Review",
+           placeholder = "Type your review here..."
+       ),
+       actionButton("submit", "Submit Review"),
+      br(),
+      br()
+     ),
+    column(
+      4,
+      actionButton("sample_1", "Sample Review 1"),
+      actionButton("sample_2", "Sample Review 2"),
+      actionButton("sample_3", "Sample Review 3")
+    )
   ),
   shiny::fluidRow(
     uiOutput("review")
