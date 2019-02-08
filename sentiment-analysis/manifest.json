@@ -6,8 +6,16 @@
     "appmode": "api",
     "primary_rmd": null,
     "primary_html": null,
-    "content_category": null,
+    "content_category": "api",
     "has_parameters": false
+  },
+  "python": {
+    "version": "3.7.1",
+    "package_manager": {
+      "name": "pip",
+      "version": "19.0.1",
+      "package_file": "requirements.txt"
+    }
   },
   "packages": {
     "BH": {
@@ -418,8 +426,8 @@
     }
   },
   "files": {
-    "app.R": {
-      "checksum": "43687b70c131c823b9c779ec248d6ea7"
+    "manifest.json": {
+      "checksum": "9dcacada5ea18249ae468edc841b1eae"
     },
     "model/meta.json": {
       "checksum": "a49e25b5de3e7960cb40d951378cbf90"
@@ -493,11 +501,14 @@
     "packrat/packrat.lock": {
       "checksum": "3a8684eebfcfca94f6ff7eacec8b653d"
     },
+    "plumber.R": {
+      "checksum": "43687b70c131c823b9c779ec248d6ea7"
+    },
     "predict.py": {
       "checksum": "7fc8ab2af71f73b90e73577e3540921d"
     },
     "requirements.txt": {
-      "checksum": "e3ed8d1ebb487d6f2f9d580566a4d9a8"
+      "checksum": "b653631d9e541a012e7237aa9d335bcc"
     }
   },
   "users": null
