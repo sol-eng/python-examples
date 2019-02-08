@@ -13,7 +13,7 @@
     "version": "3.7.1",
     "package_manager": {
       "name": "pip",
-      "version": "18.1",
+      "version": "19.0.1",
       "package_file": "requirements.txt"
     }
   },
@@ -21,10 +21,6 @@
     "BH": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "BH",
         "Type": "Package",
@@ -46,10 +42,6 @@
     "MASS": {
       "Source": "CRAN",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "MASS",
         "Priority": "recommended",
@@ -79,10 +71,6 @@
     "Matrix": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "Matrix",
         "Version": "1.2-14",
@@ -115,10 +103,6 @@
     "R6": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "R6",
         "Title": "Classes with Reference Semantics",
@@ -144,10 +128,6 @@
     "RColorBrewer": {
       "Source": "CRAN",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "RColorBrewer",
         "Version": "1.1-2",
@@ -169,10 +149,6 @@
     "Rcpp": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "Rcpp",
         "Title": "Seamless R and C++ Integration",
@@ -200,10 +176,6 @@
     "assertthat": {
       "Source": "CRAN",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "assertthat",
         "Title": "Easy Pre and Post Assertions",
@@ -227,10 +199,6 @@
     "base64enc": {
       "Source": "CRAN",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "base64enc",
         "Version": "0.1-3",
@@ -252,10 +220,6 @@
     "bindr": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "bindr",
         "Title": "Parametrized Active Bindings",
@@ -282,10 +246,6 @@
     "bindrcpp": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "bindrcpp",
         "Title": "An 'Rcpp' Interface to Active Bindings",
@@ -314,10 +274,6 @@
     "cli": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "cli",
         "Title": "Helpers for Developing Command Line Interfaces",
@@ -345,10 +301,6 @@
     "colorspace": {
       "Source": "CRAN",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "colorspace",
         "Version": "1.3-2",
@@ -374,10 +326,6 @@
     "crayon": {
       "Source": "CRAN",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "crayon",
         "Title": "Colored Terminal Output",
@@ -405,10 +353,6 @@
     "digest": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "digest",
         "Author": "Dirk Eddelbuettel <edd@debian.org> with contributions \n by Antoine Lucas, Jarek Tuszynski, Henrik Bengtsson, Simon Urbanek,\n Mario Frasca, Bryan Lewis, Murray Stokely, Hannes Muehleisen,\n Duncan Murdoch, Jim Hester, Wush Wu, Qiang Kou, Thierry Onkelinx, \n Michel Lang, Viliam Simko, Kurt Hornik and Radford Neal.",
@@ -433,10 +377,6 @@
     "dplyr": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Type": "Package",
         "Package": "dplyr",
@@ -467,10 +407,6 @@
     "evaluate": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "evaluate",
         "Type": "Package",
@@ -498,10 +434,6 @@
     "fansi": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "fansi",
         "Title": "ANSI Control Sequence Aware String Functions",
@@ -530,10 +462,6 @@
     "ggplot2": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "ggplot2",
         "Version": "3.1.0",
@@ -564,10 +492,6 @@
     "glue": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "glue",
         "Title": "Interpreted String Literals",
@@ -597,10 +521,6 @@
     "gtable": {
       "Source": "CRAN",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "gtable",
         "Version": "0.2.0",
@@ -625,10 +545,6 @@
     "highr": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "highr",
         "Type": "Package",
@@ -655,10 +571,6 @@
     "hms": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "hms",
         "Title": "Pretty Time of Day",
@@ -686,10 +598,6 @@
     "htmltools": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "htmltools",
         "Type": "Package",
@@ -718,10 +626,6 @@
     "jsonlite": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "jsonlite",
         "Version": "1.6",
@@ -746,10 +650,6 @@
     "knitr": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "knitr",
         "Type": "Package",
@@ -780,10 +680,6 @@
     "labeling": {
       "Source": "CRAN",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "labeling",
         "Type": "Package",
@@ -809,10 +705,6 @@
     "lattice": {
       "Source": "CRAN",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "lattice",
         "Version": "0.20-35",
@@ -841,10 +733,6 @@
     "lazyeval": {
       "Source": "CRAN",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "lazyeval",
         "Version": "0.2.1",
@@ -869,10 +757,6 @@
     "magrittr": {
       "Source": "CRAN",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "magrittr",
         "Type": "Package",
@@ -895,10 +779,6 @@
     "markdown": {
       "Source": "CRAN",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "markdown",
         "Type": "Package",
@@ -927,10 +807,6 @@
     "mgcv": {
       "Source": "CRAN",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "mgcv",
         "Version": "1.8-22",
@@ -955,10 +831,6 @@
     "mime": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "mime",
         "Type": "Package",
@@ -985,10 +857,6 @@
     "munsell": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "munsell",
         "Type": "Package",
@@ -1012,10 +880,6 @@
     "nlme": {
       "Source": "CRAN",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "nlme",
         "Version": "3.1-131",
@@ -1044,10 +908,6 @@
     "nycflights13": {
       "Source": "CRAN",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "nycflights13",
         "Title": "Flights that Departed NYC in 2013",
@@ -1074,10 +934,6 @@
     "pillar": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "pillar",
         "Title": "Coloured Formatting for Columns",
@@ -1105,10 +961,6 @@
     "pkgconfig": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "pkgconfig",
         "Title": "Private Configuration for 'R' Packages",
@@ -1133,10 +985,6 @@
     "plogr": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "plogr",
         "Title": "The 'plog' C++ Logging Library",
@@ -1163,10 +1011,6 @@
     "plyr": {
       "Source": "CRAN",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "plyr",
         "Version": "1.8.4",
@@ -1194,10 +1038,6 @@
     "purrr": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "purrr",
         "Title": "Functional Programming Tools",
@@ -1226,10 +1066,6 @@
     "readr": {
       "Source": "CRAN",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "readr",
         "Version": "1.1.1",
@@ -1258,10 +1094,6 @@
     "reshape2": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "reshape2",
         "Title": "Flexibly Reshape Data: A Reboot of the Reshape Package",
@@ -1287,17 +1119,13 @@
       }
     },
     "reticulate": {
-      "Source": "github",
-      "Repository": null,
-      "GithubRepo": "reticulate",
-      "GithubUsername": "rstudio",
-      "GithubRef": "master",
-      "GithubSha1": "6a60daddafba2376a7857b28d0b50c283b662777",
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "description": {
         "Package": "reticulate",
         "Type": "Package",
         "Title": "Interface to 'Python'",
-        "Version": "1.10.0.9003",
+        "Version": "1.10",
         "Authors@R": "c(\n  person(\"JJ\", \"Allaire\", role = c(\"aut\", \"cre\"), email = \"jj@rstudio.com\"),\n  person(\"Kevin\", \"Ushey\", role = c(\"aut\"),\n         email = \"kevin@rstudio.com\"),\n  person(\"RStudio\", role = c(\"cph\", \"fnd\")),\n  person(\"Yuan\", \"Tang\", role = c(\"aut\", \"cph\"),\n         email = \"terrytangyuan@gmail.com\",\n         comment = c(ORCID = \"0000-0001-5243-233X\")),\n  person(\"Dirk\", \"Eddelbuettel\", role = c(\"ctb\", \"cph\"),\n         email = \"edd@debian.org\"),\n  person(\"Bryan\", \"Lewis\", role = c(\"ctb\", \"cph\"),\n         email = \"blewis@illposed.net\"),\n  person(\"Marcus\", \"Geelnard\", role = c(\"ctb\", \"cph\"),\n         comment = \"TinyThread library, http://tinythreadpp.bitsnbites.eu/\")\n  )",
         "Description": "Interface to 'Python' modules, classes, and functions. When calling\n    into 'Python', R data types are automatically converted to their equivalent 'Python'\n    types. When values are returned from 'Python' to R they are converted back to R\n    types. Compatible with all versions of 'Python' >= 2.7.",
         "License": "Apache License 2.0",
@@ -1310,33 +1138,20 @@
         "Imports": "utils, graphics, jsonlite, Rcpp (>= 0.12.7), Matrix",
         "Suggests": "testthat, knitr, callr, rmarkdown",
         "LinkingTo": "Rcpp",
-        "RoxygenNote": "6.1.1",
-        "Roxygen": "list(markdown = TRUE)",
+        "RoxygenNote": "6.0.1",
         "VignetteBuilder": "knitr",
-        "RemoteType": "github",
-        "RemoteHost": "api.github.com",
-        "RemoteRepo": "reticulate",
-        "RemoteUsername": "rstudio",
-        "RemoteRef": "master",
-        "RemoteSha": "6a60daddafba2376a7857b28d0b50c283b662777",
-        "GithubRepo": "reticulate",
-        "GithubUsername": "rstudio",
-        "GithubRef": "master",
-        "GithubSHA1": "6a60daddafba2376a7857b28d0b50c283b662777",
         "NeedsCompilation": "yes",
-        "Packaged": "2019-01-28 04:14:51 UTC; carendt",
-        "Author": "JJ Allaire [aut, cre],\n  Kevin Ushey [aut],\n  RStudio [cph, fnd],\n  Yuan Tang [aut, cph] (0000-0001-5243-233X),\n  Dirk Eddelbuettel [ctb, cph],\n  Bryan Lewis [ctb, cph],\n  Marcus Geelnard [ctb, cph] (TinyThread library,\n    http://tinythreadpp.bitsnbites.eu/)",
+        "Packaged": "2018-08-05 12:00:33 UTC; jjallaire",
+        "Author": "JJ Allaire [aut, cre],\n  Kevin Ushey [aut],\n  RStudio [cph, fnd],\n  Yuan Tang [aut, cph] (<https://orcid.org/0000-0001-5243-233X>),\n  Dirk Eddelbuettel [ctb, cph],\n  Bryan Lewis [ctb, cph],\n  Marcus Geelnard [ctb, cph] (TinyThread library,\n    http://tinythreadpp.bitsnbites.eu/)",
         "Maintainer": "JJ Allaire <jj@rstudio.com>",
-        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2019-01-28 04:14:52 UTC; unix"
+        "Repository": "RSPM",
+        "Date/Publication": "2018-08-05 15:40:07 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2019-02-07 14:55:04 UTC; unix"
       }
     },
     "rlang": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "rlang",
         "Version": "0.3.1",
@@ -1365,10 +1180,6 @@
     "rmarkdown": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "rmarkdown",
         "Type": "Package",
@@ -1397,10 +1208,6 @@
     "scales": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "scales",
         "Title": "Scale Functions for Visualization",
@@ -1429,10 +1236,6 @@
     "stringi": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "stringi",
         "Version": "1.2.4",
@@ -1461,10 +1264,6 @@
     "stringr": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "stringr",
         "Title": "Simple, Consistent Wrappers for Common String Operations",
@@ -1492,10 +1291,6 @@
     "tibble": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "tibble",
         "Title": "Simple Data Frames",
@@ -1525,10 +1320,6 @@
     "tidyselect": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "tidyselect",
         "Title": "Select from a Set of Strings",
@@ -1556,10 +1347,6 @@
     "tinytex": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "tinytex",
         "Type": "Package",
@@ -1587,10 +1374,6 @@
     "utf8": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "utf8",
         "Version": "1.1.4",
@@ -1617,10 +1400,6 @@
     "viridisLite": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "viridisLite",
         "Type": "Package",
@@ -1648,10 +1427,6 @@
     "withr": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Encoding": "UTF-8",
         "Package": "withr",
@@ -1681,10 +1456,6 @@
     "xfun": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "xfun",
         "Type": "Package",
@@ -1713,10 +1484,6 @@
     "yaml": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "yaml",
         "Type": "Package",
@@ -1866,7 +1633,7 @@
       "checksum": "6a23a153d95292868ca53dfa87b76b22"
     },
     "packrat/desc/reticulate": {
-      "checksum": "54a386100627967160070146edc236db"
+      "checksum": "a3eb47d685e28ec27cd4157adcc0d159"
     },
     "packrat/desc/rlang": {
       "checksum": "badba2d4e28e163b1322f98c7cee3ce2"
@@ -1908,7 +1675,7 @@
       "checksum": "727431b9e87c3b298ee1bb1676e8f5ba"
     },
     "packrat/packrat.lock": {
-      "checksum": "148c47056ee65025c739d550ff3bbf81"
+      "checksum": "ac5f7d49d759a54e4c1f9f7c8d9fd1d3"
     },
     "requirements.txt": {
       "checksum": "ae84c7724e17bf1bc94db88da461a3de"
