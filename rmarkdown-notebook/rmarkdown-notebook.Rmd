@@ -10,8 +10,9 @@ output: html_notebook
 
 ```{r setup}
 library(reticulate)
-use_python("/usr/local/bin/python")
-readr::write_csv(nycflights13::flights,path = "flights.csv")
+readr::write_csv(nycflights13::flights, path = "flights.csv")
+
+print(reticulate::py_config())
 ```
 
 ***
@@ -21,7 +22,7 @@ readr::write_csv(nycflights13::flights,path = "flights.csv")
 
 ### Use Python to manipulate data
 
-```{python}
+```{python data}
 import pandas
 flights = pandas.read_csv("flights.csv")
 flights = flights[flights['dest'] == "ORD"]
@@ -43,7 +44,8 @@ ggplot(py$flights, aes(carrier, arr_delay)) + geom_point() + geom_jitter()
 ### Use R to read and manipulate data
 
 ```{r, message=FALSE}
-library(tidyverse)
+library(readr)
+library(dplyr)
 flights <- read_csv("flights.csv") %>%
   filter(dest == "ORD") %>%
   select(carrier, dep_delay, arr_delay) %>%
@@ -52,7 +54,7 @@ flights <- read_csv("flights.csv") %>%
 
 ### Use Python to print R dataframe
 
-```{python}
+```{python print}
 print(r.flights.head(10))
 ```
 

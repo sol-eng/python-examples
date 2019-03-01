@@ -1,0 +1,161 @@
+---
+title: "Sentiment Analysis with Python in RStudio"
+output: html_document
+---
+
+### Import modules
+
+```{python}
+from __future__ import unicode_literals, print_function
+import plac
+import random
+from pathlib import Path
+import thinc.extra.datasets
+
+import spacy
+from spacy.util import minibatch, compounding
+```
+
+### Define helper functions
+
+```{python}
+def load_data(limit=0, split=0.8):
+    """Load data from the IMDB dataset."""
+    # Partition off part of the train data for evaluation
+    train_data, _ = thinc.extra.datasets.imdb()
+    random.shuffle(train_data)
+    train_data = train_data[-limit:]
+    texts, labels = zip(*train_data)
+    cats = [{'POSITIVE': bool(y)} for y in labels]
+    split = int(len(train_data) * split)
+    return (texts[:split], cats[:split]), (texts[split:], cats[split:])
+```
+
+```{python}
+def evaluate(tokenizer, textcat, texts, cats):
+    docs = (tokenizer(text) for text in texts)
+    tp = 0.0   # True positives
+    fp = 1e-8  # False positives
+    fn = 1e-8  # False negatives
+    tn = 0.0   # True negatives
+    for i, doc in enumerate(textcat.pipe(docs)):
+        gold = cats[i]
+        for label, score in doc.cats.items():
+            if label not in gold:
+                continue
+            if score >= 0.5 and gold[label] >= 0.5:
+                tp += 1.
+            elif score >= 0.5 and gold[label] < 0.5:
+                fp += 1.
+            elif score < 0.5 and gold[label] < 0.5:
+                tn += 1
+            elif score < 0.5 and gold[label] >= 0.5:
+                fn += 1
+    precision = tp / (tp + fp)
+    recall = tp / (tp + fn)
+    try:
+        f_score = 2 * (precision * recall) / (precision + recall)
+    except ZeroDivisionError:
+        print("Warning! Zero Division Error, setting f_score to 1")
+        f_score = 1
+    return {'textcat_p': precision, 'textcat_r': recall, 'textcat_f': f_score}
+```
+
+### Load blank model
+
+```{python}
+nlp = spacy.blank('en')  # create blank Language class
+print("Created blank 'en' model")
+```
+
+### Setup text classifier
+
+```{python}
+# add the text classifier to the pipeline if it doesn't exist
+# nlp.create_pipe works for built-ins that are registered with spaCy
+if 'textcat' not in nlp.pipe_names:
+    textcat = nlp.create_pipe('textcat')
+    nlp.add_pipe(textcat, last=True)
+    # otherwise, get it, so we can add labels to it
+else:
+    textcat = nlp.get_pipe('textcat')
+    
+# add label to text classifier
+textcat.add_label('POSITIVE')
+```
+
+### Load text data
+
+```{python}
+n_texts=10000
+# load the IMDB dataset
+print("Loading IMDB data...")
+(train_texts, train_cats), (dev_texts, dev_cats) = load_data(limit=n_texts)
+print("Using {} examples ({} training, {} evaluation)"
+      .format(n_texts, len(train_texts), len(dev_texts)))
+train_data = list(zip(train_texts,
+                  [{'cats': cats} for cats in train_cats]))
+```
+
+### Train the model
+
+```{python}
+n_iter=20
+# get names of other pipes to disable them during training
+other_pipes = [pipe for pipe in nlp.pipe_names if pipe != 'textcat']
+with nlp.disable_pipes(*other_pipes):  # only train textcat
+    optimizer = nlp.begin_training()
+    print("Training the model...")
+    print('{:^5}\t{:^5}\t{:^5}\t{:^5}'.format('LOSS', 'P', 'R', 'F'))
+    for i in range(n_iter):
+        losses = {}
+        # batch up the examples using spaCy's minibatch
+        batches = minibatch(train_data, size=compounding(4., 32., 1.001))
+        for batch in batches:
+            texts, annotations = zip(*batch)
+            nlp.update(texts, annotations, sgd=optimizer, drop=0.2,
+                       losses=losses)
+        with textcat.model.use_params(optimizer.averages):
+            # evaluate on the dev data split off in load_data()
+            scores = evaluate(nlp.tokenizer, textcat, dev_texts, dev_cats)
+        print('{0:.3f}\t{1:.3f}\t{2:.3f}\t{3:.3f}'  # print a simple table
+              .format(losses['textcat'], scores['textcat_p'],
+                      scores['textcat_r'], scores['textcat_f']))
+```
+
+### Test the trained model
+
+```{python}
+test_text_neg = "This movie was an terrible, awful rehash of past movies. I will never watch it again."
+doc = nlp(test_text_neg)
+print(test_text_neg, "\n", doc.cats)
+
+test_text_pos = "This great movie was a wonderful remake of the original version. I loved it!"
+doc = nlp(test_text_pos)
+print(test_text_pos, "\n", doc.cats)
+```
+
+### Save model to disk
+
+```{python}
+output_dir = "model"
+
+if output_dir is not None:
+    output_dir = Path(output_dir)
+    if not output_dir.exists():
+        output_dir.mkdir()
+    with nlp.use_params(optimizer.averages):
+        nlp.to_disk(output_dir)
+    print("Saved model to directory:", output_dir)
+```
+
+### Test the saved model
+
+```{python}
+print("Loading from", output_dir)
+nlp2 = spacy.load(output_dir)
+doc2 = nlp2(test_text_neg)
+print(test_text_neg, "\n", doc2.cats)
+doc3 = nlp2(test_text_pos)
+print(test_text_pos, "\n", doc3.cats)
+```

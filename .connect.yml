@@ -1,0 +1,16 @@
+default:
+  content:
+    - title: "Use Python with R"
+      path: "./rmarkdown-notebook"
+      description: "Use the reticulate package to integrate Python into an R Markdown notebook."
+      tag:
+        - "Demo Content|Python"
+      url: "/python/reticulate/"
+      image: "reticulated_python.png"
+    - title: "Sentiment Analysis with Python"
+      path: "./sentiment-analysis"
+      description: "A Plumber API that uses R and Python to evaluate sentiment in text input using a pretrained spaCy model."
+      tag:
+        - "Demo Content|Python"
+      url: "/python/sentiment-analysis/"
+      image: "sentiment-analysis/spacy_logo.jpg"

@@ -1,0 +1,4 @@
+default:
+  image: "fetch-image-url"
+quickstart:
+  image: "upload"
