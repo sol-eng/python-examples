@@ -27,8 +27,8 @@ You can publish Jupyter notebooks to RStudio connect. The RStudio plugin for Jup
 * [Use Python with R Markdown](https://colorado.rstudio.com/rsc/reticulate-demo) [[login]](https://colorado.rstudio.com/rsc/connect/#/apps/1924/access/2075)
 * [Use Python to visualize data in R Markdown](https://colorado.rstudio.com/rsc/python-visuals) [[login]](https://colorado.rstudio.com/rsc/connect/#/apps/1716/access)
 * [Publish Jupyter Notebooks to RStudio Connect](https://colorado.rstudio.com/rsc/jupyter-geospatial) [[login]](https://colorado.rstudio.com/rsc/connect/#/apps/1762/access)
-* [Python-based Visualizations in Jupyter Notebooks](https://colorado.rstudio.com/rsc/jupyter-notebook-interactive-plots) [[login]](https://colorado.rstudio.com/rsc/connect/#/apps/2036/access/2158)
-* [Interactive Python-based Plots in Jupyter Notebooks](https://colorado.rstudio.com/rsc/jupyter-notebook-visualization) [[login]](https://colorado.rstudio.com/rsc/connect/#/apps/2038/access/2160)
+* [Python-based Visualizations in Jupyter Notebooks](https://colorado.rstudio.com/rsc/jupyter-notebook-visualization) [[login]](https://colorado.rstudio.com/rsc/connect/#/apps/2038/access/2160)
+* [Interactive Python-based Plots in Jupyter Notebooks](https://colorado.rstudio.com/rsc/jupyter-notebook-interactive-plots) [[login]](https://colorado.rstudio.com/rsc/connect/#/apps/2036/access/2158)
 
 ### Getting Started
 
