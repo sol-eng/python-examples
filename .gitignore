@@ -41,3 +41,6 @@ __pycache__
 .ipynb_checkpoints
 *.html
 rmarkdown-notebook/flights.csv
+
+.venv
+venv

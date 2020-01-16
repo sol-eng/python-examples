@@ -28,6 +28,7 @@ flights = pandas.read_csv("flights.csv")
 flights = flights[flights['dest'] == "ORD"]
 flights = flights[['carrier', 'dep_delay', 'arr_delay']]
 flights = flights.dropna()
+flights
 ```
 
 ### Use R to visualize Pandas DataFrame
@@ -61,4 +62,3 @@ print(r.flights.head(10))
 ***
 
 See the [reticulate website](https://rstudio.github.io/reticulate/index.html) for details.
-

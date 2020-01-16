@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"lang":"en","name":"model","version":"0.0.0","spacy_version":">=2.2.3","description":"","author":"","email":"","url":"","license":"","vectors":{"width":0,"vectors":0,"keys":0,"name":"spacy_pretrained_vectors"},"pipeline":["textcat"],"factories":{"textcat":"textcat"},"labels":{"textcat":["POSITIVE"]}}
+=======
+{"lang":"en","name":"model","version":"0.0.0","spacy_version":">=2.1.8","description":"","author":"","email":"","url":"","license":"","vectors":{"width":0,"vectors":0,"keys":0,"name":"spacy_pretrained_vectors"},"pipeline":["textcat"]}
+>>>>>>> ee7778e4376575f17307ac457129f9dab3e68eb8
