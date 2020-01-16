@@ -87,7 +87,7 @@ textcat.add_label('POSITIVE')
 ### Load text data
 
 ```{python}
-n_texts=100
+n_texts=1000
 # load the IMDB dataset
 print("Loading IMDB data...")
 (train_texts, train_cats), (dev_texts, dev_cats) = load_data(limit=n_texts)
