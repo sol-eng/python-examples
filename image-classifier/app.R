@@ -10,12 +10,12 @@ stopifnot(behavior %in% c("upload", "fetch-image-url"))
 source_python('image-classifier.py')
 
 server <- function(input, output, session) {
-    
+
     # where the image that should be classified is on disk
     image_path <- reactiveVal("./img/cat.jpg")
-    
+
     image_prefix <- "pytorch_image"
-    
+
     # the configurable selector for fetch-image-url vs. upload
     output$image_selector <- renderUI({
         if (behavior == "fetch-image-url") {
@@ -29,14 +29,14 @@ server <- function(input, output, session) {
             stop("Invalid configuration. Please chose 'fetch-image-url' or 'upload'")
         }
     })
-    
+
     # handle upload
     observe({
         req(input$file_upload)
         upload_file <- input$file_upload
         image_path(upload_file$datapath[[1]])
     })
-    
+
     # handle fetch-image-url
     observeEvent(input[["fetch-image-url"]], {
         req(input$file1)
@@ -44,15 +44,15 @@ server <- function(input, output, session) {
             # Fetch image from URL
             temp_fetch_image_url <- fs::file_temp(image_prefix, ext = ".jpg")
             downloader::download(input$file1, temp_fetch_image_url)
-            
+
             image_path(temp_fetch_image_url)
         }, error = function(e){
             # usually, you would not expose this to the user
             # without a little sanitization
             showNotification(as.character(safeError(e)), type = "warning")
-        })  
+        })
     })
-    
+
     output$contents <- renderTable({
         req(image_path())
 
@@ -73,7 +73,7 @@ server <- function(input, output, session) {
     # render the image
     output$image1 <- renderImage({
         req(image_path())
-        
+
         # Copy the image to temp space
         new_path <- fs::file_copy(image_path(), fs::file_temp(image_prefix, ext = ".jpg"))
 
