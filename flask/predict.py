@@ -27,10 +27,10 @@ mpg_predict = api.model(
     },
 )
 
-
-#served at route + namespace, so at /predict
+# POST example, that accepts a JSON body that specifies new data
+# served at route + namespace, so at /predict
 @ns.route("/")
-@ns.param("data", "JSON containing hp and cyl", _in = "body")
+@ns.param("data", "JSON containing hp and cyl {'hp':'200', 'cyl':'4'} ", _in = "body")
 class Predict(Resource):
     @ns.marshal_with(mpg_predict)
     @ns.doc("get mpg for inputs")
@@ -40,10 +40,11 @@ class Predict(Resource):
         cyl = int(json_data['cyl'])
         mpg = m.predict([[cyl, hp]])
         return {"hp": hp, "cyl": cyl, "mpg": mpg}
-        
-#served at route + namespace, so at /predict/cyl6/<user's hp input>
+
+# GET example that accepts a new data point in the path        
+# served at route + namespace, so at /predict/cyl6/<user's hp input>
 @ns.route("/cyl6/<int:hp>")
-@ns.param("hp", "JSON containing hp and cyl")
+@ns.param("hp", "new hp value")
 class Predict(Resource):
     @ns.marshal_with(mpg_predict)
     @ns.doc("get mpg for 6 cyl vehicle")
