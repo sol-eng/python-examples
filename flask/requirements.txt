@@ -1,3 +1,2 @@
-spacy==2.0.18
 flask-restx
 sklearn
