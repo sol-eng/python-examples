@@ -1,0 +1,11 @@
+{
+    "https://rsc.radixu.com/": {
+        "server_url": "https://rsc.radixu.com/",
+        "filename": "/Users/koverholt/Repos/rstudio-demos/python-examples/flask-sentiment-analysis-app",
+        "app_url": "https://rsc.radixu.com/connect/#/apps/3814",
+        "app_id": "a8e41870-2f29-4139-b180-b29a3c94f2b3",
+        "app_guid": "a8e41870-2f29-4139-b180-b29a3c94f2b3",
+        "title": "flask-sentiment-analysis-app",
+        "app_mode": "python-api"
+    }
+}
