@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "metadata": {
+    "appmode": "python-api",
+    "entrypoint": "app:app"
+  },
+  "locale": "en_US.UTF-8",
+  "python": {
+    "version": "3.7.4",
+    "package_manager": {
+      "name": "pip",
+      "version": "19.3.1",
+      "package_file": "requirements.txt"
+    }
+  },
+  "files": {
+    "requirements.txt": {
+      "checksum": "efadf2b45aa7a48bc3e2502d08ff7ae7"
+    },
+    ".DS_Store": {
+      "checksum": "dd9b840abe910d924725c8793dc356af"
+    },
+    "app.py": {
+      "checksum": "26e3261020d1f21464d2441c1a4c98d8"
+    },
+    "model/tokenizer": {
+      "checksum": "c057eb8e73f11c9b732cebc7017920d6"
+    },
+    "model/meta.json": {
+      "checksum": "bee047ff755b9d44c3d78ef93cbe74b0"
+    },
+    "model/vocab/vectors": {
+      "checksum": "63fd11f249a725dee9c2941b339ea037"
+    },
+    "model/vocab/lexemes.bin": {
+      "checksum": "c16035a23412de84db136a6d12dfe1a1"
+    },
+    "model/vocab/strings.json": {
+      "checksum": "eadd659d23b0bb25f41ce9505a3e6099"
+    },
+    "model/vocab/key2row": {
+      "checksum": "8d39dd7eef115ea6975446ef4082951f"
+    },
+    "model/textcat/cfg": {
+      "checksum": "7fd0e491d35cf5d0782724f8d5a4044c"
+    },
+    "model/textcat/model": {
+      "checksum": "6bd3a92f33669d6cbaad99b2df0f01b9"
+    }
+  }
+}
