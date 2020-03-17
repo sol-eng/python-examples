@@ -4,4 +4,4 @@ This example is from Plotly's [Dash tutorial](https://dash.plot.ly/getting-start
 
 Note: this app references external web resources and an external dataset, so the server must have internet access in order to run the app.
 
-![example app image](https://github.com/sol-eng/python-examples/raw/master/dash-app/app.png)
+![example app image](app.png)
