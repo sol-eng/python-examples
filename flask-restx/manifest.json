@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "metadata": {
+    "appmode": "python-api",
+    "entrypoint": "predict:app"
+  },
+  "locale": "en_US.UTF-8",
+  "python": {
+    "version": "3.7.3",
+    "package_manager": {
+      "name": "pip",
+      "version": "20.0.2",
+      "package_file": "requirements.txt"
+    }
+  },
+  "files": {
+    "requirements.txt": {
+      "checksum": "0143755f7ea657c983817786e0a21e84"
+    },
+    "manifest.json": {
+      "checksum": "be9b6c36933ed3c754936712d97c24f9"
+    },
+    "model.p": {
+      "checksum": "e41e5fc2ba9bdbc3101e8d44cdaef699"
+    },
+    "predict.py": {
+      "checksum": "52f3dc2f9b9a5ca65984b2c5521f616f"
+    },
+    "train.py": {
+      "checksum": "7b5ca034bf00471bd027e25cce1b9288"
+    }
+  }
+}
