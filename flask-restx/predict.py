@@ -4,20 +4,21 @@ import pickle
 from flask import Flask, request
 from flask_restx import Api, Resource, fields
 
-# loads our model
-# TODO: Replace with getting a pin!
+# loads our previously trained model
+# this is loaded once per process startup
+# keeping subsequent requests fast
 m = pickle.load(open("model.p", "rb"))
 
-# define the flask-restx stuff
+# define the flask-restx boilerplate
 app = Flask(__name__)
 api = Api(
     app, version="0.1.0", title="MPG API", description="mtcars predict mpg"
 )
 
-# defines the main subroute for requests
+# define the main subroute for requests
 ns = api.namespace("predict", description="predict mpg based on attributes")
 
-# defines the API response
+# define the API response
 mpg_predict = api.model(
     "MPG Prediction",
     {
@@ -41,7 +42,7 @@ class Predict(Resource):
         mpg = m.predict([[cyl, hp]])
         return {"hp": hp, "cyl": cyl, "mpg": mpg}
 
-# GET example that accepts a new data point in the path        
+# GET example that accepts a new data point as a query parameter in the URL path
 # served at route + namespace, so at /predict/cyl6/<user's hp input>
 @ns.route("/cyl6/<int:hp>")
 @ns.param("hp", "new hp value")
