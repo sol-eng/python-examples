@@ -12,12 +12,55 @@ locations = pd.read_csv("https://colorado.rstudio.com/rsc/bike_station_info/data
 location_options = [{'label': locations['name'][l], 'value': locations['station_id'][l]} for l in locations.index]
 mapbox = "pk.eyJ1IjoibG9wcHNlYW4iLCJhIjoiY2s4OTFwaDB2MDJicDNkcXh2bm5oOWhwZSJ9.eLH6Sm3rovtXQVOy6kCXiw"
 
-app.layout = html.Div(
-    html.Div([
-        html.Div([
-            html.H1(children='Capitol Bikeshare Forecast')
-        ], className = "rStudioHeader"),
+app.layout = html.Div([
 
+            html.Div(
+            [
+                html.Div(
+                    [
+                        html.Img(
+                            src="https://d33wubrfki0l68.cloudfront.net/1ac3f0e3753f18c7e2a8893957d1841fba1e3d08/48a33/wp-content/uploads/2018/10/rstudio-logo-flat.png",
+                            style={
+                                "height": "60px",
+                                "width": "auto"
+                            },
+                        )
+                    ],
+                    className="one-third column",
+                ),
+                html.Div(
+                    [
+                        html.Div(
+                            [
+                                html.H3(
+                                    "Capitol Bikeshare",
+                                    style={"margin-bottom": "0px"},
+                                ),
+                                html.H5(
+                                    "Availability Forecast", style={"margin-top": "0px"}
+                                ),
+                            ]
+                        )
+                    ],
+                    className="one-half column",
+                    id="title",
+                ),
+                html.Div(
+                    [
+                        html.A(
+                            html.Button("View Code", id="learn-more-button"),
+                            href="https://github.com/sol-eng/python-examples",
+                        )
+                    ],
+                    className="one-third column",
+                    id="button",
+                ),
+            ],
+            id="header",
+            className="row flex-display",
+            style={"margin-bottom": "25px"},
+        ),
+    html.Div([
         html.Div(
             [
                 html.Div(
@@ -46,7 +89,7 @@ app.layout = html.Div(
             ]),
         ])
     ], className = "row")
-)
+])
 
 @app.callback(
     Output("bike-forecast","figure"),
@@ -57,7 +100,12 @@ def update_forecast_graph(value):
         params = {"station_id":value}
     )
     prediction = pd.DataFrame.from_dict(r.json())
-    return px.line(prediction, x = "times", y = "pred")
+    fig = px.line(prediction, x = "times", y = "pred")
+    fig.update_layout(
+    xaxis_title="Day and Time",
+    yaxis_title="Predicted Num of Bikes Available",
+    )
+    return fig
 
 @app.callback(
     Output("bike-map","figure"),
