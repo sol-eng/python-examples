@@ -6,12 +6,7 @@ import pandas as pd
 import plotly.express as px
 import requests as req
 
-app = dash.Dash(
-    __name__, meta_tags=[{"name": "viewport", "content": "width=device-width"}]
-)
-server = app.server
-
-
+app = dash.Dash(__name__)
 
 locations = pd.read_csv("https://colorado.rstudio.com/rsc/bike_station_info/data.csv")
 location_options = [{'label': locations['name'][l], 'value': locations['station_id'][l]} for l in locations.index]
@@ -33,9 +28,7 @@ app.layout = html.Div(
                                 options = location_options,
                                 value = 1
                         ),
-                    ],
-                    className='six columns',
-                    style={'margin-top': '10'}
+                    ], style={'margin-top': '10'}
                 ),
             ], className="row"
         ),
@@ -45,12 +38,12 @@ app.layout = html.Div(
                 dcc.Graph(
                     id='bike-forecast'
                 )
-            ], className = 'six columns'),
+            ]),
             html.Div([
                 dcc.Graph(
                     id='bike-map'
                 )
-            ], className = 'six columns'),
+            ]),
         ])
     ], className = "row")
 )
@@ -70,7 +63,7 @@ def update_forecast_graph(value):
     Output("bike-map","figure"),
     [Input("location", "value")]
 )
-def update_forecast_graph(value):
+def update_bike_graph(value):
     this_station = locations[locations['station_id']==value]
     df = pd.DataFrame.from_dict({
         "lat" : this_station["lat"],
@@ -80,13 +73,7 @@ def update_forecast_graph(value):
     px.set_mapbox_access_token(mapbox)
     fig = px.scatter_mapbox(df, lat = "lat", lon = "lon", size ="size")
     fig.update_layout(mapbox_style="open-street-map",
-                      mapbox=dict(
-                          zoom=13,
-                          center=dict(
-                              lat=df["lat"][0], 
-                              lon=df["lon"][0]
-                            )
-                        )
+                      mapbox=dict(zoom=13)
                     )
     return fig
 
