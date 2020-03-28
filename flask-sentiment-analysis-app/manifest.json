@@ -2,11 +2,11 @@
   "version": 1,
   "metadata": {
     "appmode": "python-api",
-    "entrypoint": "app:app"
+    "entrypoint": "app"
   },
   "locale": "en_US.UTF-8",
   "python": {
-    "version": "3.7.4",
+    "version": "3.6.10",
     "package_manager": {
       "name": "pip",
       "version": "19.3.1",
@@ -15,43 +15,235 @@
   },
   "files": {
     "requirements.txt": {
-      "checksum": "1fb8ec903323124ac3db7dbf2e00a3c4"
-    },
-    ".DS_Store": {
-      "checksum": "a23e98416f102dec0521f90f465a20cc"
+      "checksum": "ade1e2f1081802913672ec7310d8d825"
     },
     "app.py": {
-      "checksum": "578cac11c31ea25d1ec363c7a0fd527e"
-    },
-    "model/tokenizer": {
-      "checksum": "c057eb8e73f11c9b732cebc7017920d6"
+      "checksum": "9daa5a7cf12e12d3045c666d99693fb2"
     },
     "model/meta.json": {
       "checksum": "bee047ff755b9d44c3d78ef93cbe74b0"
-    },
-    "model/vocab/vectors": {
-      "checksum": "63fd11f249a725dee9c2941b339ea037"
-    },
-    "model/vocab/lexemes.bin": {
-      "checksum": "c16035a23412de84db136a6d12dfe1a1"
-    },
-    "model/vocab/strings.json": {
-      "checksum": "eadd659d23b0bb25f41ce9505a3e6099"
-    },
-    "model/vocab/key2row": {
-      "checksum": "8d39dd7eef115ea6975446ef4082951f"
     },
     "model/textcat/cfg": {
       "checksum": "7fd0e491d35cf5d0782724f8d5a4044c"
     },
     "model/textcat/model": {
-      "checksum": "6bd3a92f33669d6cbaad99b2df0f01b9"
+      "checksum": "baa550189d70b55749616790ee1283a5"
+    },
+    "model/tokenizer": {
+      "checksum": "c057eb8e73f11c9b732cebc7017920d6"
+    },
+    "model/vocab/key2row": {
+      "checksum": "8d39dd7eef115ea6975446ef4082951f"
+    },
+    "model/vocab/lexemes.bin": {
+      "checksum": "69e670f7fe63515625918eee8e080742"
+    },
+    "model/vocab/strings.json": {
+      "checksum": "9331aeb9f9ac5ca64d3688e29b170f5c"
+    },
+    "model/vocab/vectors": {
+      "checksum": "63fd11f249a725dee9c2941b339ea037"
+    },
+    "static/css/landing-page.css": {
+      "checksum": "a3e8907479702059069af23513f5cd21"
+    },
+    "static/css/landing-page.min.css": {
+      "checksum": "a605e83e22e84d1283458ef442548164"
+    },
+    "static/img/bg-masthead.jpg": {
+      "checksum": "20cbd480edd75dd476f3d16c6a763f28"
+    },
+    "static/vendor/bootstrap/css/bootstrap-grid.css": {
+      "checksum": "59e3488e09a8bc96de5884586f3c67ec"
+    },
+    "static/vendor/bootstrap/css/bootstrap-grid.css.map": {
+      "checksum": "441b2804e7759f4404ac7858b2516d8a"
+    },
+    "static/vendor/bootstrap/css/bootstrap-grid.min.css": {
+      "checksum": "7aba9868c6ffadaf2c45d1bafe86d2c3"
+    },
+    "static/vendor/bootstrap/css/bootstrap-grid.min.css.map": {
+      "checksum": "6dac0622de5a5f629e6607233f1daa93"
+    },
+    "static/vendor/bootstrap/css/bootstrap-reboot.css": {
+      "checksum": "b53d1eaf9daeab26f2772281ae060120"
+    },
+    "static/vendor/bootstrap/css/bootstrap-reboot.css.map": {
+      "checksum": "0a34ddb82623c03645892cea7c042bfd"
+    },
+    "static/vendor/bootstrap/css/bootstrap-reboot.min.css": {
+      "checksum": "220e4dc01283a9e9c5c146f984eb8934"
+    },
+    "static/vendor/bootstrap/css/bootstrap-reboot.min.css.map": {
+      "checksum": "053b3186ba9bfbf0232f23f24155ab7d"
+    },
+    "static/vendor/bootstrap/css/bootstrap.css": {
+      "checksum": "bd551f56ce2be3eba2812e605ab4f5b2"
+    },
+    "static/vendor/bootstrap/css/bootstrap.css.map": {
+      "checksum": "064ecb4098489747f9ee4022badfd8e4"
+    },
+    "static/vendor/bootstrap/css/bootstrap.min.css": {
+      "checksum": "a15c2ac3234aa8f6064ef9c1f7383c37"
+    },
+    "static/vendor/bootstrap/css/bootstrap.min.css.map": {
+      "checksum": "1ac01d0e0892441d8eb12356a5b7e5a4"
+    },
+    "static/vendor/bootstrap/js/bootstrap.bundle.js": {
+      "checksum": "a9247b1fe21ee409d0b37e74100de687"
+    },
+    "static/vendor/bootstrap/js/bootstrap.bundle.js.map": {
+      "checksum": "06ab40ddb02567b23a55c8c62d1f2b37"
+    },
+    "static/vendor/bootstrap/js/bootstrap.bundle.min.js": {
+      "checksum": "a454220fc07088bf1fdd19313b6bfd50"
+    },
+    "static/vendor/bootstrap/js/bootstrap.bundle.min.js.map": {
+      "checksum": "aaad5d3094bf3897ad4330517d395419"
+    },
+    "static/vendor/bootstrap/js/bootstrap.js": {
+      "checksum": "7f827fe484ec04346553202782b0664b"
+    },
+    "static/vendor/bootstrap/js/bootstrap.js.map": {
+      "checksum": "e7d7dc6d44047670c68d91c068969edb"
+    },
+    "static/vendor/bootstrap/js/bootstrap.min.js": {
+      "checksum": "e1d98d47689e00f8ecbc5d9f61bdb42e"
+    },
+    "static/vendor/bootstrap/js/bootstrap.min.js.map": {
+      "checksum": "f32bc113e823c80e52841730b5969976"
+    },
+    "static/vendor/fontawesome-free/css/all.css": {
+      "checksum": "4cd5b86baba794f3e4f6e54b501f0b6e"
+    },
+    "static/vendor/fontawesome-free/css/all.min.css": {
+      "checksum": "164a58dcca37a5b00c22e06ee8e2fc68"
+    },
+    "static/vendor/fontawesome-free/css/brands.css": {
+      "checksum": "28ab16676debf5194d4a168ab7305611"
+    },
+    "static/vendor/fontawesome-free/css/brands.min.css": {
+      "checksum": "27c105d6b1d79b59f9c59e0916d5251b"
+    },
+    "static/vendor/fontawesome-free/css/fontawesome.css": {
+      "checksum": "f9696932582e4061778f0035eb8e8831"
+    },
+    "static/vendor/fontawesome-free/css/fontawesome.min.css": {
+      "checksum": "df3b5091bcf015feb9f8dab2a8579ca9"
+    },
+    "static/vendor/fontawesome-free/css/regular.css": {
+      "checksum": "2e526933cb77bfeab639228211e7887f"
+    },
+    "static/vendor/fontawesome-free/css/regular.min.css": {
+      "checksum": "6b92c90246f17fbba6faf5d94e1f2aa9"
+    },
+    "static/vendor/fontawesome-free/css/solid.css": {
+      "checksum": "d0a3f0ba3fe0c06e5471385f36ed244d"
+    },
+    "static/vendor/fontawesome-free/css/solid.min.css": {
+      "checksum": "685230fe920360c8d423498ebe891455"
+    },
+    "static/vendor/fontawesome-free/css/svg-with-js.css": {
+      "checksum": "ed43a369a56fecb6131bbebfc9f688f3"
+    },
+    "static/vendor/fontawesome-free/css/svg-with-js.min.css": {
+      "checksum": "3b4cea40c72e186dd5fdea6e99195b88"
+    },
+    "static/vendor/fontawesome-free/css/v4-shims.css": {
+      "checksum": "9062d26cf93b0264514b75c482f5b52d"
+    },
+    "static/vendor/fontawesome-free/css/v4-shims.min.css": {
+      "checksum": "e0fe4a6191bf975ee1a105ea1cb4c41e"
+    },
+    "static/vendor/fontawesome-free/webfonts/fa-brands-400.eot": {
+      "checksum": "14c590d124662eb50efa4c00f027b79c"
+    },
+    "static/vendor/fontawesome-free/webfonts/fa-brands-400.svg": {
+      "checksum": "bfa9c38bd6081dafe7278dedc4aad1d9"
+    },
+    "static/vendor/fontawesome-free/webfonts/fa-brands-400.ttf": {
+      "checksum": "5e8aa9ea0ebcd2218178f554cdd8e6b0"
+    },
+    "static/vendor/fontawesome-free/webfonts/fa-brands-400.woff": {
+      "checksum": "df02c782834b113d605d8329368737b4"
+    },
+    "static/vendor/fontawesome-free/webfonts/fa-brands-400.woff2": {
+      "checksum": "3e1b2a654a784ceb385157140b4ccd71"
+    },
+    "static/vendor/fontawesome-free/webfonts/fa-regular-400.eot": {
+      "checksum": "aa66d0e0e38c75666e98db33abae955e"
+    },
+    "static/vendor/fontawesome-free/webfonts/fa-regular-400.svg": {
+      "checksum": "95f13e0be408d117bd3d9b366084a3ef"
+    },
+    "static/vendor/fontawesome-free/webfonts/fa-regular-400.ttf": {
+      "checksum": "285a9d2a28886ad64c4e45cbd733cf7c"
+    },
+    "static/vendor/fontawesome-free/webfonts/fa-regular-400.woff": {
+      "checksum": "5623624dd1b017c66c29d1ac69cdcfa3"
+    },
+    "static/vendor/fontawesome-free/webfonts/fa-regular-400.woff2": {
+      "checksum": "ac21cac3f22cc9642f5af32e0c750797"
+    },
+    "static/vendor/fontawesome-free/webfonts/fa-solid-900.eot": {
+      "checksum": "42e1fbd2cf655a0b44a2dfae9ca2f8c1"
+    },
+    "static/vendor/fontawesome-free/webfonts/fa-solid-900.svg": {
+      "checksum": "6ed5e3bc9018d2a03e2f1fadbf8a0a4a"
+    },
+    "static/vendor/fontawesome-free/webfonts/fa-solid-900.ttf": {
+      "checksum": "896e20e26ad07dc63c9526ed814117e9"
+    },
+    "static/vendor/fontawesome-free/webfonts/fa-solid-900.woff": {
+      "checksum": "3ded831d708bf90b2da86756551b5c1c"
+    },
+    "static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2": {
+      "checksum": "d6d8d5da9214dc7d46b297672a602d55"
+    },
+    "static/vendor/jquery/jquery.js": {
+      "checksum": "11c05eb286ed576526bf4543760785b9"
+    },
+    "static/vendor/jquery/jquery.min.js": {
+      "checksum": "220afd743d9e9643852e31a135a9f3ae"
+    },
+    "static/vendor/jquery/jquery.min.map": {
+      "checksum": "e99460edb86e2af065ca38a4795543fa"
+    },
+    "static/vendor/jquery/jquery.slim.js": {
+      "checksum": "1a94b73b4b451a7872de5d76f57024e4"
+    },
+    "static/vendor/jquery/jquery.slim.min.js": {
+      "checksum": "d9b11ca4d877c327889805b73bb79edd"
+    },
+    "static/vendor/jquery/jquery.slim.min.map": {
+      "checksum": "6d58a8a7c3f70b97d772fc0d41578e35"
+    },
+    "static/vendor/simple-line-icons/css/simple-line-icons.css": {
+      "checksum": "093ca662394ed698fdb5835e425d28dd"
+    },
+    "static/vendor/simple-line-icons/fonts/Simple-Line-Icons.eot": {
+      "checksum": "f33df365d6d0255b586f2920355e94d7"
+    },
+    "static/vendor/simple-line-icons/fonts/Simple-Line-Icons.svg": {
+      "checksum": "2fe2efe63441d830b1acd106c1fe8734"
+    },
+    "static/vendor/simple-line-icons/fonts/Simple-Line-Icons.ttf": {
+      "checksum": "d2285965fe34b05465047401b8595dd0"
+    },
+    "static/vendor/simple-line-icons/fonts/Simple-Line-Icons.woff": {
+      "checksum": "78f07e2c2a535c26ef21d95e41bd7175"
+    },
+    "static/vendor/simple-line-icons/fonts/Simple-Line-Icons.woff2": {
+      "checksum": "0cb0b9c589c0624c9c78dd3d83e946f6"
     },
     "templates/app.html": {
-      "checksum": "c1f9a580d2d0ccddcbf1f5535b6437ce"
+      "checksum": "ea2db77c7adcf147b8a644cd5933e2d3"
     },
     "templates/result.html": {
-      "checksum": "61651897601cb21bb3543b5cf066938f"
+      "checksum": "a190a000276e173342e12128297acdac"
+    },
+    "train.py": {
+      "checksum": "01a48fac33a8ddac5597a7b6c4df687e"
     }
   }
 }
