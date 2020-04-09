@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body class="pa">
+    <div class="ba">
+    {% for user in users %}
+      Hello, {{ user.username }} from RStudio Connect! <br />
+    {% endfor %}
+    </div>
+  </body>
+</html>

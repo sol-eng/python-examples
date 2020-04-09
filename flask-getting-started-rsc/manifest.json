@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "metadata": {
+    "appmode": "python-api",
+    "entrypoint": "app"
+  },
+  "locale": "en_US.UTF-8",
+  "python": {
+    "version": "3.7.4",
+    "package_manager": {
+      "name": "pip",
+      "version": "19.0.3",
+      "package_file": "requirements.txt"
+    }
+  },
+  "files": {
+    "requirements.txt": {
+      "checksum": "4218d4579ae9bc8ee3c77acb556b8998"
+    },
+    "app.py": {
+      "checksum": "9dcfbffbfa4f022525af8c47b9a0e976"
+    },
+    "static/api-snippet.png": {
+      "checksum": "7d75b4ee6c3834edc79e114b8b371c21"
+    },
+    "static/style.css": {
+      "checksum": "ee9656d5610fbc4ad05d1c1413618341"
+    },
+    "templates/index.html": {
+      "checksum": "18c6159098b83ecc561a20b837236498"
+    }
+  }
+}

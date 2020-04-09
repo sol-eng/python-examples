@@ -39,7 +39,7 @@ rsconnect/
 .DS_Store
 __pycache__
 .ipynb_checkpoints
-*.html
+
 rmarkdown-notebook/flights.csv
 
 .venv

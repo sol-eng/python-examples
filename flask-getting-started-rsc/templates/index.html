@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body class="sans-serif center w-60">
+    <div class="mt5 ba pa br2 b--black-30 tc">
+      <h2>🎉 Hello, World! This is Flask on RStudio Connect!</h2>
+    </div>
+    <div class="mt5 ba pa br2 b--black-30 tc">
+      <h2>🚀Access the API endpoint</h2>
+      <h3><a href="{{ url_for('hello') }}">{{ url_for('hello') }}</a></h3>
+
+      <img
+        class="w-100"
+        src="{{ url_for('static', filename='api-snippet.png') }}"
+      />
+    </div>
+  </body>
+</html>
