@@ -7,6 +7,8 @@ Two routes are defined:
 - `/` renders an HTML template
 - `/api/hello` returns a JSON object
 
+![](https://github.com/sol-eng/python-examples/blob/master/flask-getting-started-rsc/getting-started-flask.png)
+
 #### Resources
 
 - [RStudio Connect User Guide - Flask](https://docs.rstudio.com/connect/1.8.2/user/flask/)
