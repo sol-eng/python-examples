@@ -8,11 +8,11 @@ app = Flask(__name__,
 model_dir = "model"
 
 @app.route('/')
-def page():
+def index():
    return render_template("app.html")
 
 @app.route('/sentiment', methods = ['POST', 'GET'])
-def predict():
+def sentiment():
     if request.method == "POST":
         input = request.form["input"]
         print(input)
