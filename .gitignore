@@ -35,6 +35,9 @@ vignettes/*.pdf
 # Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
 rsconnect/
 
+# Deployment details from rsconnect-python
+rsconnect-python/
+
 # Temporary files
 .DS_Store
 __pycache__
