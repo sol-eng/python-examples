@@ -6,16 +6,16 @@
   },
   "locale": "en_US.UTF-8",
   "python": {
-    "version": "3.7.4",
+    "version": "3.8.6",
     "package_manager": {
       "name": "pip",
-      "version": "19.0.3",
+      "version": "21.2.4",
       "package_file": "requirements.txt"
     }
   },
   "files": {
     "requirements.txt": {
-      "checksum": "4218d4579ae9bc8ee3c77acb556b8998"
+      "checksum": "d5ff3e78f56f0d97c203e5475083853f"
     },
     "app.py": {
       "checksum": "9dcfbffbfa4f022525af8c47b9a0e976"
