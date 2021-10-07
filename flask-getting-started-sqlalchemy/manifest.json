@@ -2,23 +2,26 @@
   "version": 1,
   "metadata": {
     "appmode": "python-api",
-    "entrypoint": "app:app"
+    "entrypoint": "app"
   },
   "locale": "en_US.UTF-8",
   "python": {
-    "version": "3.7.4",
+    "version": "3.8.6",
     "package_manager": {
       "name": "pip",
-      "version": "19.0.3",
+      "version": "21.2.4",
       "package_file": "requirements.txt"
     }
   },
   "files": {
     "requirements.txt": {
-      "checksum": "f00237682b99f60fa6d297c278e87fe5"
+      "checksum": "4218d4579ae9bc8ee3c77acb556b8998"
+    },
+    ".DS_Store": {
+      "checksum": "67b20de0d9182ef11ff6e9f40e02eac3"
     },
     "app.py": {
-      "checksum": "e4ccd14db159c5bcc7ea67cbfaff2cfb"
+      "checksum": "4ba3af068512ebddd4abd66230e5b0b7"
     },
     "static/style.css": {
       "checksum": "f49bd4d078ffd375f2deb76e0cdb5cf3"
@@ -27,7 +30,7 @@
       "checksum": "f3d3be99cf0a8467bdb2548b90f9076f"
     },
     "users.db": {
-      "checksum": "7f391d911e8d45d2326a02f98fa45048"
+      "checksum": "d9dad4a55e8aa4c63658b311d0198122"
     }
   }
 }
