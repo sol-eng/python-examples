@@ -2,14 +2,14 @@
   "version": 1,
   "metadata": {
     "appmode": "python-dash",
-    "entrypoint": "app:app"
+    "entrypoint": "app"
   },
   "locale": "en_US.UTF-8",
   "python": {
-    "version": "3.7.4",
+    "version": "3.8.6",
     "package_manager": {
       "name": "pip",
-      "version": "19.2.3",
+      "version": "21.2.4",
       "package_file": "requirements.txt"
     }
   },
@@ -17,14 +17,11 @@
     "requirements.txt": {
       "checksum": "2a7c57f3b31ba1b8b95f4d226bdc5384"
     },
-    ".vscode/settings.json": {
-      "checksum": "16da2d9d51e570607407ca2e40ac0795"
-    },
     "app.py": {
-      "checksum": "d561176016d9c3b2eba50c843212f578"
+      "checksum": "34fd547314532279ce0eeae8ed9f32e9"
     },
     "assets/simple.css": {
-      "checksum": "549f2ac317e00680ded1883d4c883022"
+      "checksum": "30dc5ae0bfabcc5cf69e64a271e3c8c6"
     }
   }
 }

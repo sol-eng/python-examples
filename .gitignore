@@ -47,3 +47,4 @@ rmarkdown-notebook/flights.csv
 
 .venv
 venv
+.env
