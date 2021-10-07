@@ -6,31 +6,31 @@
   },
   "locale": "en_US.UTF-8",
   "python": {
-    "version": "3.6.10",
+    "version": "3.8.6",
     "package_manager": {
       "name": "pip",
-      "version": "19.3.1",
+      "version": "21.2.4",
       "package_file": "requirements.txt"
     }
   },
   "files": {
     "requirements.txt": {
-      "checksum": "ade1e2f1081802913672ec7310d8d825"
+      "checksum": "f532ac011282d6b0235441ebb8326e21"
     },
     "app.py": {
       "checksum": "26e3261020d1f21464d2441c1a4c98d8"
     },
     "model/meta.json": {
-      "checksum": "bee047ff755b9d44c3d78ef93cbe74b0"
+      "checksum": "dac5074cb7cf0a693e3652287b48c43b"
     },
     "model/textcat/cfg": {
-      "checksum": "7fd0e491d35cf5d0782724f8d5a4044c"
+      "checksum": "5835120c39c78ed403eac787c37e532e"
     },
     "model/textcat/model": {
-      "checksum": "baa550189d70b55749616790ee1283a5"
+      "checksum": "bc3dfa6dd4684917ea2788ea9c6aa144"
     },
     "model/tokenizer": {
-      "checksum": "c057eb8e73f11c9b732cebc7017920d6"
+      "checksum": "45838f5fb248489823a625c0bfedbdd8"
     },
     "model/vocab/key2row": {
       "checksum": "8d39dd7eef115ea6975446ef4082951f"
@@ -38,8 +38,11 @@
     "model/vocab/lexemes.bin": {
       "checksum": "69e670f7fe63515625918eee8e080742"
     },
+    "model/vocab/lookups.bin": {
+      "checksum": "0072b6791ad7eebbe5562967d6a22c07"
+    },
     "model/vocab/strings.json": {
-      "checksum": "9331aeb9f9ac5ca64d3688e29b170f5c"
+      "checksum": "4fb558ca791112a0b6d8dc6c8394fe58"
     },
     "model/vocab/vectors": {
       "checksum": "63fd11f249a725dee9c2941b339ea037"
