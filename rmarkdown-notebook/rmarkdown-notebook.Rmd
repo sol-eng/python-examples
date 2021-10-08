@@ -10,7 +10,7 @@ output: html_notebook
 
 ```{r setup}
 library(reticulate)
-readr::write_csv(nycflights13::flights, path = "flights.csv")
+readr::write_csv(nycflights13::flights, file = "flights.csv")
 
 print(reticulate::py_config())
 ```

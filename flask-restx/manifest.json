@@ -2,32 +2,29 @@
   "version": 1,
   "metadata": {
     "appmode": "python-api",
-    "entrypoint": "predict:app"
+    "entrypoint": "app"
   },
   "locale": "en_US.UTF-8",
   "python": {
-    "version": "3.7.3",
+    "version": "3.8.6",
     "package_manager": {
       "name": "pip",
-      "version": "20.0.2",
+      "version": "21.2.4",
       "package_file": "requirements.txt"
     }
   },
   "files": {
     "requirements.txt": {
-      "checksum": "0143755f7ea657c983817786e0a21e84"
-    },
-    "manifest.json": {
-      "checksum": "be9b6c36933ed3c754936712d97c24f9"
+      "checksum": "e2700a9c02b6ea9812bc8e2a8803de13"
     },
     "model.p": {
-      "checksum": "e41e5fc2ba9bdbc3101e8d44cdaef699"
+      "checksum": "4f8cffb3b2479f056c334ccf1e1e807e"
+    },
+    "mtcars.csv": {
+      "checksum": "6463474bfe6973a81dc7cbc4a71e8dd1"
     },
     "predict.py": {
-      "checksum": "52f3dc2f9b9a5ca65984b2c5521f616f"
-    },
-    "train.py": {
-      "checksum": "7b5ca034bf00471bd027e25cce1b9288"
+      "checksum": "d1092446f4cf3eca946d2eeae9a7132d"
     }
   }
 }

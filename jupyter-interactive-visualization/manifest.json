@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "metadata": {
+    "appmode": "jupyter-static",
+    "entrypoint": "jupyter-interactive-visualization.ipynb"
+  },
+  "locale": "en_US.UTF-8",
+  "python": {
+    "version": "3.8.6",
+    "package_manager": {
+      "name": "pip",
+      "version": "21.2.4",
+      "package_file": "requirements.txt"
+    }
+  },
+  "files": {
+    "jupyter-interactive-visualization.ipynb": {
+      "checksum": "20b7f819b6b3f4fff5df28e05d6dd924"
+    },
+    "requirements.txt": {
+      "checksum": "66f695001c446d7d3a616dc48ff637e2"
+    }
+  }
+}

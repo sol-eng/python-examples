@@ -6,31 +6,31 @@
   },
   "locale": "en_US.UTF-8",
   "python": {
-    "version": "3.6.10",
+    "version": "3.8.6",
     "package_manager": {
       "name": "pip",
-      "version": "19.3.1",
+      "version": "21.2.4",
       "package_file": "requirements.txt"
     }
   },
   "files": {
     "requirements.txt": {
-      "checksum": "ade1e2f1081802913672ec7310d8d825"
+      "checksum": "f532ac011282d6b0235441ebb8326e21"
     },
     "app.py": {
-      "checksum": "9daa5a7cf12e12d3045c666d99693fb2"
+      "checksum": "96adf17f1be9681ceaca0689d164fdf9"
     },
     "model/meta.json": {
-      "checksum": "bee047ff755b9d44c3d78ef93cbe74b0"
+      "checksum": "dac5074cb7cf0a693e3652287b48c43b"
     },
     "model/textcat/cfg": {
-      "checksum": "7fd0e491d35cf5d0782724f8d5a4044c"
+      "checksum": "5835120c39c78ed403eac787c37e532e"
     },
     "model/textcat/model": {
-      "checksum": "baa550189d70b55749616790ee1283a5"
+      "checksum": "0b84af4344ed355268f8cc9421df2dff"
     },
     "model/tokenizer": {
-      "checksum": "c057eb8e73f11c9b732cebc7017920d6"
+      "checksum": "45838f5fb248489823a625c0bfedbdd8"
     },
     "model/vocab/key2row": {
       "checksum": "8d39dd7eef115ea6975446ef4082951f"
@@ -38,8 +38,11 @@
     "model/vocab/lexemes.bin": {
       "checksum": "69e670f7fe63515625918eee8e080742"
     },
+    "model/vocab/lookups.bin": {
+      "checksum": "0072b6791ad7eebbe5562967d6a22c07"
+    },
     "model/vocab/strings.json": {
-      "checksum": "9331aeb9f9ac5ca64d3688e29b170f5c"
+      "checksum": "65170e38b714b116c8c0f4bcaf6ef47e"
     },
     "model/vocab/vectors": {
       "checksum": "63fd11f249a725dee9c2941b339ea037"
@@ -237,13 +240,10 @@
       "checksum": "0cb0b9c589c0624c9c78dd3d83e946f6"
     },
     "templates/app.html": {
-      "checksum": "ea2db77c7adcf147b8a644cd5933e2d3"
+      "checksum": "b9dae6059fa66ee2c7c056c07e6b2cf6"
     },
     "templates/result.html": {
-      "checksum": "a190a000276e173342e12128297acdac"
-    },
-    "train.py": {
-      "checksum": "01a48fac33a8ddac5597a7b6c4df687e"
+      "checksum": "f918492991c4e4aef260ffb9e5a99a39"
     }
   }
 }
