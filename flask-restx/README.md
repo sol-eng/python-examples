@@ -10,3 +10,8 @@ creates the Flask API.
 This example can be deployed to RStudio Connect using the `rsconnect-python`
 package, specifically with `rsconnect deploy api -e predict:app .`.
 
+## deploy
+
+```
+rsconnect deploy api 
+```

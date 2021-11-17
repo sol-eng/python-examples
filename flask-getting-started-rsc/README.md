@@ -9,6 +9,12 @@ Two routes are defined:
 
 ![](https://github.com/sol-eng/python-examples/blob/master/flask-getting-started-rsc/getting-started-flask.png)
 
+## deploy
+
+```
+rsconnect deploy api 
+```
+
 #### Resources
 
 - [RStudio Connect User Guide - Flask](https://docs.rstudio.com/connect/1.8.2/user/flask/)

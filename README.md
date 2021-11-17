@@ -1,48 +1,66 @@
-# Using R with Python
+# RStudio Connect & Python
+
+RStudio Connect is a publishing platform for the work your team creates in R and Python.
+This repository contains examples of Python content you can deploy to Connect, including:
+
+## Interactive apps
+
+- [Streamlit](./streamlit-income-share/README.md)
+- [Dash](dash-app/README.MD)
+
+### Web APIs
+
+- [Flask](./flask-sentiment-analysis-api/README.md)
+- [FastAPI](./fastapi-stock/README.md)
+## Documents
+
+- [Jupyter Notebooks](./jupyter-interactive-visualization/README.md)
+
+## Reticulate
 
 <a href="https://rstudio.github.io/reticulate/">
   <img src="reticulated_python.png" width="200">
 </a>
 
-### Reticulate
+Reticulate allows you to call Python from within an R session.
+This enables you to use models built in Python to power Shiny apps, visualize pandas dataframes with ggplot2, and much more.
 
-The reticulate package provides a comprehensive set of tools for interoperability between Python and R. You can use Python for the following:
+### Interactive apps
 
-* Call Python from R
-* Use Python with R Markdown, Shiny, and R scripts
-* Source Python scripts
-* Import Python modules
-* Use Python interactively within an R session
-* Translate between R and Pandas data frames
-* Translate between R matrices and NumPy arrays
-* Bind with Virtualenv
-* Bind with Conda environments
+- [Serving Sentiment Analysis with Plumber and spaCy](./sentiment-analysis/README.md)
+- [Image Classification with PyTorch and Shiny](./image-classifier/README.md)
 
-### RStudio Connect
+### Documents
 
-You can publish Jupyter notebooks to RStudio connect. The RStudio plugin for Jupyter allows you to publish Jupyter notebooks with the press of a button. Once published on RStudio Connect, these notebooks can be scheduled for updates or refreshed on demand.
+- [Visualizing pandas dataframes with ggplot2](./rmarkdown-notebook/README.md)
 
-### Examples
+## Getting Started
 
-* [Use Python with R Markdown](https://colorado.rstudio.com/rsc/reticulate-demo) [[login]](https://colorado.rstudio.com/rsc/connect/#/apps/1924/access/2075)
-* [Use Python to visualize data in R Markdown](https://colorado.rstudio.com/rsc/python-visuals) [[login]](https://colorado.rstudio.com/rsc/connect/#/apps/1716/access)
-* [Publish Jupyter Notebooks to RStudio Connect](https://colorado.rstudio.com/rsc/jupyter-geospatial) [[login]](https://colorado.rstudio.com/rsc/connect/#/apps/1762/access)
-* [Python-based Visualizations in Jupyter Notebooks](https://colorado.rstudio.com/rsc/jupyter-notebook-visualization) [[login]](https://colorado.rstudio.com/rsc/connect/#/apps/2038/access/2160)
-* [Interactive Python-based Plots in Jupyter Notebooks](https://colorado.rstudio.com/rsc/jupyter-notebook-interactive-plots) [[login]](https://colorado.rstudio.com/rsc/connect/#/apps/2036/access/2158)
+You can deploy examples from this repo to your Connect server [via git-backed deployment](https://docs.rstudio.com/connect/user/git-backed/), or clone the repository and deploy examples from their manifests with the [`rsconnect` CLI](https://docs.rstudio.com/rsconnect-python/).
 
-### Getting Started
+If you want to explore an example more closely before deploying it:
 
 * Clone this repository
-* Install Python on your machine
-* Set the `RETICULATE_PYTHON` environment variable to point to your installation
-  of Python, for example using the following line in your `~/.Rprofile`:
+* create a virtual environment in the folder you want to work in
+* restore the needed packages into the virtual environment
 
-  ```
-  Sys.setenv(RETICULATE_PYTHON = '/usr/local/bin/python')
-  ```
-* Run the examples
-* Publish the examples with source code to RStudio Connect
+```bash
+$ cd flask-sentiment-analysis-api
+$ python -m venv .venv
+$ source .venv/bin/activate
+$ python -m pip install -U pip setuptools wheel
+$ python -m pip install -r requirements.txt
+```
 
-### Philosophy
+For reticulated content, set the `RETICULATE_PYTHON` environment variable to point to your virtual environment, by placing an `.Renviron` file in the folder containing the following:
 
-The intent of the reticulate package is to integrate Python into R projects, and are not intended for standalone Python work. There are many IDEs available for doing data science with Python including JupyterLab, Rodeo, Spyder, and Visual Studio Code, and we strongly recommend using one of them for Python-only projects. However, if you are using reticulated Python within an R project then RStudio provides a set of tools that we think you will find extremely helpful.
+```
+RETICULATE_PYTHON=.venv/bin/python
+```
+
+* Run the examples locally
+* Publish the examples with the rsconnect cli
+
+```
+rsconnect deploy api . -n <SERVER-NICKNAME>
+```

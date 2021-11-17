@@ -18,6 +18,12 @@ And, optionally:
 
 ---
 
+## deploy
+
+```
+rsconnect deploy api 
+```
+
 ### Additional Resources
 
 - [Getting Started with Flask and RStudio Connect](https://support.rstudio.com/hc/en-us/articles/360044700234)

@@ -1,0 +1,5 @@
+## deploy
+
+```
+rsconnect deploy notebook 
+```
