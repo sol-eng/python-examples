@@ -1,8 +1,11 @@
 # Data Visualization with Streamlit
 
-
-## deploy
+## Deploy
 
 ```
-rsconnect deploy streamlit
+rsconnect deploy streamlit . -n <SERVER-NICKNAME>
 ```
+
+## Resources
+
+[RStudio Connect User Guide - Streamlit](https://docs.rstudio.com/connect/user/rmarkdown/)

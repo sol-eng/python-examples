@@ -3,9 +3,8 @@
 ## Deploy
 
 ```
-rsconnect deploy fastapi 
+rsconnect deploy fastapi . -n <SERVER-NICKNAME>
 ```
-
 ## Resources
 
 [RStudio Connect User Guide - FastAPI](https://docs.rstudio.com/connect/user/fastapi/)

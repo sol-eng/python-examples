@@ -1,6 +1,14 @@
 # Serving Sentiment Analysis with spaCy and Flask
 
-## deploy
+This application exposes a model trained in spaCy via a Flask API.
+A user interface for the application is also served via Flask.
+
+## Setup
+
+```bash
+python train.py
+```
+## Deploy
 
 ```
 rsconnect deploy api 

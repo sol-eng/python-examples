@@ -9,10 +9,10 @@ Two routes are defined:
 
 ![](https://github.com/sol-eng/python-examples/blob/master/flask-getting-started-rsc/getting-started-flask.png)
 
-## deploy
+## Deploy
 
 ```
-rsconnect deploy api 
+rsconnect deploy api . -n <SERVER-NICKNAME>
 ```
 
 #### Resources

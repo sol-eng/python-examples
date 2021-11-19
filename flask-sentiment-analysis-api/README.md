@@ -1,7 +1,17 @@
 # Serving Sentiment Analysis with spaCy and Flask
 
-## deploy
+This application exposes a model trained in spaCy via a Flask API.
+## Setup
 
 ```
-rsconnect deploy api 
+python train.py
 ```
+## Deploy
+
+```
+rsconnect deploy api . -n <SERVER-NAME>
+```
+
+## Resources
+
+[RStudio Connect User Guide - Flask](https://docs.rstudio.com/connect/user/flask/)

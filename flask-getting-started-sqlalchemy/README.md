@@ -17,11 +17,18 @@ And, optionally:
 - Redeploy the application
 
 ---
+## Setup
 
-## deploy
+Run the following to create the sqlite database used by the application:
 
 ```
-rsconnect deploy api 
+python seed_db.py
+```
+
+## Deploy
+
+```
+rsconnect deploy api . -n <SERVER-NICKNAME>
 ```
 
 ### Additional Resources

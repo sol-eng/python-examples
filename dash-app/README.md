@@ -4,12 +4,12 @@ This example is from Plotly's [Dash tutorial](https://dash.plot.ly/getting-start
 
 ![example app image](app.png)
 
-## deploy
+## Deploy
 
 ```
-rsconnect deploy dash 
+rsconnect deploy dash . -n <SERVER-NICKNAME>
 ```
 
-## resources
+## Resources
 
 [RStudio Connect User Guide - Dash](https://docs.rstudio.com/connect/user/dash/)

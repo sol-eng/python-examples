@@ -1,5 +1,7 @@
 # Data Analysis and Visualization with pandas and ggplot2
 
+Read more about 
+
 https://rstudio.github.io/reticulate/articles/r_markdown.html
 
 ## deploy
@@ -7,3 +9,8 @@ https://rstudio.github.io/reticulate/articles/r_markdown.html
 ```
 rsconnect::deployDoc()
 ```
+
+## Resources
+
+- [RStudio Connect User Guide - RMarkdown](https://docs.rstudio.com/connect/user/rmarkdown/)
+- [Deploying Reticulated Content](https://solutions.rstudio.com/r/reticulate/#setting-up-a-reticulated-project)
