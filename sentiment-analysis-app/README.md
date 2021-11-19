@@ -1,4 +1,4 @@
-# Sentiment Analysis with spaCy and Reticulated Shiny
+# Sentiment Analysis with spaCy and Shiny
 
 ## deploy
 
