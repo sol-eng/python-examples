@@ -11,5 +11,9 @@ python train.py
 ## Deploy
 
 ```
-rsconnect deploy api 
+rsconnect deploy api . -n <SERVER-NAME>
 ```
+
+## Resources
+
+[RStudio Connect User Guide - Flask](https://docs.rstudio.com/connect/user/flask/)
