@@ -1,0 +1,36 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+
+  # https://blog.slashgear.dev/how-to-split-test-by-folder-with-github-action/
+  directories:
+    runs-on: ubuntu-latest
+    outputs:
+      dir: ${{ steps.get-dirs.outputs.dir }}
+    steps:
+      - uses: actions/checkout@v2
+      - id: get-dirs
+        run: echo "::set-output name=dir::$(ls -d */ | jq -R -s -c 'split("\n")[:-1]')"
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [directories]
+    strategy:
+      fail-fast: false
+      matrix:
+        dir: ${{ fromJson(needs.directories.outputs.dir) }}
+    steps:
+
+      - name: deploy
+        uses: rstudio/actions/connect-publish@main
+        with:
+          url: https://${{ secrets.CONNECT_API_KEY }}@colorado.rstudio.com/rsc
+          namespace: python-examples
+          dir: ./${{matrix.dir}}:/${{matrix.dir}}
+          require-vanity-path: true
