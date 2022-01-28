@@ -8,31 +8,31 @@ on:
 
 jobs:
 
-  # https://blog.slashgear.dev/how-to-split-test-by-folder-with-github-action/
-  directories:
-    runs-on: ubuntu-latest
-    outputs:
-      dir: ${{ steps.get-dirs.outputs.dir }}
-    steps:
-      - uses: actions/checkout@v2
-      - id: get-dirs
-        run: echo "::set-output name=dir::$(ls -d */ | jq -R -s -c 'split("\n")[:-1]')"
 
   deploy:
     runs-on: ubuntu-latest
-    needs: [directories]
-    strategy:
-      fail-fast: false
-      matrix:
-        dir: ${{ fromJson(needs.directories.outputs.dir) }}
     steps:
-
       - name: deploy
         uses: rstudio/actions/connect-publish@main
         with:
           url: https://${{ secrets.CONNECT_API_KEY }}@colorado.rstudio.com/rsc
           namespace: python-examples
           dir: |
-            ./${{matrix.dir}}
+            ./dash-app/
+            ./dash-bikeshare/
+            ./fastapi-stock
+            ./flask-getting-started-rsc/
+            ./flask-getting-started-sqlalchemy/
+            ./flask-restx/
+            ./flask-sentiment-analysis-api/
+            ./flask-sentiment-analysis-app/
+            ./image-classifier/
+            ./jupyter-interactive-visualization/
+            ./jupyter-static-visualization/
+            ./rmarkdown-notebook/
+            ./rmarkdown-static-visualization/
+            ./sentiment-analysis
+            ./sentiment-analysis-app
+            ./streamlit-income-share
           require-vanity-path: true
           access-type: all
