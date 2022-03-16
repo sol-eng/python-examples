@@ -9,19 +9,25 @@
     "version": "3.8.6",
     "package_manager": {
       "name": "pip",
-      "version": "21.2.4",
+      "version": "22.0.3",
       "package_file": "requirements.txt"
     }
   },
   "files": {
     "requirements.txt": {
-      "checksum": "4218d4579ae9bc8ee3c77acb556b8998"
+      "checksum": "1fe298da93bcee6287e4130586a9f42b"
     },
-    ".DS_Store": {
-      "checksum": "67b20de0d9182ef11ff6e9f40e02eac3"
+    ".gitignore": {
+      "checksum": "fe7a30636aa51dec02fc7fba330672ef"
+    },
+    "README.md": {
+      "checksum": "f5aee02c5cc1cbf9d9181200e8b10bb3"
     },
     "app.py": {
       "checksum": "4ba3af068512ebddd4abd66230e5b0b7"
+    },
+    "seed_db.py": {
+      "checksum": "eb441affe452a42d2ea5cec9a4f8e0c9"
     },
     "static/style.css": {
       "checksum": "f49bd4d078ffd375f2deb76e0cdb5cf3"
@@ -30,7 +36,7 @@
       "checksum": "f3d3be99cf0a8467bdb2548b90f9076f"
     },
     "users.db": {
-      "checksum": "d9dad4a55e8aa4c63658b311d0198122"
+      "checksum": "ff96365c048742756322d209b57db15f"
     }
   }
 }
