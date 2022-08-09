@@ -6,7 +6,7 @@ This repository contains examples of Python content you can deploy to Connect, i
 ## Interactive apps
 
 - [Streamlit](./streamlit-income-share/README.md)
-- [Dash](dash-app/README.MD)
+- [Dash](dash-app/README.md)
 - [Flask](flask-sentiment-analysis-app/README.md)
 
 ### Web APIs
