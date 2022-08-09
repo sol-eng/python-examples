@@ -8,8 +8,12 @@ dependabot:
 
 # set up virtual environment in working directory
 bootstrap:
-    if test ! -e .venv; then python  -m venv  {{invocation_directory()}}/.venv; fi
-    python  -m pip install --upgrade pip wheel setuptools
+    if test ! -e {{invocation_directory()}}/.venv; then python  -m venv  {{invocation_directory()}}/.venv; fi
+    {{invocation_directory()}}/.venv/bin/python -m pip install --upgrade pip wheel setuptools
+    if test -f {{invocation_directory()}}/requirements.txt; \
+        then \
+         {{invocation_directory()}}/.venv/bin/python -m pip install -r {{invocation_directory()}}/requirements.txt; \
+    fi
 
 # remove virtual environment from working directory
 clean:
