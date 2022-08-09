@@ -18,3 +18,6 @@ bootstrap:
 # remove virtual environment from working directory
 clean:
     rm -rf {{invocation_directory()}}/.venv
+
+deploy:
+    rsconnect deploy manifest {{invocation_directory()}}/manifest.json -n colorado
