@@ -1,15 +1,15 @@
 {
   "version": 1,
+  "locale": "en_US.UTF-8",
   "metadata": {
     "appmode": "jupyter-static",
     "entrypoint": "jupyter-static-visualization.ipynb"
   },
-  "locale": "en_US.UTF-8",
   "python": {
     "version": "3.8.6",
     "package_manager": {
       "name": "pip",
-      "version": "21.2.4",
+      "version": "22.1.2",
       "package_file": "requirements.txt"
     }
   },
@@ -18,7 +18,7 @@
       "checksum": "38c3f8ed702592971dad012b850268e6"
     },
     "requirements.txt": {
-      "checksum": "8336c22ac6ace0b5ae110297093e8edf"
+      "checksum": "8af8028b00d321262c35e5cbb47891b6"
     }
   }
 }
