@@ -1,3 +1,4 @@
+--index-url https://staging.packagemanager.rstudio.com/pypi/latest/simple
 click==8.0.1
 Flask==2.0.2
 Flask-SQLAlchemy==2.5.1

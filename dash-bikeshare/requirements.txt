@@ -1,3 +1,4 @@
+--index-url https://staging.packagemanager.rstudio.com/pypi/latest/simple
 Brotli==1.0.9
 certifi==2021.5.30
 charset-normalizer==2.0.6
