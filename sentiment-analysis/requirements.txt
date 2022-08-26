@@ -1,1 +1,2 @@
+--index-url https://staging.packagemanager.rstudio.com/pypi/latest/simple
 spacy==2.2.3
