@@ -1,4 +1,4 @@
---index-url https://staging.packagemanager.rstudio.com/pypi/latest/simple
+--index-url https://packagemanager.rstudio.com/pypi/latest/simple
 Brotli==1.0.9
 click==8.0.1
 dash==2.0.0

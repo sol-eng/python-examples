@@ -1,4 +1,4 @@
---index-url https://staging.packagemanager.rstudio.com/pypi/latest/simple
+--index-url https://packagemanager.rstudio.com/pypi/latest/simple
 asgiref==3.4.1
 click==8.0.1
 fastapi==0.66.0

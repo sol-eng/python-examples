@@ -1,4 +1,4 @@
---index-url https://staging.packagemanager.rstudio.com/pypi/latest/simple
+--index-url https://packagemanager.rstudio.com/pypi/latest/simple
 blis==0.7.4
 catalogue==1.0.0
 certifi==2021.5.30

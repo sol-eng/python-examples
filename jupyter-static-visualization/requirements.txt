@@ -1,4 +1,4 @@
---index-url --index-url https://staging.packagemanager.rstudio.com/pypi/2022-08-04/simple
+--index-url --index-url https://packagemanager.rstudio.com/pypi/2022-08-04/simple
 jupyter
 numpy
 pandas
