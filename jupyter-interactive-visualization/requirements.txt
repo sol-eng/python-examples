@@ -3,3 +3,4 @@ jupyter
 numpy
 bokeh
 plotly
+pandas
