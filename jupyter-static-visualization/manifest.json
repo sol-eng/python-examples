@@ -9,16 +9,16 @@
     "version": "3.8.6",
     "package_manager": {
       "name": "pip",
-      "version": "22.1.2",
+      "version": "22.2.2",
       "package_file": "requirements.txt"
     }
   },
   "files": {
     "jupyter-static-visualization.ipynb": {
-      "checksum": "38c3f8ed702592971dad012b850268e6"
+      "checksum": "350d13dbf6604ec56918895843a4d1cd"
     },
     "requirements.txt": {
-      "checksum": "8af8028b00d321262c35e5cbb47891b6"
+      "checksum": "9af48b0fa1bf157e32fe770adf1a6358"
     }
   }
 }

@@ -21,7 +21,7 @@ jobs:
           dir: |
             ./dash-app/
             ./dash-bikeshare/
-            ./fastapi-stock
+            ./fastapi-stock/
             ./flask-getting-started-rsc/
             ./flask-getting-started-sqlalchemy/
             ./flask-restx/
@@ -32,8 +32,9 @@ jobs:
             ./jupyter-static-visualization/
             ./rmarkdown-notebook/
             ./rmarkdown-static-visualization/
-            ./sentiment-analysis
-            ./sentiment-analysis-app
-            ./streamlit-income-share
+            ./shiny-income-share/
+            ./sentiment-analysis/
+            ./sentiment-analysis-app/
+            ./streamlit-income-share/
           require-vanity-path: true
           access-type: all
