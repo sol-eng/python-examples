@@ -29,7 +29,7 @@ For example:
 streamlit run ~/Projects/streamlit_min/app.py
 ```
 
-When done the command to close the preview is `ctrl/command c`. 
+When done the command to close the preview is `ctrl+c`. 
 
 ## Deploy to Connect
 
