@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "locale": "en_US.UTF-8",
+  "metadata": {
+    "appmode": "python-streamlit",
+    "entrypoint": "app"
+  },
+  "python": {
+    "version": "3.10.4",
+    "package_manager": {
+      "name": "pip",
+      "version": "21.2.4",
+      "package_file": "requirements.txt"
+    }
+  },
+  "files": {
+    "requirements.txt": {
+      "checksum": "2a0f5f556bdaa421046cedcf0fcce273"
+    },
+    ".ipynb_checkpoints/app-checkpoint.py": {
+      "checksum": "94346b7ca0a4f8f25bca242fb0a9f73f"
+    },
+    "app.py": {
+      "checksum": "94346b7ca0a4f8f25bca242fb0a9f73f"
+    }
+  }
+}
