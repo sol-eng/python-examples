@@ -1,4 +1,4 @@
---index-url https://packagemanager.rstudio.com/pypi/latest/simple
+--index-url https://packagemanager.rstudio.com/pypi/2022-09-13/simple
 jupyter
 numpy
 bokeh
