@@ -1,0 +1,72 @@
+---
+title: "Quarto matplotlib and lightbox demo"
+filters:
+   - lightbox
+lightbox: auto
+format:
+  html:
+    code-fold: true
+jupyter: python3
+resource_files:
+- "_extensions/quarto-ext/lightbox/lightbox.lua"
+- "_extensions/quarto-ext/lightbox/lightbox.css"
+- "_extensions/quarto-ext/lightbox/_extension.yml"
+- "_extensions/quarto-ext/lightbox/resources/css/glightbox.min.css"
+- "_extensions/quarto-ext/lightbox/resources/js/glightbox.min.js"
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## matplotlib demo
+
+Quarto can use different languages and packages, for example [Python](https://quarto.org/docs/computations/python.html). This example is using the Jupyter engine (python3 kernel) following the Quarto instructions on [this page](https://quarto.org/docs/tools/rstudio.html#jupyter-engine). 
+
+For example, computing the go-to demonstration of a line plot on a polar axis using python and jupyter for rendering:
+
+```{python}
+#| label: fig-polar
+#| fig-cap: "A line plot on a polar axis"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'} 
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+## lightbox
+
+The images are interactive, try clicking on one!
+
+::: {layout-ncol="2"}
+
+![Lions](https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lion_waiting_in_Namibia.jpg/800px-Lion_waiting_in_Namibia.jpg){group="my-gallery"}
+
+![and tigers](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Panthera_tigris_corbetti_%28Tierpark_Berlin%29_832-714-%28118%29.jpg/1024px-Panthera_tigris_corbetti_%28Tierpark_Berlin%29_832-714-%28118%29.jpg){group="my-gallery"}
+
+![and bears](https://upload.wikimedia.org/wikipedia/commons/5/54/Chengdu-pandas-d10.jpg){group="my-gallery"}
+
+![oh my!](){group="my-gallery"}
+
+:::
+
+Quarto can arrange images for you, with the ability to both arrange them in various grid configurations as well as for a pop-out interaction when clicked on. This is done through [quarto extensions](https://quarto.org/docs/extensions/), requiring quarto v1.2 or higher. 
+
+* Tips on dealing with displaying images in a rendered quarto document: <https://quarto.org/docs/authoring/figures.html#figure-panels>
+
+* Install the lightbox extension: <https://github.com/quarto-ext/lightbox>
+
+```bash
+quarto install extension quarto-ext/lightbox
+```
+
+[Check out the code](https://github.com/sol-eng/python-examples/tree/main/quarto-lightbox/)
