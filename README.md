@@ -16,6 +16,7 @@ This repository contains examples of Python content you can deploy to Connect, i
 ## Documents
 
 - [Jupyter Notebooks](./jupyter-interactive-visualization/README.md)
+- [Quarto Documents](./quarto-lightbox/README.md)
 
 ## Reticulate
 
@@ -59,9 +60,25 @@ For reticulated content, set the `RETICULATE_PYTHON` environment variable to poi
 RETICULATE_PYTHON=.venv/bin/python
 ```
 
+## Publishing basics
+
 * Run the examples locally
-* Publish the examples with the rsconnect cli
+* Acquire an [API key](https://docs.rstudio.com/connect/user/api-keys/) 
+* Publish the examples with the [rsconnect cli](https://github.com/rstudio/rsconnect-python)
+
+```
+rsconnect add \
+    --api-key <MY-API-KEY> \
+    --server <https://connect.example.org:3939> \
+    --name <SERVER-NICKNAME>
+```
 
 ```
 rsconnect deploy api . -n <SERVER-NICKNAME>
+```
+
+* Create a manifest for future git-backed publishing
+
+```
+rsconnect write-manifest api .
 ```
