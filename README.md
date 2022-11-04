@@ -13,6 +13,7 @@ This repository contains examples of Python content you can deploy to Connect, i
 
 - [Flask](./flask-sentiment-analysis-api/README.md)
 - [FastAPI](./fastapi-stock/README.md)
+
 ## Documents
 
 - [Jupyter Notebooks](./jupyter-interactive-visualization/README.md)
@@ -81,4 +82,20 @@ rsconnect deploy api . -n <SERVER-NICKNAME>
 
 ```
 rsconnect write-manifest api .
+```
+
+## Virtual Environments 
+
+For more information check out [the Solutions article](https://solutions.rstudio.com/python/minimum-viable-python/installing-packages/). 
+
+```
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+If the path to the python installations is known, specific python/python3 versions can be explicitly used: 
+
+```
+/opt/python/3.7.7/bin/python -m venv .venv
+source .venv/bin/activate
 ```
