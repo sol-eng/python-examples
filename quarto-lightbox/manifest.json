@@ -14,7 +14,7 @@
     "version": "3.10.4",
     "package_manager": {
       "name": "pip",
-      "version": "22.3",
+      "version": "22.3.1",
       "package_file": "requirements.txt"
     }
   },
@@ -52,59 +52,11 @@
     "old_requirements.txt": {
       "checksum": "cd6f3630b79cc20de2fd96235c027a0d"
     },
-    "quarto-python-lightbox.html": {
-      "checksum": "cbee82a469d09e53035cc29b5c12923e"
-    },
     "quarto-python-lightbox.qmd": {
       "checksum": "81d37f3ebf47f9f8db4cae9a56966817"
     },
-    "quarto-python-lightbox_files/figure-html/fig-polar-output-1.png": {
-      "checksum": "f76757513c34ffcc1f3b2966082c7239"
-    },
-    "quarto-python-lightbox_files/libs/bootstrap/bootstrap-icons.css": {
-      "checksum": "3104c106b6c22560ae274d7c56f116c5"
-    },
-    "quarto-python-lightbox_files/libs/bootstrap/bootstrap-icons.woff": {
-      "checksum": "e4cc83ddcec34db65724eb56c5230b4c"
-    },
-    "quarto-python-lightbox_files/libs/bootstrap/bootstrap.min.css": {
-      "checksum": "fef8602bfff06909c1157a6fddf0545a"
-    },
-    "quarto-python-lightbox_files/libs/bootstrap/bootstrap.min.js": {
-      "checksum": "7ccd9d390d31af98110f74f842ea9b32"
-    },
-    "quarto-python-lightbox_files/libs/clipboard/clipboard.min.js": {
-      "checksum": "ad98572d415d2f2452845a6068a913c0"
-    },
-    "quarto-python-lightbox_files/libs/quarto-contrib/glightbox/glightbox.min.css": {
-      "checksum": "9b438b29cef1c212d1c65a877ffc7232"
-    },
-    "quarto-python-lightbox_files/libs/quarto-contrib/glightbox/glightbox.min.js": {
-      "checksum": "2b4c8cbaade24ecb58bcb0d89694ccee"
-    },
-    "quarto-python-lightbox_files/libs/quarto-contrib/glightbox/lightbox.css": {
-      "checksum": "f94b9cae12f142eaf34dc631afa138fc"
-    },
-    "quarto-python-lightbox_files/libs/quarto-html/anchor.min.js": {
-      "checksum": "a58f4bdbf86e8ae057af9131b5b1bcfd"
-    },
-    "quarto-python-lightbox_files/libs/quarto-html/popper.min.js": {
-      "checksum": "ad6c106f3ba17d5a54d8053a4c4899ca"
-    },
-    "quarto-python-lightbox_files/libs/quarto-html/quarto-syntax-highlighting.css": {
-      "checksum": "099cd394577c915952e100d918f76f84"
-    },
-    "quarto-python-lightbox_files/libs/quarto-html/quarto.js": {
-      "checksum": "84b5b88230a1ec3d72af672e400e38c1"
-    },
-    "quarto-python-lightbox_files/libs/quarto-html/tippy.css": {
-      "checksum": "ebd6f8ce46a677e1a4f5f8a8317109a9"
-    },
-    "quarto-python-lightbox_files/libs/quarto-html/tippy.umd.min.js": {
-      "checksum": "d828775275749701b48bd9d958814111"
-    },
     "requirements.txt": {
-      "checksum": "f60fea2dee2a38a61203f91e2ba0a321"
+      "checksum": "9fdcda64a5b5e8e77340a124b815da27"
     }
   }
 }

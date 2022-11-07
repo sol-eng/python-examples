@@ -10,7 +10,7 @@ Steps:
 * Acquire an [API key](https://docs.rstudio.com/connect/user/api-keys/) 
 * Publish with your method of choice 
 
-Tip: Use [quarto projects](https://quarto.org/docs/projects/quarto-projects.html) for the most robust publishing experience. The rsconnect-python package (and git backed publishing on Connect) as of 2022/11/02 are only able to deploy Quarto projects, not standalone documents. 
+Tip: Use [quarto projects](https://quarto.org/docs/projects/quarto-projects.html) for the most robust publishing experience. The rsconnect-python package (and git backed publishing on Connect) as of 2022/11/07 do not have support for publishing standalone documents and needs quarto content to be in a project. 
 
 **Quarto CLI**
 
@@ -20,8 +20,7 @@ quarto publish connect quarto-python-lightbox.qmd
 
 **rsconnect-python**
 
-Configure your server address and publish. 
-
+Configure your server address: 
 ```
 rsconnect add \
     --api-key <MY-API-KEY> \
@@ -29,6 +28,12 @@ rsconnect add \
     --name <SERVER-NICKNAME>
 ```
 
+Create the requirements file: 
+```
+python -m pip freeze > requirements.txt
+```
+
+Publish: 
 ```
 rsconnect deploy quarto . -n <SERVER-NICKNAME>
 ```
@@ -37,7 +42,7 @@ rsconnect deploy quarto . -n <SERVER-NICKNAME>
 
 **git-backed**
 
-Writing the manifest.json file (which in turn writes the requirements.txt file) enables [git backed publishing from inside the Connect UI](https://docs.rstudio.com/connect/user/git-backed/). 
+Writing the manifest file: 
 
 ```bash
 rsconnect write-manifest quarto .
@@ -53,5 +58,3 @@ rsconnect write-manifest quarto .
 - [RStudio Connect User Guide - Git Backed Publishing ](https://docs.rstudio.com/connect/user/git-backed/)
 - [Quarto Version Manager](https://github.com/dpastoor/qvm)
 - [Lightbox Quarto Extension](https://github.com/quarto-ext/lightbox)
-
-

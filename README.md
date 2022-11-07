@@ -63,9 +63,13 @@ RETICULATE_PYTHON=.venv/bin/python
 
 ## Publishing basics
 
+Overview: 
+
+* Create and activate a virtual environment 
 * Run the examples locally
 * Acquire an [API key](https://docs.rstudio.com/connect/user/api-keys/) 
 * Publish the examples with the [rsconnect cli](https://github.com/rstudio/rsconnect-python)
+* Save the environment and deployment details for future git-backed publishing
 
 ```
 rsconnect add \
@@ -78,8 +82,12 @@ rsconnect add \
 rsconnect deploy api . -n <SERVER-NICKNAME>
 ```
 
-* Create a manifest for future git-backed publishing
+Create the requirements file: 
+```
+python -m pip freeze > requirements.txt
+```
 
+Create the manifest for future git-backed publishing: 
 ```
 rsconnect write-manifest api .
 ```
@@ -90,12 +98,30 @@ For more information check out [the Solutions article](https://solutions.rstudio
 
 ```
 python3 -m venv .venv
-source .venv/bin/activate
 ```
 
-If the path to the python installations is known, specific python/python3 versions can be explicitly used: 
-
+If the path to the python installations is known, specific python/python3 versions can be explicitly used. For example: 
 ```
 /opt/python/3.7.7/bin/python -m venv .venv
+```
+
+Activate the virtual environment. On Linux or Mac this is done with: 
+```
 source .venv/bin/activate
+```
+
+On Windows the venv environment is activated with: 
+```
+venv\Scripts\activate
+```
+
+Upgrade pip and then install needed packages: 
+```
+python -m pip install --upgrade pip wheel setuptools
+python -m pip install rsconnect-python
+```
+
+Leave a virtual environment with: 
+```
+deactivate
 ```
