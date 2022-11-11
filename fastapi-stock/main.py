@@ -3,9 +3,12 @@ import os
 from datetime import date
 from typing import List
 
+import uvicorn
+
 import numpy as np
 import pandas as pd
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import RedirectResponse
 from pydantic import BaseModel, Field
 
 prices = pd.read_csv(
@@ -46,6 +49,10 @@ app = FastAPI(
 )
 
 
+@app.get("/")
+async def docs():
+    return RedirectResponse("docs")
+
 @app.get("/stocks", response_model=Tickers)
 async def tickers():
     tickers = prices["ticker"].unique().tolist()
@@ -76,3 +83,15 @@ async def history(ticker: str):
     ticker_prices = prices[prices["ticker"] == ticker]
     ticker_prices["date"] = ticker_prices.index
     return ticker_prices.to_dict("records")
+
+if __name__ == "__main__":
+    path, port = '', 8123 # declare uvicorn arguments
+    
+    # When running in Posit Workbench, pass port to rserver-url to determine the root path
+    # See https://docs.rstudio.com/ide/server-pro/user/vs-code/guide/posit-workbench-extension.html#fastapi for details
+    import os
+    if 'RS_SERVER_URL' in os.environ and os.environ['RS_SERVER_URL']:
+        import subprocess
+        path = subprocess.run(f'echo $(/usr/lib/rstudio-server/bin/rserver-url -l {port})',
+                              stdout=subprocess.PIPE, shell=True).stdout.decode().strip()
+    uvicorn.run(app, port = port, root_path = path)
