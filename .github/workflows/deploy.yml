@@ -30,6 +30,7 @@ jobs:
             ./image-classifier/
             ./jupyter-interactive-visualization/
             ./jupyter-static-visualization/
+            ./quarto-lightbox/
             ./rmarkdown-notebook/
             ./rmarkdown-static-visualization/
             ./shiny-income-share/
