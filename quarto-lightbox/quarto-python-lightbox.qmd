@@ -47,26 +47,31 @@ plt.show()
 
 Quarto can arrange images for you, with the ability to both arrange them in various grid configurations as well as for a pop-out interaction when clicked on.  
 
-The images are interactive, try clicking on one!
+These images are interactive, try clicking on one!
 
 ::: {layout-ncol="2"}
 
-![Lions](https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lion_waiting_in_Namibia.jpg/800px-Lion_waiting_in_Namibia.jpg){group="my-gallery"}
+![Lions](img/Lion_waiting_in_Namibia.jpg){group="my-gallery"}
 
-![and tigers](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Panthera_tigris_corbetti_%28Tierpark_Berlin%29_832-714-%28118%29.jpg/1024px-Panthera_tigris_corbetti_%28Tierpark_Berlin%29_832-714-%28118%29.jpg){group="my-gallery"}
+![and tigers](img/Panthera_tigris_corbetti_%28Tierpark_Berlin%29_832-714-%28118%29.jpg){group="my-gallery"}
 
-![and bears](https://upload.wikimedia.org/wikipedia/commons/5/54/Chengdu-pandas-d10.jpg){group="my-gallery"}
+![and bears](img/Chengdu-pandas-d10.jpg){group="my-gallery"}
 
-![oh my!](https://upload.wikimedia.org/wikipedia/commons/8/81/The_Wizard_of_Oz_1955_Lobby_Card.jpg){group="my-gallery"}
+![oh my!](img/The_Wizard_of_Oz_1955_Lobby_Card.jpg){group="my-gallery"}
 
 :::
 
-Tips on dealing with displaying images in a rendered quarto document: <https://quarto.org/docs/authoring/figures.html#figure-panels>
+References: 
 
-Install the lightbox extension: <https://github.com/quarto-ext/lightbox>
+- Tips on dealing with displaying images in a rendered quarto document: <https://quarto.org/docs/authoring/figures.html#figure-panels>
 
-```bash
-quarto install extension quarto-ext/lightbox
-```
+- Install the lightbox extension: <https://github.com/quarto-ext/lightbox>
 
-[Check out the code](https://github.com/sol-eng/python-examples/tree/main/quarto-lightbox/)
+Images are from Wikipedia and in the public domain:
+
+- Lions: <https://en.wikipedia.org/wiki/File:Lion_waiting_in_Namibia.jpg>
+- Tigers: <https://commons.wikimedia.org/wiki/File:Panthera_tigris_corbetti_(Tierpark_Berlin)_832-714-(118).jpg>
+- Bears: <https://en.wikipedia.org/wiki/Bear#/media/File:Chengdu-pandas-d10.jpg>
+- Wizard of Oz: <https://commons.wikimedia.org/wiki/File:The_Wizard_of_Oz_1955_Lobby_Card.jpg>
+
+Check out the code: [here](https://github.com/sol-eng/python-examples/tree/main/quarto-lightbox/)
