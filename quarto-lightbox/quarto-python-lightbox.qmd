@@ -1,0 +1,77 @@
+---
+title: "Quarto matplotlib and lightbox demo"
+filters:
+   - lightbox
+lightbox: auto
+format:
+  html:
+    code-fold: true
+jupyter: python3
+resource_files:
+- "_extensions/quarto-ext/lightbox/lightbox.lua"
+- "_extensions/quarto-ext/lightbox/lightbox.css"
+- "_extensions/quarto-ext/lightbox/_extension.yml"
+- "_extensions/quarto-ext/lightbox/resources/css/glightbox.min.css"
+- "_extensions/quarto-ext/lightbox/resources/js/glightbox.min.js"
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## matplotlib demo
+
+Quarto can use different languages and packages, for example [Python](https://quarto.org/docs/computations/python.html). This example is using the Jupyter engine (python3 kernel) following the Quarto instructions on [this page](https://quarto.org/docs/tools/rstudio.html#jupyter-engine). 
+
+For example, inserting Python code creating a line plot on a polar axis using Jupyter for rendering (taken from the Quarto documentation):
+
+```{python}
+#| label: fig-polar
+#| fig-cap: "A line plot on a polar axis"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'} 
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+## lightbox
+
+Quarto can arrange images for you, with the ability to both arrange them in various grid configurations as well as for a pop-out interaction when clicked on.  
+
+These images are interactive, try clicking on one!
+
+::: {layout-ncol="2"}
+
+![Lions](img/Lion_waiting_in_Namibia.jpg){group="my-gallery"}
+
+![and tigers](img/Panthera_tigris_corbetti_%28Tierpark_Berlin%29_832-714-%28118%29.jpg){group="my-gallery"}
+
+![and bears](img/Chengdu-pandas-d10.jpg){group="my-gallery"}
+
+![oh my!](img/The_Wizard_of_Oz_1955_Lobby_Card.jpg){group="my-gallery"}
+
+:::
+
+References: 
+
+- Tips on dealing with displaying images in a rendered quarto document: <https://quarto.org/docs/authoring/figures.html#figure-panels>
+
+- Install the lightbox extension: <https://github.com/quarto-ext/lightbox>
+
+Images are from Wikipedia and in the public domain:
+
+- Lions: <https://en.wikipedia.org/wiki/File:Lion_waiting_in_Namibia.jpg>
+- Tigers: <https://commons.wikimedia.org/wiki/File:Panthera_tigris_corbetti_(Tierpark_Berlin)_832-714-(118).jpg>
+- Bears: <https://en.wikipedia.org/wiki/Bear#/media/File:Chengdu-pandas-d10.jpg>
+- Wizard of Oz: <https://commons.wikimedia.org/wiki/File:The_Wizard_of_Oz_1955_Lobby_Card.jpg>
+
+Check out the code: [here](https://github.com/sol-eng/python-examples/tree/main/quarto-lightbox/)

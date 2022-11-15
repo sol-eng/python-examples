@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "locale": "en_US.UTF-8",
+  "metadata": {
+    "appmode": "quarto-static"
+  },
+  "quarto": {
+    "version": "1.1.189",
+    "engines": [
+      "jupyter"
+    ]
+  },
+  "python": {
+    "version": "3.10.4",
+    "package_manager": {
+      "name": "pip",
+      "version": "22.3.1",
+      "package_file": "requirements.txt"
+    }
+  },
+  "files": {
+    ".gitignore": {
+      "checksum": "06d306ff933a023ca365a9fbf6589381"
+    },
+    "README.md": {
+      "checksum": "dd2585ad6d80b094863c9a2ba44c4ec5"
+    },
+    "_extensions/quarto-ext/lightbox/_extension.yml": {
+      "checksum": "3db0b546785dbeb0117afef962c424bd"
+    },
+    "_extensions/quarto-ext/lightbox/lightbox.css": {
+      "checksum": "f94b9cae12f142eaf34dc631afa138fc"
+    },
+    "_extensions/quarto-ext/lightbox/lightbox.lua": {
+      "checksum": "2ceffdc78094bca8e55b4be6d37cb12d"
+    },
+    "_extensions/quarto-ext/lightbox/resources/css/glightbox.min.css": {
+      "checksum": "9b438b29cef1c212d1c65a877ffc7232"
+    },
+    "_extensions/quarto-ext/lightbox/resources/js/glightbox.min.js": {
+      "checksum": "2b4c8cbaade24ecb58bcb0d89694ccee"
+    },
+    "_publish.yml": {
+      "checksum": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "_quarto.yml": {
+      "checksum": "ab8efbe8e2d5444405b716b3bb917b3f"
+    },
+    "old_manifest.json": {
+      "checksum": "3de58621a7037d760eb26b00d224345b"
+    },
+    "old_requirements.txt": {
+      "checksum": "cd6f3630b79cc20de2fd96235c027a0d"
+    },
+    "quarto-python-lightbox.qmd": {
+      "checksum": "81d37f3ebf47f9f8db4cae9a56966817"
+    },
+    "requirements.txt": {
+      "checksum": "9fdcda64a5b5e8e77340a124b815da27"
+    }
+  }
+}
