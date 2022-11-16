@@ -23,7 +23,7 @@
       "checksum": "06d306ff933a023ca365a9fbf6589381"
     },
     "README.md": {
-      "checksum": "dd2585ad6d80b094863c9a2ba44c4ec5"
+      "checksum": "0ecee7ad8ddb45110229b1b0c23c3b96"
     },
     "_extensions/quarto-ext/lightbox/_extension.yml": {
       "checksum": "3db0b546785dbeb0117afef962c424bd"
@@ -46,17 +46,23 @@
     "_quarto.yml": {
       "checksum": "ab8efbe8e2d5444405b716b3bb917b3f"
     },
-    "old_manifest.json": {
-      "checksum": "3de58621a7037d760eb26b00d224345b"
+    "img/Chengdu-pandas-d10.jpg": {
+      "checksum": "55ef49ea2db1762990435c43e2a8dca0"
     },
-    "old_requirements.txt": {
-      "checksum": "cd6f3630b79cc20de2fd96235c027a0d"
+    "img/Lion_waiting_in_Namibia.jpg": {
+      "checksum": "c407f20233958896edd2bc90cc1cba12"
+    },
+    "img/Panthera_tigris_corbetti_(Tierpark_Berlin)_832-714-(118).jpg": {
+      "checksum": "40aa373fb50f06112555bcc941aaf6e0"
+    },
+    "img/The_Wizard_of_Oz_1955_Lobby_Card.jpg": {
+      "checksum": "bdbf9246bd2eb7ff5942b3bdc0f3a401"
     },
     "quarto-python-lightbox.qmd": {
-      "checksum": "81d37f3ebf47f9f8db4cae9a56966817"
+      "checksum": "c1083bb396a02e22466cca0b5c5e7f6c"
     },
     "requirements.txt": {
-      "checksum": "9fdcda64a5b5e8e77340a124b815da27"
+      "checksum": "d98af85c5ab8fce1fd8ad751ab9263fd"
     }
   }
 }

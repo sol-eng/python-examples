@@ -19,5 +19,6 @@ bootstrap:
 clean:
     rm -rf {{invocation_directory()}}/.venv
 
-deploy:
-    rsconnect deploy manifest {{invocation_directory()}}/manifest.json -n colorado
+# deploy manifest in current directory to target server
+deploy connect:
+    rsconnect deploy manifest {{invocation_directory()}}/manifest.json -n {{connect}}
