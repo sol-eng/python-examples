@@ -16,7 +16,7 @@ jobs:
       - name: deploy
         uses: rstudio/actions/connect-publish@main
         with:
-          url: https://${{ secrets.CONNECT_API_KEY }}@colorado.rstudio.com/rsc
+          url: https://${{ secrets.CONNECT_API_KEY }}@colorado.posit.co/rsc
           namespace: python-examples
           dir: |
             ./dash-app/
