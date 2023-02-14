@@ -1,4 +1,4 @@
---index-url https://p3m.dev/pypi/2023-01-16/simple
+--index-url https://p3m.dev/pypi/simple
 shiny
 shinywidgets
 altair
