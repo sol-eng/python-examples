@@ -10,7 +10,7 @@
     "has_parameters": false
   },
   "python": {
-    "version": "3.8.6",
+    "version": "3.10.0",
     "package_manager": {
       "name": "pip",
       "version": "23.0.1",
