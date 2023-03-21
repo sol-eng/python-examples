@@ -27,7 +27,7 @@ jobs:
             ./flask-restx/
             ./flask-sentiment-analysis-api/
             ./flask-sentiment-analysis-app/
-            ./jupyter-static-visualization/
+            ./jupyter-interactive-visualization/
             ./jupyter-voila/
             ./quarto-lightbox/
             ./reticulated-image-classifier/
