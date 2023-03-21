@@ -7,4 +7,4 @@ rsconnect deploy fastapi . -n <SERVER-NICKNAME>
 ```
 ## Resources
 
-[RStudio Connect User Guide - FastAPI](https://docs.rstudio.com/connect/user/fastapi/)
+[Posit Connect User Guide - FastAPI](https://docs.posit.co/connect/user/fastapi/)

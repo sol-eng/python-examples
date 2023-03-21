@@ -16,4 +16,4 @@ rsconnect deploy api . -n <SERVER-NAME>
 
 ## Resources
 
-[RStudio Connect User Guide - Flask](https://docs.rstudio.com/connect/user/flask/)
+[Posit Connect User Guide - Flask](https://docs.posit.co/connect/user/flask/)

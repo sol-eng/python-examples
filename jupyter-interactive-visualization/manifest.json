@@ -6,10 +6,10 @@
     "entrypoint": "jupyter-interactive-visualization.ipynb"
   },
   "python": {
-    "version": "3.8.6",
+    "version": "3.10.0",
     "package_manager": {
       "name": "pip",
-      "version": "22.2.2",
+      "version": "23.0.1",
       "package_file": "requirements.txt"
     }
   },
@@ -18,7 +18,7 @@
       "checksum": "20b7f819b6b3f4fff5df28e05d6dd924"
     },
     "requirements.txt": {
-      "checksum": "09e927986f6cf3951b7fdd638177542b"
+      "checksum": "9cf304c5a2680b5a0325e961c17db93f"
     }
   }
 }

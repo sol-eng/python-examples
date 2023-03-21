@@ -1,6 +1,6 @@
-# RStudio Connect & Python
+# Posit Connect & Python
 
-RStudio Connect is a publishing platform for the work your team creates in R and Python.
+Posit Connect is a publishing platform for the work your team creates in R and Python.
 This repository contains examples of Python content you can deploy to Connect, including:
 
 ## Interactive apps
@@ -8,6 +8,7 @@ This repository contains examples of Python content you can deploy to Connect, i
 - [Streamlit](./streamlit-income-share/README.md)
 - [Dash](dash-app/README.md)
 - [Flask](flask-sentiment-analysis-app/README.md)
+- [Voila](./jupyter-voila/README.md)
 
 ### Web APIs
 
@@ -30,8 +31,8 @@ This enables you to use models built in Python to power Shiny apps, visualize pa
 
 ### Interactive apps
 
-- [Serving Sentiment Analysis with Plumber and spaCy](./sentiment-analysis/README.md)
-- [Image Classification with PyTorch and Shiny](./image-classifier/README.md)
+- [Serving Sentiment Analysis with Plumber and spaCy](./reticulatd-sentiment-analysis-api/README.md)
+- [Image Classification with PyTorch and Shiny](./reticulated-image-classifier/README.md)
 
 ### Documents
 
@@ -39,7 +40,7 @@ This enables you to use models built in Python to power Shiny apps, visualize pa
 
 ## Getting Started
 
-You can deploy examples from this repo to your Connect server [via git-backed deployment](https://docs.rstudio.com/connect/user/git-backed/), or clone the repository and deploy examples from their manifests with the [`rsconnect` CLI](https://docs.rstudio.com/rsconnect-python/).
+You can deploy examples from this repo to your Connect server [via git-backed deployment](https://docs.posit.co/connect/user/git-backed/), or clone the repository and deploy examples from their manifests with the [`rsconnect` CLI](https://docs.posit.co/rsconnect-python/).
 
 If you want to explore an example more closely before deploying it:
 
@@ -67,7 +68,7 @@ Overview:
 
 * Create and activate a virtual environment 
 * Run the examples locally
-* Acquire an [API key](https://docs.rstudio.com/connect/user/api-keys/) 
+* Acquire an [API key](https://docs.posit.co/connect/user/api-keys/) 
 * Publish the examples with the [rsconnect cli](https://github.com/rstudio/rsconnect-python)
 * Save the environment and deployment details for future git-backed publishing
 

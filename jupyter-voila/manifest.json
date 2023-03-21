@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "locale": "en_US.UTF-8",
+  "metadata": {
+    "appmode": "jupyter-voila",
+    "entrypoint": ""
+  },
+  "python": {
+    "version": "3.10.0",
+    "package_manager": {
+      "name": "pip",
+      "version": "23.0.1",
+      "package_file": "requirements.txt"
+    }
+  },
+  "files": {
+    "requirements.txt": {
+      "checksum": "bf98bfa326c6411f23be9809ef2b8599"
+    },
+    "bqplot.ipynb": {
+      "checksum": "9f283b29889500e6c78e83ad1257e03f"
+    },
+    "hash.ipynb": {
+      "checksum": "72f44e0fa678573992c7cf553ecb9a6f"
+    },
+    "ipyvolume.ipynb": {
+      "checksum": "f8df24eb0418afaa205b0cb1dbb49628"
+    }
+  }
+}
