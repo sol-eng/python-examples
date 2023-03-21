@@ -49,3 +49,5 @@ rmarkdown-notebook/flights.csv
 venv
 .env
 .Rprofile
+
+/.luarc.json

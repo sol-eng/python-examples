@@ -1,21 +1,21 @@
 {
   "version": 1,
+  "locale": "en_US.UTF-8",
   "metadata": {
     "appmode": "python-api",
     "entrypoint": "app"
   },
-  "locale": "en_US.UTF-8",
   "python": {
     "version": "3.8.6",
     "package_manager": {
       "name": "pip",
-      "version": "22.0.3",
+      "version": "23.0.1",
       "package_file": "requirements.txt"
     }
   },
   "files": {
     "requirements.txt": {
-      "checksum": "1fe298da93bcee6287e4130586a9f42b"
+      "checksum": "4ab5dcdc69a553ba17d4225fd300bc59"
     },
     "README.md": {
       "checksum": "f5aee02c5cc1cbf9d9181200e8b10bb3"
