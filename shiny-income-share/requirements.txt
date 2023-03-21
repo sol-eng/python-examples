@@ -1,7 +1,7 @@
---index-url https://p3m.dev/pypi/latest/simple
+--index-url https://p3m.dev/pypi/2022-12-09/simple
 shiny
 shinywidgets
+vega
 altair
 pandas
-vega
 six

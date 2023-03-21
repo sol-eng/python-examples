@@ -8,4 +8,4 @@ rsconnect deploy notebook jupyter-interactive-notebook.ipynb -n <SERVER-NICKNAME
 
 ## Resources 
 
-[RStudio Connect User Guide - Jupyter](https://docs.rstudio.com/connect/user/jupyter-notebook/)
+[Posit Connect User Guide - Jupyter](https://docs.posit.co/connect/user/jupyter-notebook/)

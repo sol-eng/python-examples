@@ -9,4 +9,4 @@ rsconnect deploy dash . -n <SERVER-NICKNAME>
 ```
 ## Resources
 
-[RStudio Connect User Guide - Dash](https://docs.rstudio.com/connect/user/dash/)
+[Posit Connect User Guide - Dash](https://docs.posit.co/connect/user/dash/)

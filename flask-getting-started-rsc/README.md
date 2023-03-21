@@ -1,4 +1,4 @@
-## Getting Started with Flask and RStudio Connect
+## Getting Started with Flask and Posit Connect
 
 This application structure and set-up follows the steps outlined in the links below.
 
@@ -17,7 +17,7 @@ rsconnect deploy api . -n <SERVER-NICKNAME>
 
 #### Resources
 
-- [RStudio Connect User Guide - Flask](https://docs.rstudio.com/connect/user/flask/)
-- [Getting Started with Flask and RStudio Connect](https://support.rstudio.com/hc/en-us/articles/360044700234)
-- [Deploying Flask Applications to RStudio Connect with Git and rsconnect-python](https://support.rstudio.com/hc/en-us/articles/360045224233)
-- [Using Templates and Static Assets with Flask Applications on RStudio Connect](https://support.rstudio.com/hc/en-us/articles/360045279313)
+- [Posit Connect User Guide - Flask](https://docs.posit.co/connect/user/flask/)
+- [Getting Started with Flask and Posit Connect](https://support.rstudio.com/hc/en-us/articles/360044700234)
+- [Deploying Flask Applications to Posit Connect with Git and rsconnect-python](https://support.rstudio.com/hc/en-us/articles/360045224233)
+- [Using Templates and Static Assets with Flask Applications on Posit Connect](https://support.rstudio.com/hc/en-us/articles/360045279313)

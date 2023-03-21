@@ -1,6 +1,0 @@
---index-url https://packagemanager.rstudio.com/pypi/2022-09-13/simple
-jupyter
-numpy
-pandas
-seaborn
-matplotlib

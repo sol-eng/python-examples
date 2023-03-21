@@ -1,21 +1,21 @@
 {
   "version": 1,
+  "locale": "en_US.UTF-8",
   "metadata": {
     "appmode": "python-api",
     "entrypoint": "app"
   },
-  "locale": "en_US.UTF-8",
   "python": {
-    "version": "3.8.6",
+    "version": "3.10.0",
     "package_manager": {
       "name": "pip",
-      "version": "21.2.4",
+      "version": "23.0.1",
       "package_file": "requirements.txt"
     }
   },
   "files": {
     "requirements.txt": {
-      "checksum": "f532ac011282d6b0235441ebb8326e21"
+      "checksum": "5516f0c68a7d99f0818f784db41dc1fb"
     },
     "app.py": {
       "checksum": "26e3261020d1f21464d2441c1a4c98d8"
@@ -47,8 +47,8 @@
     "model/vocab/vectors": {
       "checksum": "63fd11f249a725dee9c2941b339ea037"
     },
-    "train.py": {
-      "checksum": "01a48fac33a8ddac5597a7b6c4df687e"
+    "reqs.txt": {
+      "checksum": "21b94d1e5f5897b22df1412cbe8b17ae"
     }
   }
 }

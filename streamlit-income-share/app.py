@@ -11,7 +11,7 @@ st.markdown("Share of income received by the richest 5%" " of the population.")
 DATA = os.path.join(HERE, "data.csv")
 
 
-@st.cache
+@st.cache_data
 def load_data(nrows):
     return pd.read_csv("./data.csv", nrows=nrows)
 
