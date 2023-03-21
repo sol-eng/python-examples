@@ -27,4 +27,4 @@ six==1.16.0
 statsmodels==0.13.0
 tenacity==8.0.1
 urllib3==1.26.7
-Werkzeug==2.0.2
+Werkzeug==2.2.3
