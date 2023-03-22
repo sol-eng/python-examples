@@ -36,7 +36,7 @@ This enables you to use models built in Python to power Shiny apps, visualize pa
 
 ### Documents
 
-- [Visualizing pandas dataframes with ggplot2](./rmarkdown-notebook/README.md)
+- [Visualizing pandas dataframes with ggplot2](./reticulated-rmarkdown-notebook/README.md)
 
 ## Getting Started
 
