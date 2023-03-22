@@ -86,7 +86,7 @@ server <- function(input, output, session) {
         } else {
             return(list(src = new_path, style = htmltools::css(width = "100%")))
         }
-    })
+    }, deleteFile = FALSE)
 
     # default images
     observeEvent(input$oil_platform, image_path("./img/oil_platform.jpg"))
