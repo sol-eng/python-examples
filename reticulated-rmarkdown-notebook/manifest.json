@@ -2058,9 +2058,6 @@
     }
   },
   "files": {
-    "flights.csv": {
-      "checksum": "aec9c406a2ecf5717b2efb8605510b0f"
-    },
     "requirements.txt": {
       "checksum": "754dc3626ff310be2b474f7628d91089"
     },
