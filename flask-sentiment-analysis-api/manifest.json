@@ -46,9 +46,6 @@
     },
     "model/vocab/vectors": {
       "checksum": "63fd11f249a725dee9c2941b339ea037"
-    },
-    "reqs.txt": {
-      "checksum": "21b94d1e5f5897b22df1412cbe8b17ae"
     }
   }
 }

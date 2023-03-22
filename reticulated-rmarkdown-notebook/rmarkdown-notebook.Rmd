@@ -1,6 +1,6 @@
 ---
-title: "The reticulate package"
-subtitle: "Integration of Python into R projects"
+title: "Reticulated R Markdown"
+subtitle: "Calling Python from an R Markdown document"
 output: html_notebook
 ---
 
@@ -18,7 +18,6 @@ print(reticulate::py_config())
 ***
 
 # From Python to R
-
 
 ### Use Python to manipulate data
 

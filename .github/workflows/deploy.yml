@@ -27,13 +27,13 @@ jobs:
             ./flask-restx/
             ./flask-sentiment-analysis-api/
             ./flask-sentiment-analysis-app/
-            ./jupyter-static-visualization/
+            ./jupyter-interactive-visualization/
             ./jupyter-voila/
             ./quarto-lightbox/
             ./reticulated-image-classifier/
+            ./reticulated-rmarkdown-notebook/
             ./reticulated-sentiment-analysis-api/
             ./reticulated-sentiment-analysis-app/
-            ./rmarkdown-notebook/
             ./shiny-income-share/
             ./streamlit-income-share/
           require-vanity-path: true
