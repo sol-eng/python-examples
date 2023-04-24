@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "locale": "en_US.UTF-8",
+  "metadata": {
+    "appmode": "python-dash",
+    "entrypoint": "app"
+  },
+  "python": {
+    "version": "3.10.6",
+    "package_manager": {
+      "name": "pip",
+      "version": "23.0.1",
+      "package_file": "requirements.txt"
+    }
+  },
+  "files": {
+    "requirements.txt": {
+      "checksum": "31a91eebf8335fbe666d282da8f43a37"
+    },
+    "app.py": {
+      "checksum": "2f03e2d860ca5209e04f6618ce384a28"
+    },
+    "prices.csv": {
+      "checksum": "90a908060f20dfa7e229e631a42c5081"
+    }
+  }
+}
