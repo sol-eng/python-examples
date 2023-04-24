@@ -21,6 +21,7 @@ jobs:
           dir: |
             ./dash-app/
             ./dash-bikeshare/
+            ./dash-stock-pricing/
             ./fastapi-stock/
             ./flask-getting-started-rsc/
             ./flask-getting-started-sqlalchemy/
