@@ -80,7 +80,7 @@ pytz==2022.7.1
 pyzmq==25.0.2
 qtconsole==5.4.1
 QtPy==2.3.0
-requests==2.28.2
+requests==2.31.0
 scipy==1.10.1
 Send2Trash==1.8.0
 six==1.16.0
