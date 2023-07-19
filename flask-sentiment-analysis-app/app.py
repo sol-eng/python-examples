@@ -22,4 +22,4 @@ def sentiment():
         return render_template("result.html", input = input, sentiment = sentiment)
 
 if __name__ == '__main__':
-   app.run(debug = True)
+   app.run(debug = False)
