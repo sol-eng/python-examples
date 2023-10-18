@@ -19,5 +19,5 @@ pytz==2022.7.1
 requests==2.31.0
 six==1.16.0
 tenacity==8.2.2
-urllib3==1.26.15
+urllib3==1.26.18
 Werkzeug==2.2.3
