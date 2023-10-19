@@ -22,3 +22,6 @@ clean:
 # deploy manifest in current directory to target server
 deploy connect:
     rsconnect deploy manifest {{invocation_directory()}}/manifest.json -n {{connect}}
+
+release:
+    gh release create

@@ -5,16 +5,16 @@
     "appmode": "quarto-static"
   },
   "quarto": {
-    "version": "1.1.189",
+    "version": "1.4.424",
     "engines": [
       "jupyter"
     ]
   },
   "python": {
-    "version": "3.10.4",
+    "version": "3.10.12",
     "package_manager": {
       "name": "pip",
-      "version": "22.3.1",
+      "version": "23.2.1",
       "package_file": "requirements.txt"
     }
   },
@@ -22,8 +22,11 @@
     ".gitignore": {
       "checksum": "06d306ff933a023ca365a9fbf6589381"
     },
+    ".internal.yml": {
+      "checksum": "1e5a127a851c07e0ca7655bb3d5c7713"
+    },
     "README.md": {
-      "checksum": "0ecee7ad8ddb45110229b1b0c23c3b96"
+      "checksum": "eca5c4e1f4827d2562c5de3abc100cdc"
     },
     "_extensions/quarto-ext/lightbox/_extension.yml": {
       "checksum": "3db0b546785dbeb0117afef962c424bd"
@@ -58,11 +61,14 @@
     "img/The_Wizard_of_Oz_1955_Lobby_Card.jpg": {
       "checksum": "bdbf9246bd2eb7ff5942b3bdc0f3a401"
     },
+    "quarto-lightbox.png": {
+      "checksum": "1105422772d95ab055a6c8a2f96c7061"
+    },
     "quarto-python-lightbox.qmd": {
       "checksum": "c1083bb396a02e22466cca0b5c5e7f6c"
     },
     "requirements.txt": {
-      "checksum": "d98af85c5ab8fce1fd8ad751ab9263fd"
+      "checksum": "97bf05c3ffb69a82084ecc2aaeee4760"
     }
   }
 }
