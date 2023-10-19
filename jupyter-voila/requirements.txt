@@ -89,7 +89,7 @@ soupsieve==2.4
 stack-data==0.6.2
 terminado==0.17.1
 tinycss2==1.2.1
-tornado==6.3.2
+tornado==6.3.3
 traitlets==5.9.0
 traittypes==0.2.1
 urllib3==1.26.18
