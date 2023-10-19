@@ -1,0 +1,9 @@
+default:
+  content:
+    - name: "Interactive Data Exploration with Streamlit"
+      path: "."
+      description: "A Streamlit application makes it easy to transform your analysis into an interactive dashboard using Python."
+      tag:
+        - "Examples|Python|Streamlit"
+      url: "/python-examples/streamlit/"
+      image: "streamlit-income-share.png"

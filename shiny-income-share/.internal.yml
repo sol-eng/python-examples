@@ -1,0 +1,9 @@
+default:
+  content:
+    - name: "Interactive Data Exploration with Shiny for Python"
+      path: "."
+      description: "Easy web apps for data science without the compromises."
+      tag:
+        - "Examples|Python|Shiny"
+      url: "/python-examples/shiny/"
+      image: "shiny-income-share.png"

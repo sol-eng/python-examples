@@ -1,0 +1,9 @@
+default:
+  content:
+    - name: "Voila Dashboards"
+      path: "."
+      description: "Turn your Jupyter Notebooks into dashboards with Voilà."
+      tag:
+        - "Examples|Python|Voila"
+      url: "/python-examples/voila/"
+      image: "voila.png"

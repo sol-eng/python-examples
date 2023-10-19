@@ -1,0 +1,9 @@
+default:
+  content:
+    - name: "Serving Stock Information with FastAPI "
+      path: "."
+      description: "An API allows you to turn your models into production services that other tools and teams can use."
+      tag:
+        - "Examples|Python|FastAPI"
+      url: "/python-examples/fastapi/"
+      image: "fastapi-stock.png"
