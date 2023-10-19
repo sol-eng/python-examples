@@ -57,7 +57,7 @@ psutil==5.9.3
 ptyprocess==0.7.0
 pure-eval==0.2.2
 pycparser==2.21
-Pygments==2.13.0
+Pygments==2.15.0
 PyJWT==2.6.0
 pyparsing==3.0.9
 pyrsistent==0.19.2
