@@ -1,0 +1,9 @@
+default:
+  content:
+    - name: "Literate Programming with Quarto"
+      path: "."
+      description: "An open-source scientific and technical publishing system."
+      tag:
+        - "Examples|Python|Quarto"
+      url: "/python-examples/quarto"
+      image: "quarto-lightbox.png"
