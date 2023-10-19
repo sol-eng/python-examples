@@ -27,7 +27,7 @@ Jinja2==3.1.2
 jsonschema==4.17.0
 jupyter==1.0.0
 jupyter-console==6.4.4
-jupyter-server==1.23.0
+jupyter-server==2.7.2
 jupyter_client==7.4.4
 jupyter_core==4.11.2
 jupyterlab-pygments==0.2.2
@@ -50,14 +50,14 @@ pandocfilters==1.5.0
 parso==0.8.3
 pexpect==4.8.0
 pickleshare==0.7.5
-Pillow==9.3.0
+Pillow==10.0.1
 prometheus-client==0.15.0
 prompt-toolkit==3.0.32
 psutil==5.9.3
 ptyprocess==0.7.0
 pure-eval==0.2.2
 pycparser==2.21
-Pygments==2.13.0
+Pygments==2.15.0
 PyJWT==2.6.0
 pyparsing==3.0.9
 pyrsistent==0.19.2
@@ -74,7 +74,7 @@ soupsieve==2.3.2.post1
 stack-data==0.6.0
 terminado==0.17.0
 tinycss2==1.2.1
-tornado==6.3.2
+tornado==6.3.3
 traitlets==5.5.0
 wcwidth==0.2.5
 webencodings==0.5.1
