@@ -20,4 +20,4 @@ thinc==7.4.6
 tqdm==4.65.0
 urllib3==1.26.18
 wasabi==0.10.1
-Werkzeug==2.2.3
+Werkzeug==3.0.1
