@@ -5,7 +5,7 @@
     "appmode": "quarto-static"
   },
   "quarto": {
-    "version": "1.4.424",
+    "version": "1.4.514",
     "engines": [
       "jupyter"
     ]
@@ -14,11 +14,14 @@
     "version": "3.10.12",
     "package_manager": {
       "name": "pip",
-      "version": "23.2.1",
+      "version": "23.3.1",
       "package_file": "requirements.txt"
     }
   },
   "files": {
+    "requirements.txt": {
+      "checksum": "6ec2a900c6496c928bb6012c36c69efb"
+    },
     ".gitignore": {
       "checksum": "06d306ff933a023ca365a9fbf6589381"
     },
@@ -66,9 +69,6 @@
     },
     "quarto-python-lightbox.qmd": {
       "checksum": "c1083bb396a02e22466cca0b5c5e7f6c"
-    },
-    "requirements.txt": {
-      "checksum": "97bf05c3ffb69a82084ecc2aaeee4760"
     }
   }
 }
