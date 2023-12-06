@@ -3,12 +3,7 @@ import os
 
 import dash
 import dash_bootstrap_components as dbc
-
-# from dash import dcc
-# from dash import html
-import dash_table as dt
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import dash_table, dcc, html
 from dash.dependencies import Input, Output
 import pandas as pd
 import plotly.express as px
@@ -155,7 +150,7 @@ graphs = [
     ),
 ]
 
-max_table_dash = dt.DataTable(
+max_table_dash = dash_table.DataTable(
     data=max_vol.to_dict("records"),
     style_as_list_view=True,
     fill_width=False,
