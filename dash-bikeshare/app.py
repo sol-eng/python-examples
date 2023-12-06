@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+load_dotenv()
 import dash
 import os
 import pandas as pd
@@ -6,7 +8,6 @@ import requests as req
 
 from dash import dcc, html
 from dash.dependencies import Input, Output
-from dotenv import load_dotenv
 
 app = dash.Dash(__name__)
 
