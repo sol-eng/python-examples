@@ -34,7 +34,7 @@ rich==13.3.2
 semver==2.13.0
 six==1.16.0
 smmap==5.0.0
-streamlit==1.20.0
+streamlit==1.30.0
 toml==0.10.2
 toolz==0.12.0
 tornado==6.3.3
