@@ -4,7 +4,7 @@ click==8.1.6
 exceptiongroup==1.1.2
 fastapi==0.100.0
 h11==0.14.0
-idna==3.4
+idna==3.7
 numpy==1.25.1
 pandas==2.0.3
 pydantic==2.0.3
