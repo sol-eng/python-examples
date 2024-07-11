@@ -16,3 +16,4 @@ six==1.16.0
 tenacity==8.2.2
 Werkzeug==3.0.1
 python-dotenv
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
