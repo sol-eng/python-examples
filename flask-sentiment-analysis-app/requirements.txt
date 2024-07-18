@@ -21,3 +21,4 @@ tqdm==4.65.0
 urllib3==1.26.18
 wasabi==0.10.1
 Werkzeug==3.0.1
+setuptools>=70.0.0 # not directly required, pinned by Snyk to avoid a vulnerability
